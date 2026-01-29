@@ -1,0 +1,1896 @@
+[
+  {
+    "api_id": "2020054",
+    "api_name": "지분증권",
+    "description": "증권신고서(지분증권) 내에 요약 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/estkRs.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/estkRs.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "일반사항"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "sbd",
+        "label": "청약기일",
+        "description": "청약기일"
+      },
+      {
+        "name": "pymd",
+        "label": "납입기일",
+        "description": "납입기일"
+      },
+      {
+        "name": "sband",
+        "label": "청약공고일",
+        "description": "청약공고일"
+      },
+      {
+        "name": "asand",
+        "label": "배정공고일",
+        "description": "배정공고일"
+      },
+      {
+        "name": "asstd",
+        "label": "배정기준일",
+        "description": "배정기준일"
+      },
+      {
+        "name": "exstk",
+        "label": "신주인수권에 관한 사항(행사대상증권)",
+        "description": "신주인수권에 관한 사항(행사대상증권)"
+      },
+      {
+        "name": "exprc",
+        "label": "신주인수권에 관한 사항(행사가격)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "expd",
+        "label": "신주인수권에 관한 사항(행사기간)",
+        "description": "신주인수권에 관한 사항(행사기간)"
+      },
+      {
+        "name": "rpt_rcpn",
+        "label": "주요사항보고서(접수번호)",
+        "description": "주요사항보고서(접수번호)"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "증권의종류"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "stksen",
+        "label": "증권의종류",
+        "description": "증권의종류"
+      },
+      {
+        "name": "stkcnt",
+        "label": "증권수량",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fv",
+        "label": "액면가액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "slprc",
+        "label": "모집(매출)가액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "slta",
+        "label": "모집(매출)총액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "slmthn",
+        "label": "모집(매출)방법",
+        "description": "모집(매출)방법"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "인수인정보"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "actsen",
+        "label": "인수인구분",
+        "description": "인수인구분"
+      },
+      {
+        "name": "actnmn",
+        "label": "인수인명",
+        "description": "인수인명"
+      },
+      {
+        "name": "stksen",
+        "label": "증권의종류",
+        "description": "증권의종류"
+      },
+      {
+        "name": "udtcnt",
+        "label": "인수수량",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "udtamt",
+        "label": "인수금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "udtprc",
+        "label": "인수대가",
+        "description": "인수대가"
+      },
+      {
+        "name": "udtmth",
+        "label": "인수방법",
+        "description": "인수방법"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "자금의사용목적"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "se",
+        "label": "구분",
+        "description": "구분"
+      },
+      {
+        "name": "amt",
+        "label": "금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "매출인에관한사항"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "hdr",
+        "label": "보유자",
+        "description": "보유자"
+      },
+      {
+        "name": "rl_cmp",
+        "label": "회사와의관계",
+        "description": "회사와의관계"
+      },
+      {
+        "name": "bfsl_hdstk",
+        "label": "매출전보유증권수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "slstk",
+        "label": "매출증권수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atsl_hdstk",
+        "label": "매출후보유증권수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "일반청약자환매청구권"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "grtrs",
+        "label": "부여사유",
+        "description": "부여사유"
+      },
+      {
+        "name": "exavivr",
+        "label": "행사가능 투자자",
+        "description": "행사가능 투자자"
+      },
+      {
+        "name": "grtcnt",
+        "label": "부여수량",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "expd",
+        "label": "행사기간",
+        "description": "행사기간"
+      },
+      {
+        "name": "exprc",
+        "label": "행사가격",
+        "description": "9,999,999,999"
+      }
+    ],
+    "group_code": "DS006",
+    "group_name": "registration"
+  },
+  {
+    "api_id": "2020055",
+    "api_name": "채무증권",
+    "description": "증권신고서(채무증권) 내에 요약 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/bdRs.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/bdRs.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "일반사항"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "tm",
+        "label": "회차",
+        "description": "회차"
+      },
+      {
+        "name": "bdnmn",
+        "label": "채무증권 명칭",
+        "description": "채무증권 명칭"
+      },
+      {
+        "name": "slmth",
+        "label": "모집(매출)방법",
+        "description": "모집(매출)방법"
+      },
+      {
+        "name": "fta",
+        "label": "권면(전자등록)총액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "slta",
+        "label": "모집(매출)총액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "isprc",
+        "label": "발행가액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "intr",
+        "label": "이자율",
+        "description": "이자율"
+      },
+      {
+        "name": "isrr",
+        "label": "발행수익률",
+        "description": "발행수익률"
+      },
+      {
+        "name": "rpd",
+        "label": "상환기일",
+        "description": "상환기일"
+      },
+      {
+        "name": "print_pymint",
+        "label": "원리금지급대행기관",
+        "description": "원리금지급대행기관"
+      },
+      {
+        "name": "mngt_cmp",
+        "label": "(사채)관리회사",
+        "description": "(사채)관리회사"
+      },
+      {
+        "name": "cdrt_int",
+        "label": "신용등급(신용평가기관)",
+        "description": "신용등급(신용평가기관)"
+      },
+      {
+        "name": "sbd",
+        "label": "청약기일",
+        "description": "청약기일"
+      },
+      {
+        "name": "pymd",
+        "label": "납입기일",
+        "description": "납입기일"
+      },
+      {
+        "name": "sband",
+        "label": "청약공고일",
+        "description": "청약공고일"
+      },
+      {
+        "name": "asand",
+        "label": "배정공고일",
+        "description": "배정공고일"
+      },
+      {
+        "name": "asstd",
+        "label": "배정기준일",
+        "description": "배정기준일"
+      },
+      {
+        "name": "dpcrn",
+        "label": "표시통화",
+        "description": "표시통화"
+      },
+      {
+        "name": "dpcr_amt",
+        "label": "표시통화기준발행규모",
+        "description": "표시통화기준발행규모"
+      },
+      {
+        "name": "usarn",
+        "label": "사용지역",
+        "description": "사용지역"
+      },
+      {
+        "name": "usntn",
+        "label": "사용국가",
+        "description": "사용국가"
+      },
+      {
+        "name": "wnexpl_at",
+        "label": "원화 교환 예정 여부",
+        "description": "원화 교환 예정 여부"
+      },
+      {
+        "name": "udtintnm",
+        "label": "인수기관명",
+        "description": "인수기관명"
+      },
+      {
+        "name": "grt_int",
+        "label": "보증을 받은 경우(보증기관)",
+        "description": "보증을 받은 경우(보증기관)"
+      },
+      {
+        "name": "grt_amt",
+        "label": "보증을 받은 경우(보증금액)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "icmg_mgknd",
+        "label": "담보 제공의 경우(담보의 종류)",
+        "description": "담보 제공의 경우(담보의 종류)"
+      },
+      {
+        "name": "icmg_mgamt",
+        "label": "담보 제공의 경우(담보금액)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "estk_exstk",
+        "label": "지분증권과 연계된 경우(행사대상증권)",
+        "description": "지분증권과 연계된 경우(행사대상증권)"
+      },
+      {
+        "name": "estk_exrt",
+        "label": "지분증권과 연계된 경우(권리행사비율)",
+        "description": "지분증권과 연계된 경우(권리행사비율)"
+      },
+      {
+        "name": "estk_exprc",
+        "label": "지분증권과 연계된 경우(권리행사가격)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "estk_expd",
+        "label": "지분증권과 연계된 경우(권리행사기간)",
+        "description": "지분증권과 연계된 경우(권리행사기간)"
+      },
+      {
+        "name": "rpt_rcpn",
+        "label": "주요사항보고서(접수번호)",
+        "description": "주요사항보고서(접수번호)"
+      },
+      {
+        "name": "drcb_at",
+        "label": "파생결합사채해당여부",
+        "description": "파생결합사채해당여부"
+      },
+      {
+        "name": "drcb_uast",
+        "label": "파생결합사채(기초자산)",
+        "description": "파생결합사채(기초자산)"
+      },
+      {
+        "name": "drcb_optknd",
+        "label": "파생결합사채(옵션종류)",
+        "description": "파생결합사채(옵션종류)"
+      },
+      {
+        "name": "drcb_mtd",
+        "label": "파생결합사채(만기일)",
+        "description": "파생결합사채(만기일)"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "인수인정보"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "tm",
+        "label": "회차",
+        "description": "회차"
+      },
+      {
+        "name": "actsen",
+        "label": "인수인구분",
+        "description": "인수인구분"
+      },
+      {
+        "name": "actnmn",
+        "label": "인수인명",
+        "description": "인수인명"
+      },
+      {
+        "name": "stksen",
+        "label": "증권의종류",
+        "description": "증권의종류"
+      },
+      {
+        "name": "udtcnt",
+        "label": "인수수량",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "udtamt",
+        "label": "인수금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "udtprc",
+        "label": "인수대가",
+        "description": "인수대가"
+      },
+      {
+        "name": "udtmth",
+        "label": "인수방법",
+        "description": "인수방법"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "자금의사용목적"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "tm",
+        "label": "회차",
+        "description": "회차"
+      },
+      {
+        "name": "se",
+        "label": "구분",
+        "description": "구분"
+      },
+      {
+        "name": "amt",
+        "label": "금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "매출인에관한사항"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "tm",
+        "label": "회차",
+        "description": "회차"
+      },
+      {
+        "name": "hdr",
+        "label": "보유자",
+        "description": "보유자"
+      },
+      {
+        "name": "rl_cmp",
+        "label": "회사와의관계",
+        "description": "회사와의관계"
+      },
+      {
+        "name": "bfsl_hdstk",
+        "label": "매출전보유증권수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "slstk",
+        "label": "매출증권수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atsl_hdstk",
+        "label": "매출후보유증권수",
+        "description": "9,999,999,999"
+      }
+    ],
+    "group_code": "DS006",
+    "group_name": "registration"
+  },
+  {
+    "api_id": "2020056",
+    "api_name": "증권예탁증권",
+    "description": "증권신고서(증권예탁증권) 내에 요약 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/stkdpRs.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/stkdpRs.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "일반사항"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "sbd",
+        "label": "청약기일",
+        "description": "청약기일"
+      },
+      {
+        "name": "pymd",
+        "label": "납입기일",
+        "description": "납입기일"
+      },
+      {
+        "name": "sband",
+        "label": "청약공고일",
+        "description": "청약공고일"
+      },
+      {
+        "name": "asand",
+        "label": "배정공고일",
+        "description": "배정공고일"
+      },
+      {
+        "name": "asstd",
+        "label": "배정기준일",
+        "description": "배정기준일"
+      },
+      {
+        "name": "exstk",
+        "label": "신주인수권에 관한 사항(행사대상증권)",
+        "description": "신주인수권에 관한 사항(행사대상증권)"
+      },
+      {
+        "name": "exprc",
+        "label": "신주인수권에 관한 사항(행사가격)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "expd",
+        "label": "신주인수권에 관한 사항(행사기간)",
+        "description": "신주인수권에 관한 사항(행사기간)"
+      },
+      {
+        "name": "rpt_rcpn",
+        "label": "주요사항보고서(접수번호)",
+        "description": "주요사항보고서(접수번호)"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "증권의종류"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "stksen",
+        "label": "증권의종류",
+        "description": "증권의종류"
+      },
+      {
+        "name": "stkcnt",
+        "label": "증권수량",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fv",
+        "label": "액면가액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "slprc",
+        "label": "모집(매출)가액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "slta",
+        "label": "모집(매출)총액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "slmthn",
+        "label": "모집(매출)방법",
+        "description": "모집(매출)방법"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "인수인정보"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "actsen",
+        "label": "인수인구분",
+        "description": "인수인구분"
+      },
+      {
+        "name": "actnmn",
+        "label": "인수인명",
+        "description": "인수인명"
+      },
+      {
+        "name": "stksen",
+        "label": "증권의종류",
+        "description": "증권의종류"
+      },
+      {
+        "name": "udtcnt",
+        "label": "인수수량",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "udtamt",
+        "label": "인수금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "udtprc",
+        "label": "인수대가",
+        "description": "인수대가"
+      },
+      {
+        "name": "udtmth",
+        "label": "인수방법",
+        "description": "인수방법"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "자금의사용목적"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "se",
+        "label": "구분",
+        "description": "구분"
+      },
+      {
+        "name": "amt",
+        "label": "금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "매출인에관한사항"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "hdr",
+        "label": "보유자",
+        "description": "보유자"
+      },
+      {
+        "name": "rl_cmp",
+        "label": "회사와의관계",
+        "description": "회사와의관계"
+      },
+      {
+        "name": "bfsl_hdstk",
+        "label": "매출전보유증권수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "slstk",
+        "label": "매출증권수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atsl_hdstk",
+        "label": "매출후보유증권수",
+        "description": "9,999,999,999"
+      }
+    ],
+    "group_code": "DS006",
+    "group_name": "registration"
+  },
+  {
+    "api_id": "2020057",
+    "api_name": "합병",
+    "description": "증권신고서(합병) 내에 요약 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/mgRs.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/mgRs.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "일반사항"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "stn",
+        "label": "형태",
+        "description": "형태"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회 결의일",
+        "description": "이사회 결의일"
+      },
+      {
+        "name": "ctrd",
+        "label": "계약일",
+        "description": "계약일"
+      },
+      {
+        "name": "gmtsck_shddstd",
+        "label": "주주총회를 위한 주주확정일",
+        "description": "주주총회를 위한 주주확정일"
+      },
+      {
+        "name": "ap_gmtsck",
+        "label": "승인을 위한 주주총회일",
+        "description": "승인을 위한 주주총회일"
+      },
+      {
+        "name": "aprskh_pd_bgd",
+        "label": "주식매수청구권 행사 기간 및 가격(시작일)",
+        "description": "주식매수청구권 행사 기간 및 가격(시작일)"
+      },
+      {
+        "name": "aprskh_pd_edd",
+        "label": "주식매수청구권 행사 기간 및 가격(종료일)",
+        "description": "주식매수청구권 행사 기간 및 가격(종료일)"
+      },
+      {
+        "name": "aprskh_prc",
+        "label": "주식매수청구권 행사 기간 및 가격((주식매수청구가격-회사제시))",
+        "description": "주식매수청구권 행사 기간 및 가격((주식매수청구가격-회사제시))"
+      },
+      {
+        "name": "mgdt_etc",
+        "label": "합병기일등",
+        "description": "합병기일등"
+      },
+      {
+        "name": "rt_vl",
+        "label": "비율 또는 가액",
+        "description": "비율 또는 가액"
+      },
+      {
+        "name": "exevl_int",
+        "label": "외부평가기관",
+        "description": "외부평가기관"
+      },
+      {
+        "name": "grtmn_etc",
+        "label": "지급 교부금 등",
+        "description": "지급 교부금 등"
+      },
+      {
+        "name": "rpt_rcpn",
+        "label": "주요사항보고서(접수번호)",
+        "description": "주요사항보고서(접수번호)"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "발행증권"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "kndn",
+        "label": "종류",
+        "description": "종류"
+      },
+      {
+        "name": "cnt",
+        "label": "수량",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fv",
+        "label": "액면가액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "slprc",
+        "label": "모집(매출)가액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "slta",
+        "label": "모집(매출)총액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "당사회사에관한사항"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "cmpnm",
+        "label": "회사명",
+        "description": "회사명"
+      },
+      {
+        "name": "sen",
+        "label": "구분",
+        "description": "구분"
+      },
+      {
+        "name": "tast",
+        "label": "총자산",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "cpt",
+        "label": "자본금",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "isstk_knd",
+        "label": "발행주식수(주식의종류)",
+        "description": "발행주식수(주식의종류)"
+      },
+      {
+        "name": "isstk_cnt",
+        "label": "발행주식수(주식수)",
+        "description": "9,999,999,999"
+      }
+    ],
+    "group_code": "DS006",
+    "group_name": "registration"
+  },
+  {
+    "api_id": "2020058",
+    "api_name": "주식의포괄적교환·이전",
+    "description": "증권신고서(주식의포괄적교환·이전) 내에 요약 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/extrRs.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/extrRs.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "일반사항"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "stn",
+        "label": "형태",
+        "description": "형태"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회 결의일",
+        "description": "이사회 결의일"
+      },
+      {
+        "name": "ctrd",
+        "label": "계약일",
+        "description": "계약일"
+      },
+      {
+        "name": "gmtsck_shddstd",
+        "label": "주주총회를 위한 주주확정일",
+        "description": "주주총회를 위한 주주확정일"
+      },
+      {
+        "name": "ap_gmtsck",
+        "label": "승인을 위한 주주총회일",
+        "description": "승인을 위한 주주총회일"
+      },
+      {
+        "name": "aprskh_pd_bgd",
+        "label": "주식매수청구권 행사 기간 및 가격(시작일)",
+        "description": "주식매수청구권 행사 기간 및 가격(시작일)"
+      },
+      {
+        "name": "aprskh_pd_edd",
+        "label": "주식매수청구권 행사 기간 및 가격(종료일)",
+        "description": "주식매수청구권 행사 기간 및 가격(종료일)"
+      },
+      {
+        "name": "aprskh_prc",
+        "label": "주식매수청구권 행사 기간 및 가격((주식매수청구가격-회사제시))",
+        "description": "주식매수청구권 행사 기간 및 가격((주식매수청구가격-회사제시))"
+      },
+      {
+        "name": "mgdt_etc",
+        "label": "합병기일등",
+        "description": "합병기일등"
+      },
+      {
+        "name": "rt_vl",
+        "label": "비율 또는 가액",
+        "description": "비율 또는 가액"
+      },
+      {
+        "name": "exevl_int",
+        "label": "외부평가기관",
+        "description": "외부평가기관"
+      },
+      {
+        "name": "grtmn_etc",
+        "label": "지급 교부금 등",
+        "description": "지급 교부금 등"
+      },
+      {
+        "name": "rpt_rcpn",
+        "label": "주요사항보고서(접수번호)",
+        "description": "주요사항보고서(접수번호)"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "발행증권"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "kndn",
+        "label": "종류",
+        "description": "종류"
+      },
+      {
+        "name": "cnt",
+        "label": "수량",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fv",
+        "label": "액면가액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "slprc",
+        "label": "모집(매출)가액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "slta",
+        "label": "모집(매출)총액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "당사회사에관한사항"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "cmpnm",
+        "label": "회사명",
+        "description": "회사명"
+      },
+      {
+        "name": "sen",
+        "label": "구분",
+        "description": "구분"
+      },
+      {
+        "name": "tast",
+        "label": "총자산",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "cpt",
+        "label": "자본금",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "isstk_knd",
+        "label": "발행주식수(주식의종류)",
+        "description": "발행주식수(주식의종류)"
+      },
+      {
+        "name": "isstk_cnt",
+        "label": "발행주식수(주식수)",
+        "description": "9,999,999,999"
+      }
+    ],
+    "group_code": "DS006",
+    "group_name": "registration"
+  },
+  {
+    "api_id": "2020059",
+    "api_name": "분할",
+    "description": "증권신고서(분할) 내에 요약 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/dvRs.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/dvRs.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "일반사항"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "stn",
+        "label": "형태",
+        "description": "형태"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회 결의일",
+        "description": "이사회 결의일"
+      },
+      {
+        "name": "ctrd",
+        "label": "계약일",
+        "description": "계약일"
+      },
+      {
+        "name": "gmtsck_shddstd",
+        "label": "주주총회를 위한 주주확정일",
+        "description": "주주총회를 위한 주주확정일"
+      },
+      {
+        "name": "ap_gmtsck",
+        "label": "승인을 위한 주주총회일",
+        "description": "승인을 위한 주주총회일"
+      },
+      {
+        "name": "aprskh_pd_bgd",
+        "label": "주식매수청구권 행사 기간 및 가격(시작일)",
+        "description": "주식매수청구권 행사 기간 및 가격(시작일)"
+      },
+      {
+        "name": "aprskh_pd_edd",
+        "label": "주식매수청구권 행사 기간 및 가격(종료일)",
+        "description": "주식매수청구권 행사 기간 및 가격(종료일)"
+      },
+      {
+        "name": "aprskh_prc",
+        "label": "주식매수청구권 행사 기간 및 가격((주식매수청구가격-회사제시))",
+        "description": "주식매수청구권 행사 기간 및 가격((주식매수청구가격-회사제시))"
+      },
+      {
+        "name": "mgdt_etc",
+        "label": "합병기일등",
+        "description": "합병기일등"
+      },
+      {
+        "name": "rt_vl",
+        "label": "비율 또는 가액",
+        "description": "비율 또는 가액"
+      },
+      {
+        "name": "exevl_int",
+        "label": "외부평가기관",
+        "description": "외부평가기관"
+      },
+      {
+        "name": "grtmn_etc",
+        "label": "지급 교부금 등",
+        "description": "지급 교부금 등"
+      },
+      {
+        "name": "rpt_rcpn",
+        "label": "주요사항보고서(접수번호)",
+        "description": "주요사항보고서(접수번호)"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "발행증권"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "kndn",
+        "label": "종류",
+        "description": "종류"
+      },
+      {
+        "name": "cnt",
+        "label": "수량",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fv",
+        "label": "액면가액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "slprc",
+        "label": "모집(매출)가액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "slta",
+        "label": "모집(매출)총액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "title",
+        "label": "그룹명칭",
+        "description": "당사회사에관한사항"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "cmpnm",
+        "label": "회사명",
+        "description": "회사명"
+      },
+      {
+        "name": "sen",
+        "label": "구분",
+        "description": "구분"
+      },
+      {
+        "name": "tast",
+        "label": "총자산",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "cpt",
+        "label": "자본금",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "isstk_knd",
+        "label": "발행주식수(주식의종류)",
+        "description": "발행주식수(주식의종류)"
+      },
+      {
+        "name": "isstk_cnt",
+        "label": "발행주식수(주식수)",
+        "description": "9,999,999,999"
+      }
+    ],
+    "group_code": "DS006",
+    "group_name": "registration"
+  }
+]

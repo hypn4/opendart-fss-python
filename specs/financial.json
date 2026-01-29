@@ -1,0 +1,871 @@
+[
+  {
+    "api_id": "2019016",
+    "api_name": "단일회사 주요계정",
+    "description": "상장법인(유가증권, 코스닥) 및 주요 비상장법인(사업보고서 제출대상 &amp; IFRS 적용)이 제출한 정기보고서 내에 XBRL재무제표의 주요계정과목(재무상태표, 손익계산서)을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/fnlttSinglAcnt.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/fnlttSinglAcnt.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(4)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업 연도",
+        "description": "2019"
+      },
+      {
+        "name": "stock_code",
+        "label": "종목 코드",
+        "description": "상장회사의 종목코드(6자리)"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "description": "1분기보고서 : 11013\n반기보고서 : 11012\n3분기보고서 : 11014\n사업보고서 : 11011"
+      },
+      {
+        "name": "account_nm",
+        "label": "계정명",
+        "description": "ex) 자본총계"
+      },
+      {
+        "name": "fs_div",
+        "label": "개별/연결구분",
+        "description": "OFS:재무제표, CFS:연결재무제표"
+      },
+      {
+        "name": "fs_nm",
+        "label": "개별/연결명",
+        "description": "ex) 연결재무제표 또는 재무제표 출력"
+      },
+      {
+        "name": "sj_div",
+        "label": "재무제표구분",
+        "description": "BS:재무상태표, IS:손익계산서"
+      },
+      {
+        "name": "sj_nm",
+        "label": "재무제표명",
+        "description": "ex) 재무상태표 또는 손익계산서 출력"
+      },
+      {
+        "name": "thstrm_nm",
+        "label": "당기명",
+        "description": "ex) 제 13 기 3분기말"
+      },
+      {
+        "name": "thstrm_dt",
+        "label": "당기일자",
+        "description": "ex) 2018.09.30 현재"
+      },
+      {
+        "name": "thstrm_amount",
+        "label": "당기금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "thstrm_add_amount",
+        "label": "당기누적금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "frmtrm_nm",
+        "label": "전기명",
+        "description": "ex) 제 12 기말"
+      },
+      {
+        "name": "frmtrm_dt",
+        "label": "전기일자",
+        "description": "ex) 2017.01.01 ~ 2017.12.31"
+      },
+      {
+        "name": "frmtrm_amount",
+        "label": "전기금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "frmtrm_add_amount",
+        "label": "전기누적금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bfefrmtrm_nm",
+        "label": "전전기명",
+        "description": "ex) 제 11 기말(※ 사업보고서의 경우에만 출력)"
+      },
+      {
+        "name": "bfefrmtrm_dt",
+        "label": "전전기일자",
+        "description": "ex) 2016.12.31 현재(※ 사업보고서의 경우에만 출력)"
+      },
+      {
+        "name": "bfefrmtrm_amount",
+        "label": "전전기금액",
+        "description": "9,999,999,999(※ 사업보고서의 경우에만 출력)"
+      },
+      {
+        "name": "ord",
+        "label": "계정과목 정렬순서",
+        "description": "계정과목 정렬순서"
+      },
+      {
+        "name": "currency",
+        "label": "통화 단위",
+        "description": "통화 단위"
+      }
+    ],
+    "group_code": "DS003",
+    "group_name": "financial"
+  },
+  {
+    "api_id": "2019017",
+    "api_name": "다중회사 주요계정",
+    "description": "상장법인(유가증권, 코스닥) 및 주요 비상장법인(사업보고서 제출대상 &amp; IFRS 적용)이 제출한 정기보고서 내에 XBRL재무제표의 주요계정과목(재무상태표, 손익계산서)을 제공합니다.\n(대상법인 복수조회 복수조회 가능)",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/fnlttMultiAcnt.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/fnlttMultiAcnt.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(4)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업 연도",
+        "description": "사업연도(4자리)"
+      },
+      {
+        "name": "stock_code",
+        "label": "종목 코드",
+        "description": "상장회사의 종목코드(6자리)"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "description": "1분기보고서 : 11013\n반기보고서 : 11012\n3분기보고서 : 11014\n사업보고서 : 11011"
+      },
+      {
+        "name": "account_nm",
+        "label": "계정명",
+        "description": "ex) 자본총계"
+      },
+      {
+        "name": "fs_div",
+        "label": "개별/연결구분",
+        "description": "OFS:재무제표, CFS:연결재무제표"
+      },
+      {
+        "name": "fs_nm",
+        "label": "개별/연결명",
+        "description": "ex) 연결재무제표 또는 재무제표 출력"
+      },
+      {
+        "name": "sj_div",
+        "label": "재무제표구분",
+        "description": "BS:재무상태표, IS:손익계산서"
+      },
+      {
+        "name": "sj_nm",
+        "label": "재무제표명",
+        "description": "ex) 재무상태표 또는 손익계산서 출력"
+      },
+      {
+        "name": "thstrm_nm",
+        "label": "당기명",
+        "description": "ex) 제 13 기 3분기말"
+      },
+      {
+        "name": "thstrm_dt",
+        "label": "당기일자",
+        "description": "ex) 2018.09.30 현재"
+      },
+      {
+        "name": "thstrm_amount",
+        "label": "당기금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "thstrm_add_amount",
+        "label": "당기누적금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "frmtrm_nm",
+        "label": "전기명",
+        "description": "ex) 제 12 기말"
+      },
+      {
+        "name": "frmtrm_dt",
+        "label": "전기일자",
+        "description": "ex) 2017.01.01 ~ 2017.12.31"
+      },
+      {
+        "name": "frmtrm_amount",
+        "label": "전기금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "frmtrm_add_amount",
+        "label": "전기누적금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bfefrmtrm_nm",
+        "label": "전전기명",
+        "description": "ex) 제 11 기말(※ 사업보고서의 경우에만 출력)"
+      },
+      {
+        "name": "bfefrmtrm_dt",
+        "label": "전전기일자",
+        "description": "ex) 2016.12.31 현재(※ 사업보고서의 경우에만 출력)"
+      },
+      {
+        "name": "bfefrmtrm_amount",
+        "label": "전전기금액",
+        "description": "9,999,999,999(※ 사업보고서의 경우에만 출력)"
+      },
+      {
+        "name": "ord",
+        "label": "계정과목 정렬순서",
+        "description": "계정과목 정렬순서"
+      },
+      {
+        "name": "currency",
+        "label": "통화 단위",
+        "description": "통화 단위"
+      }
+    ],
+    "group_code": "DS003",
+    "group_name": "financial"
+  },
+  {
+    "api_id": "2019019",
+    "api_name": "재무제표 원본파일(XBRL)",
+    "description": "상장법인(유가증권, 코스닥) 및 주요 비상장법인(사업보고서 제출대상 &amp; IFRS 적용)이 제출한 정기보고서 내에 XBRL재무제표의 원본파일(XBRL)을 제공합니다.",
+    "endpoints": [],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "접수번호 ※ 조회방법 : 공시검색API 호출 &gt; 응답요청 값 rcept_no 추출"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      }
+    ],
+    "group_code": "DS003",
+    "group_name": "financial"
+  },
+  {
+    "api_id": "2019020",
+    "api_name": "단일회사 전체 재무제표",
+    "description": "상장법인(유가증권, 코스닥) 및 주요 비상장법인(사업보고서 제출대상 &amp; IFRS 적용)이 제출한 정기보고서 내에 XBRL재무제표의 모든계정과목을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/fnlttSinglAcntAll.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/fnlttSinglAcntAll.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(4)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      },
+      {
+        "name": "fs_div",
+        "label": "개별/연결구분",
+        "type": "STRING(3)",
+        "required": true,
+        "description": "OFS:재무제표, CFS:연결재무제표"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "description": "1분기보고서 : 11013\n반기보고서 : 11012\n3분기보고서 : 11014\n사업보고서 : 11011"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업 연도",
+        "description": "2018"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "sj_div",
+        "label": "재무제표구분",
+        "description": "BS : 재무상태표\nIS : 손익계산서 \nCIS : 포괄손익계산서\nCF : 현금흐름표\nSCE : 자본변동표"
+      },
+      {
+        "name": "sj_nm",
+        "label": "재무제표명",
+        "description": "ex) 재무상태표 또는 손익계산서 출력"
+      },
+      {
+        "name": "account_id",
+        "label": "계정ID",
+        "description": "XBRL 표준계정ID\n※ 표준계정ID가 아닐경우 \"\"-표준계정코드 미사용-\"\" 표시"
+      },
+      {
+        "name": "account_nm",
+        "label": "계정명",
+        "description": "계정명칭\nex) 자본총계"
+      },
+      {
+        "name": "account_detail",
+        "label": "계정상세",
+        "description": "※ 자본변동표에만 출력\nex) 계정 상세명칭 예시\n- 자본 [member]|지배기업 소유주지분\n- 자본 [member]|지배기업 소유주지분|기타포괄손익누계액 [member]"
+      },
+      {
+        "name": "thstrm_nm",
+        "label": "당기명",
+        "description": "ex) 제 13 기"
+      },
+      {
+        "name": "thstrm_amount",
+        "label": "당기금액",
+        "description": "9,999,999,999\n※ 분/반기 보고서이면서 (포괄)손익계산서 일 경우 [3개월] 금액"
+      },
+      {
+        "name": "thstrm_add_amount",
+        "label": "당기누적금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "frmtrm_nm",
+        "label": "전기명",
+        "description": "ex) 제 12 기말"
+      },
+      {
+        "name": "frmtrm_amount",
+        "label": "전기금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "frmtrm_q_nm",
+        "label": "전기명(분/반기)",
+        "description": "ex) 제 18 기 반기"
+      },
+      {
+        "name": "frmtrm_q_amount",
+        "label": "전기금액(분/반기)",
+        "description": "9,999,999,999\n※ 분/반기 보고서이면서 (포괄)손익계산서 일 경우 [3개월] 금액"
+      },
+      {
+        "name": "frmtrm_add_amount",
+        "label": "전기누적금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bfefrmtrm_nm",
+        "label": "전전기명",
+        "description": "ex) 제 11 기말(※ 사업보고서의 경우에만 출력)"
+      },
+      {
+        "name": "bfefrmtrm_amount",
+        "label": "전전기금액",
+        "description": "9,999,999,999(※ 사업보고서의 경우에만 출력)"
+      },
+      {
+        "name": "ord",
+        "label": "계정과목 정렬순서",
+        "description": "계정과목 정렬순서"
+      },
+      {
+        "name": "currency",
+        "label": "통화 단위",
+        "description": "통화 단위"
+      }
+    ],
+    "group_code": "DS003",
+    "group_name": "financial"
+  },
+  {
+    "api_id": "2020001",
+    "api_name": "XBRL택사노미재무제표양식",
+    "description": "금융감독원 회계포탈에서 제공하는 IFRS 기반 XBRL 재무제표 공시용 표준계정과목체계(계정과목) 을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/xbrlTaxonomy.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/xbrlTaxonomy.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "sj_div",
+        "label": "재무제표구분",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "(※재무제표구분 참조)"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "sj_div",
+        "label": "재무제표구분",
+        "description": "재무제표구분"
+      },
+      {
+        "name": "account_id",
+        "label": "계정ID",
+        "description": "계정 고유명칭"
+      },
+      {
+        "name": "account_nm",
+        "label": "계정명",
+        "description": "계정명"
+      },
+      {
+        "name": "bsns_de",
+        "label": "기준일",
+        "description": "적용 기준일"
+      },
+      {
+        "name": "label_kor",
+        "label": "한글 출력명",
+        "description": "한글 출력명"
+      },
+      {
+        "name": "label_eng",
+        "label": "영문 출력명",
+        "description": "영문 출력명"
+      },
+      {
+        "name": "data_tp",
+        "label": "데이터 유형",
+        "description": "※ 데이타 유형설명\n\n- text block : 제목\n- Text : Text\n- yyyy-mm-dd : Date\n- X : Monetary Value\n- (X): Monetary Value(Negative)\n- X.XX : Decimalized Value\n- Shares : Number of shares (주식 수)\n- For each : 공시된 항목이 전후로 반복적으로 공시될 경우 사용\n- 공란 : 입력 필요 없음"
+      },
+      {
+        "name": "ifrs_ref",
+        "label": "IFRS Reference",
+        "description": "IFRS Reference"
+      }
+    ],
+    "group_code": "DS003",
+    "group_name": "financial"
+  },
+  {
+    "api_id": "2022001",
+    "api_name": "단일회사 주요 재무지표",
+    "description": "상장법인(유가증권, 코스닥) 및 주요 비상장법인(사업보고서 제출대상 &amp; IFRS 적용)이 제출한 정기보고서 내에 XBRL재무제표의 주요 재무지표를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/fnlttSinglIndx.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/fnlttSinglIndx.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(4)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2023년 3분기 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      },
+      {
+        "name": "idx_cl_code",
+        "label": "지표분류코드",
+        "type": "STRING(7)",
+        "required": true,
+        "description": "수익성지표 : M210000 안정성지표 : M220000 성장성지표 : M230000 활동성지표 : M240000"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "description": "1분기보고서 : 11013"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업 연도",
+        "description": "2023"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "stock_code",
+        "label": "종목 코드",
+        "description": "상장회사의 종목코드(6자리)"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      },
+      {
+        "name": "idx_cl_code",
+        "label": "지표분류코드",
+        "description": "수익성지표 : M210000"
+      },
+      {
+        "name": "idx_cl_nm",
+        "label": "지표분류명",
+        "description": "수익성지표,안정성지표,성장성지표,활동성지표"
+      },
+      {
+        "name": "idx_code",
+        "label": "지표코드",
+        "description": "ex) M211000"
+      },
+      {
+        "name": "idx_nm",
+        "label": "지표명",
+        "description": "ex) 영업이익률"
+      },
+      {
+        "name": "idx_val",
+        "label": "지표값",
+        "description": "ex) 0.256"
+      }
+    ],
+    "group_code": "DS003",
+    "group_name": "financial"
+  },
+  {
+    "api_id": "2022002",
+    "api_name": "다중회사 주요 재무지표",
+    "description": "상장법인(유가증권, 코스닥) 및 주요 비상장법인(사업보고서 제출대상 &amp; IFRS 적용)이 제출한 정기보고서 내에 XBRL재무제표의 주요 재무지표를 제공합니다.(대상법인 복수조회 가능)",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/fnlttCmpnyIndx.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/fnlttCmpnyIndx.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(4)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2023년 3분기 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      },
+      {
+        "name": "idx_cl_code",
+        "label": "지표분류코드",
+        "type": "STRING(7)",
+        "required": true,
+        "description": "수익성지표 : M210000 안정성지표 : M220000 성장성지표 : M230000 활동성지표 : M240000"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "description": "1분기보고서 : 11013"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업 연도",
+        "description": "2023"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "stock_code",
+        "label": "종목 코드",
+        "description": "상장회사의 종목코드(6자리)"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      },
+      {
+        "name": "idx_cl_code",
+        "label": "지표분류코드",
+        "description": "수익성지표 : M210000"
+      },
+      {
+        "name": "idx_cl_nm",
+        "label": "지표분류명",
+        "description": "수익성지표,안정성지표,성장성지표,활동성지표"
+      },
+      {
+        "name": "idx_code",
+        "label": "지표코드",
+        "description": "ex) M211000"
+      },
+      {
+        "name": "idx_nm",
+        "label": "지표명",
+        "description": "ex) 영업이익률"
+      },
+      {
+        "name": "idx_val",
+        "label": "지표값",
+        "description": "ex) 0.256"
+      }
+    ],
+    "group_code": "DS003",
+    "group_name": "financial"
+  }
+]

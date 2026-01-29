@@ -1,0 +1,397 @@
+[
+  {
+    "api_id": "2019001",
+    "api_name": "공시검색",
+    "description": "공시 유형별, 회사별, 날짜별 등 여러가지 조건으로 공시보고서 검색기능을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/list.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/list.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": false,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일",
+        "type": "STRING(8)",
+        "required": false,
+        "description": "검색시작 접수일자(YYYYMMDD) 1) 기본값 : 종료일(end_de) 2) 고유번호(corp_code)가 없는 경우 검색기간은 3개월로 제한"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일",
+        "type": "STRING(8)",
+        "required": false,
+        "description": "검색종료 접수일자(YYYYMMDD) 1) 기본값 : 당일"
+      },
+      {
+        "name": "last_reprt_at",
+        "label": "최종보고서 검색여부",
+        "type": "STRING(1)",
+        "required": false,
+        "description": "최종보고서만 검색여부(Y or N) 1) 기본값 : N(정정이 있는 경우 최종정정만 검색)"
+      },
+      {
+        "name": "pblntf_ty",
+        "label": "공시유형",
+        "type": "STRING(1)",
+        "required": false,
+        "description": "A : 정기공시 B : 주요사항보고 C : 발행공시 D : 지분공시 E : 기타공시 F : 외부감사관련 G : 펀드공시 H : 자산유동화 I : 거래소공시 J : 공정위공시"
+      },
+      {
+        "name": "pblntf_detail_ty",
+        "label": "공시상세유형",
+        "type": "STRING(4)",
+        "required": false,
+        "description": "(※ 상세 유형 참조 : pblntf_detail_ty)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "type": "STRING(1)",
+        "required": false,
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타) ※ 없으면 전체조회, 복수조건 불가"
+      },
+      {
+        "name": "sort",
+        "label": "정렬",
+        "type": "STRING(4)",
+        "required": false,
+        "description": "접수일자: date 회사명 : crp 보고서명 : rpt ※ 기본값 : date"
+      },
+      {
+        "name": "sort_mth",
+        "label": "정렬방법",
+        "type": "STRING(4)",
+        "required": false,
+        "description": "오름차순(asc), 내림차순(desc) ※ 기본값 : desc"
+      },
+      {
+        "name": "page_no",
+        "label": "페이지 번호",
+        "type": "STRING(5)",
+        "required": false,
+        "description": "페이지 번호(1~n) 기본값 : 1"
+      },
+      {
+        "name": "page_count",
+        "label": "페이지 별 건수",
+        "type": "STRING(3)",
+        "required": false,
+        "description": "페이지당 건수(1~100) 기본값 : 10, 최대값 : 100"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "page_no",
+        "label": "페이지 번호",
+        "description": "페이지 번호"
+      },
+      {
+        "name": "page_count",
+        "label": "페이지 별 건수",
+        "description": "페이지 별 건수"
+      },
+      {
+        "name": "total_count",
+        "label": "총 건수",
+        "description": "총 페이지 수"
+      },
+      {
+        "name": "total_page",
+        "label": "총 페이지 수",
+        "description": "총 페이지 수"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_name",
+        "label": "종목명(법인명)",
+        "description": "공시대상회사의 종목명(상장사) 또는 법인명(기타법인)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "stock_code",
+        "label": "종목코드",
+        "description": "상장회사의 종목코드(6자리)"
+      },
+      {
+        "name": "report_nm",
+        "label": "보고서명",
+        "description": "공시구분+보고서명+기타정보"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "flr_nm",
+        "label": "공시 제출인명",
+        "description": "공시 제출인명"
+      },
+      {
+        "name": "rcept_dt",
+        "label": "접수일자",
+        "description": "공시 접수일자(YYYYMMDD)"
+      },
+      {
+        "name": "rm",
+        "label": "비고",
+        "description": "조합된 문자로 각각은 아래와 같은 의미가 있음"
+      }
+    ],
+    "group_code": "DS001",
+    "group_name": "disclosure"
+  },
+  {
+    "api_id": "2019002",
+    "api_name": "기업개황",
+    "description": "DART에 등록되어있는 기업의 개황정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/company.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/company.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "corp_name",
+        "label": "정식명칭",
+        "description": "정식회사명칭"
+      },
+      {
+        "name": "corp_name_eng",
+        "label": "영문명칭",
+        "description": "영문정식회사명칭"
+      },
+      {
+        "name": "stock_name",
+        "label": "종목명(상장사) 또는 약식명칭(기타법인)",
+        "description": "종목명(상장사) 또는 약식명칭(기타법인)"
+      },
+      {
+        "name": "stock_code",
+        "label": "상장회사인 경우 주식의 종목코드",
+        "description": "상장회사의 종목코드(6자리)"
+      },
+      {
+        "name": "ceo_nm",
+        "label": "대표자명",
+        "description": "대표자명"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "jurir_no",
+        "label": "법인등록번호",
+        "description": "법인등록번호"
+      },
+      {
+        "name": "bizr_no",
+        "label": "사업자등록번호",
+        "description": "사업자등록번호"
+      },
+      {
+        "name": "adres",
+        "label": "주소",
+        "description": "주소"
+      },
+      {
+        "name": "hm_url",
+        "label": "홈페이지",
+        "description": "홈페이지"
+      },
+      {
+        "name": "ir_url",
+        "label": "IR홈페이지",
+        "description": "IR홈페이지"
+      },
+      {
+        "name": "phn_no",
+        "label": "전화번호",
+        "description": "전화번호"
+      },
+      {
+        "name": "fax_no",
+        "label": "팩스번호",
+        "description": "팩스번호"
+      },
+      {
+        "name": "induty_code",
+        "label": "업종코드",
+        "description": "업종코드"
+      },
+      {
+        "name": "est_dt",
+        "label": "설립일(YYYYMMDD)",
+        "description": "설립일(YYYYMMDD)"
+      },
+      {
+        "name": "acc_mt",
+        "label": "결산월(MM)",
+        "description": "결산월(MM)"
+      }
+    ],
+    "group_code": "DS001",
+    "group_name": "disclosure"
+  },
+  {
+    "api_id": "2019003",
+    "api_name": "공시서류원본파일",
+    "description": "공시보고서 원본파일을 제공합니다.",
+    "endpoints": [],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "type": "STRING(14)",
+        "required": true,
+        "description": "접수번호"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      }
+    ],
+    "group_code": "DS001",
+    "group_name": "disclosure"
+  },
+  {
+    "api_id": "2019018",
+    "api_name": "고유번호",
+    "description": "DART에 등록되어있는 공시대상회사의 고유번호,회사명,종목코드, 최근변경일자를 파일로 제공합니다.",
+    "endpoints": [],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)\n※ ZIP File 안에 있는 XML파일 정보"
+      },
+      {
+        "name": "corp_name",
+        "label": "정식명칭",
+        "description": "정식회사명칭\n※ ZIP File 안에 있는 XML파일 정보"
+      },
+      {
+        "name": "corp_eng_name",
+        "label": "영문 정식명칭",
+        "description": "영문정식회사명칭"
+      },
+      {
+        "name": "stock_code",
+        "label": "종목코드",
+        "description": "상장회사인 경우 주식의 종목코드(6자리)\n※ ZIP File 안에 있는 XML파일 정보"
+      },
+      {
+        "name": "modify_date",
+        "label": "최종변경일자",
+        "description": "기업개황정보 최종변경일자(YYYYMMDD)\n※ ZIP File 안에 있는 XML파일 정보"
+      }
+    ],
+    "group_code": "DS001",
+    "group_name": "disclosure"
+  }
+]

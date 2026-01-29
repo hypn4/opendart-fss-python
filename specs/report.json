@@ -1,0 +1,3254 @@
+[
+  {
+    "api_id": "2019004",
+    "api_name": "증자(감자) 현황",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 증자(감자) 현황을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/irdsSttus.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/irdsSttus.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(4)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "법인명",
+        "description": "법인명"
+      },
+      {
+        "name": "isu_dcrs_de",
+        "label": "주식발행 감소일자",
+        "description": "주식발행 감소일자"
+      },
+      {
+        "name": "isu_dcrs_stle",
+        "label": "발행 감소 형태",
+        "description": "발행 감소 형태"
+      },
+      {
+        "name": "isu_dcrs_stock_knd",
+        "label": "발행 감소 주식 종류",
+        "description": "발행 감소 주식 종류"
+      },
+      {
+        "name": "isu_dcrs_qy",
+        "label": "발행 감소 수량",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "isu_dcrs_mstvdv_fval_amount",
+        "label": "발행 감소 주당 액면 가액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "isu_dcrs_mstvdv_amount",
+        "label": "발행 감소 주당 가액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2019005",
+    "api_name": "배당에 관한 사항",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 배당에 관한 사항을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/alotMatter.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/alotMatter.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(4)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "법인명",
+        "description": "법인명"
+      },
+      {
+        "name": "se",
+        "label": "구분",
+        "description": "유상증자(주주배정), 전환권행사 등"
+      },
+      {
+        "name": "stock_knd",
+        "label": "주식 종류",
+        "description": "보통주 등"
+      },
+      {
+        "name": "thstrm",
+        "label": "당기",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "frmtrm",
+        "label": "전기",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "lwfr",
+        "label": "전전기",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2019006",
+    "api_name": "자기주식 취득 및 처분 현황",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 자기주식 취득 및 처분 현황을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/tesstkAcqsDspsSttus.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/tesstkAcqsDspsSttus.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(4)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "법인명",
+        "description": "법인명"
+      },
+      {
+        "name": "stock_knd",
+        "label": "주식 종류",
+        "description": "보통주, 우선주 등"
+      },
+      {
+        "name": "bsis_qy",
+        "label": "기초 수량",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "change_qy_acqs",
+        "label": "변동 수량 취득",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "change_qy_dsps",
+        "label": "변동 수량 처분",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "change_qy_incnr",
+        "label": "변동 수량 소각",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "trmend_qy",
+        "label": "기말 수량",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rm",
+        "label": "비고",
+        "description": "비고"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2019007",
+    "api_name": "최대주주 현황",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 최대주주 현황을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/hyslrSttus.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/hyslrSttus.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(4)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "법인명",
+        "description": "법인명"
+      },
+      {
+        "name": "nm",
+        "label": "성명",
+        "description": "홍길동"
+      },
+      {
+        "name": "relate",
+        "label": "관계",
+        "description": "본인, 친인척 등"
+      },
+      {
+        "name": "stock_knd",
+        "label": "주식 종류",
+        "description": "보통주 등"
+      },
+      {
+        "name": "bsis_posesn_stock_co",
+        "label": "기초 소유 주식 수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bsis_posesn_stock_qota_rt",
+        "label": "기초 소유 주식 지분 율",
+        "description": "0.00"
+      },
+      {
+        "name": "trmend_posesn_stock_co",
+        "label": "기말 소유 주식 수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "trmend_posesn_stock_qota_rt",
+        "label": "기말 소유 주식 지분 율",
+        "description": "0.00"
+      },
+      {
+        "name": "rm",
+        "label": "비고",
+        "description": "비고"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2019008",
+    "api_name": "최대주주 변동현황",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 최대주주 변동현황을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/hyslrChgSttus.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/hyslrChgSttus.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(4)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "법인명",
+        "description": "법인명"
+      },
+      {
+        "name": "change_on",
+        "label": "변동 일",
+        "description": "YYYY.MM.DD"
+      },
+      {
+        "name": "mxmm_shrholdr_nm",
+        "label": "최대 주주 명",
+        "description": "홍길동"
+      },
+      {
+        "name": "posesn_stock_co",
+        "label": "소유 주식 수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "qota_rt",
+        "label": "지분 율",
+        "description": "0.00"
+      },
+      {
+        "name": "change_cause",
+        "label": "변동 원인",
+        "description": ""
+      },
+      {
+        "name": "rm",
+        "label": "비고",
+        "description": ""
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2019009",
+    "api_name": "소액주주 현황",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 소액주주 현황을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/mrhlSttus.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/mrhlSttus.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(4)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "법인명",
+        "description": "법인명"
+      },
+      {
+        "name": "se",
+        "label": "구분",
+        "description": "소액주주"
+      },
+      {
+        "name": "shrholdr_co",
+        "label": "주주수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "shrholdr_tot_co",
+        "label": "전체 주주수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "shrholdr_rate",
+        "label": "주주 비율",
+        "description": "0.00"
+      },
+      {
+        "name": "hold_stock_co",
+        "label": "보유 주식수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "stock_tot_co",
+        "label": "총발행 주식수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "hold_stock_rate",
+        "label": "보유 주식 비율",
+        "description": "0.00"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2019010",
+    "api_name": "임원 현황",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 임원 현황을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/exctvSttus.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/exctvSttus.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(4)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "법인명",
+        "description": "법인명"
+      },
+      {
+        "name": "nm",
+        "label": "성명",
+        "description": "홍길동"
+      },
+      {
+        "name": "sexdstn",
+        "label": "성별",
+        "description": "남"
+      },
+      {
+        "name": "birth_ym",
+        "label": "출생 년월",
+        "description": "YYYY년 MM월"
+      },
+      {
+        "name": "ofcps",
+        "label": "직위",
+        "description": "회장, 사장, 사외이사 등"
+      },
+      {
+        "name": "rgist_exctv_at",
+        "label": "등기 임원 여부",
+        "description": "등기임원, 미등기임원 등"
+      },
+      {
+        "name": "fte_at",
+        "label": "상근 여부",
+        "description": "상근, 비상근"
+      },
+      {
+        "name": "chrg_job",
+        "label": "담당 업무",
+        "description": "대표이사, 이사, 사외이사 등"
+      },
+      {
+        "name": "main_career",
+        "label": "주요 경력",
+        "description": ""
+      },
+      {
+        "name": "mxmm_shrholdr_relate",
+        "label": "최대 주주 관계",
+        "description": ""
+      },
+      {
+        "name": "hffc_pd",
+        "label": "재직 기간",
+        "description": ""
+      },
+      {
+        "name": "tenure_end_on",
+        "label": "임기 만료 일",
+        "description": ""
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2019011",
+    "api_name": "직원 현황",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 직원 현황을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/empSttus.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/empSttus.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(4)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "법인명",
+        "description": "법인명"
+      },
+      {
+        "name": "fo_bbm",
+        "label": "사 업부문",
+        "description": ""
+      },
+      {
+        "name": "sexdstn",
+        "label": "성별",
+        "description": "남, 여"
+      },
+      {
+        "name": "reform_bfe_emp_co_rgllbr",
+        "label": "개정 전 직원 수 정규직",
+        "description": ""
+      },
+      {
+        "name": "reform_bfe_emp_co_cnttk",
+        "label": "개정 전 직원 수 계약직",
+        "description": ""
+      },
+      {
+        "name": "reform_bfe_emp_co_etc",
+        "label": "개정 전 직원 수 기타",
+        "description": ""
+      },
+      {
+        "name": "rgllbr_co",
+        "label": "정규직 수",
+        "description": "상근, 비상근"
+      },
+      {
+        "name": "rgllbr_abacpt_labrr_co",
+        "label": "정규직 단시간 근로자 수",
+        "description": "대표이사, 이사, 사외이사 등"
+      },
+      {
+        "name": "cnttk_co",
+        "label": "계약직 수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "cnttk_abacpt_labrr_co",
+        "label": "계약직 단시간 근로자 수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "sm",
+        "label": "합계",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "avrg_cnwk_sdytrn",
+        "label": "평균 근속 연수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fyer_salary_totamt",
+        "label": "연간 급여 총액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "jan_salary_am",
+        "label": "1인평균 급여 액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rm",
+        "label": "비고",
+        "description": ""
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2019012",
+    "api_name": "이사·감사의 개인별 보수현황(5억원 이상)",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 이사·감사의 개인별 보수현황(5억원 이상)을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/hmvAuditIndvdlBySttus.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/hmvAuditIndvdlBySttus.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(4)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "법인명",
+        "description": "법인명"
+      },
+      {
+        "name": "nm",
+        "label": "이름",
+        "description": "홍길동"
+      },
+      {
+        "name": "ofcps",
+        "label": "직위",
+        "description": "이사, 대표이사 등"
+      },
+      {
+        "name": "mendng_totamt",
+        "label": "보수 총액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "mendng_totamt_ct_incls_mendng",
+        "label": "보수 총액 비 포함 보수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2019013",
+    "api_name": "이사·감사 전체의 보수현황(보수지급금액 - 이사·감사 전체)",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 이사·감사 전체의 보수현황(보수지급금액 - 이사·감사 전체)을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/hmvAuditAllSttus.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/hmvAuditAllSttus.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(4)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "법인명",
+        "description": "법인명"
+      },
+      {
+        "name": "nmpr",
+        "label": "인원수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "mendng_totamt",
+        "label": "보수 총액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "jan_avrg_mendng_am",
+        "label": "1인 평균 보수 액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rm",
+        "label": "비고",
+        "description": ""
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2019014",
+    "api_name": "개인별 보수지급 금액(5억이상 상위5인)",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 개인별 보수지급 금액(5억이상 상위5인)을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/indvdlByPay.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/indvdlByPay.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(4)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "법인명",
+        "description": "법인명"
+      },
+      {
+        "name": "nm",
+        "label": "이름",
+        "description": "홍길동"
+      },
+      {
+        "name": "ofcps",
+        "label": "직위",
+        "description": "대표이사 등"
+      },
+      {
+        "name": "mendng_totamt",
+        "label": "보수 총액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "mendng_totamt_ct_incls_mendng",
+        "label": "보수 총액 비 포함 보수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2019015",
+    "api_name": "타법인 출자현황",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 타법인 출자현황을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/otrCprInvstmntSttus.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/otrCprInvstmntSttus.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(4)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "inv_prm",
+        "label": "법인명",
+        "description": "법인명"
+      },
+      {
+        "name": "frst_acqs_de",
+        "label": "최초 취득 일자",
+        "description": "최초취득일자(YYYYMMDD)"
+      },
+      {
+        "name": "invstmnt_purps",
+        "label": "출자 목적",
+        "description": "출자목적(자회사 등)"
+      },
+      {
+        "name": "frst_acqs_amount",
+        "label": "최초 취득 금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bsis_blce_qy",
+        "label": "기초 잔액 수량",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bsis_blce_qota_rt",
+        "label": "기초 잔액 지분 율",
+        "description": "0.00"
+      },
+      {
+        "name": "bsis_blce_acntbk_amount",
+        "label": "기초 잔액 장부 가액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "incrs_dcrs_acqs_dsps_qy",
+        "label": "증가 감소 취득 처분 수량",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "incrs_dcrs_acqs_dsps_amount",
+        "label": "증가 감소 취득 처분 금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "incrs_dcrs_evl_lstmn",
+        "label": "증가 감소 평가 손액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "trmend_blce_qy",
+        "label": "기말 잔액 수량",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "trmend_blce_qota_rt",
+        "label": "기말 잔액 지분 율",
+        "description": "0.00"
+      },
+      {
+        "name": "trmend_blce_acntbk_amount",
+        "label": "기말 잔액 장부 가액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "recent_bsns_year_fnnr_sttus_tot_assets",
+        "label": "최근 사업 연도 재무 현황 총 자산",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "recent_bsns_year_fnnr_sttus_thstrm_ntpf",
+        "label": "최근 사업 연도 재무 현황 당기 순이익",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2020002",
+    "api_name": "주식의 총수 현황",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 주식의총수현황을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/stockTotqySttus.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/stockTotqySttus.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(1)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "se",
+        "label": "구분",
+        "description": "구분(증권의종류, 합계, 비고)"
+      },
+      {
+        "name": "isu_stock_totqy",
+        "label": "발행할 주식의 총수",
+        "description": "Ⅰ. 발행할 주식의 총수, 9,999,999,999"
+      },
+      {
+        "name": "now_to_isu_stock_totqy",
+        "label": "현재까지 발행한 주식의 총수",
+        "description": "Ⅱ. 현재까지 발행한 주식의 총수, 9,999,999,999"
+      },
+      {
+        "name": "now_to_dcrs_stock_totqy",
+        "label": "현재까지 감소한 주식의 총수",
+        "description": "Ⅲ. 현재까지 감소한 주식의 총수, 9,999,999,999"
+      },
+      {
+        "name": "redc",
+        "label": "감자",
+        "description": "Ⅲ. 현재까지 감소한 주식의 총수(1. 감자), 9,999,999,999"
+      },
+      {
+        "name": "profit_incnr",
+        "label": "이익소각",
+        "description": "Ⅲ. 현재까지 감소한 주식의 총수(2. 이익소각), 9,999,999,999"
+      },
+      {
+        "name": "rdmstk_repy",
+        "label": "상환주식의 상환",
+        "description": "Ⅲ. 현재까지 감소한 주식의 총수(3. 상환주식의 상환), 9,999,999,999"
+      },
+      {
+        "name": "etc",
+        "label": "기타",
+        "description": "Ⅲ. 현재까지 감소한 주식의 총수(4. 기타), 9,999,999,999"
+      },
+      {
+        "name": "istc_totqy",
+        "label": "발행주식의 총수",
+        "description": "Ⅳ. 발행주식의 총수 (Ⅱ-Ⅲ), 9,999,999,999"
+      },
+      {
+        "name": "tesstk_co",
+        "label": "자기주식수",
+        "description": "Ⅴ. 자기주식수, 9,999,999,999"
+      },
+      {
+        "name": "distb_stock_co",
+        "label": "유통주식수",
+        "description": "Ⅵ. 유통주식수 (Ⅳ-Ⅴ), 9,999,999,999"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2020003",
+    "api_name": "채무증권 발행실적",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 채무증권 발행실적을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/detScritsIsuAcmslt.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/detScritsIsuAcmslt.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(1)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "isu_cmpny",
+        "label": "발행회사",
+        "description": "발행회사"
+      },
+      {
+        "name": "scrits_knd_nm",
+        "label": "증권종류",
+        "description": "증권종류"
+      },
+      {
+        "name": "isu_mth_nm",
+        "label": "발행방법",
+        "description": "발행방법"
+      },
+      {
+        "name": "isu_de",
+        "label": "발행일자",
+        "description": "발행일자(YYYYMMDD)"
+      },
+      {
+        "name": "facvalu_totamt",
+        "label": "권면(전자등록)총액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "intrt",
+        "label": "이자율",
+        "description": "0.00"
+      },
+      {
+        "name": "evl_grad_instt",
+        "label": "평가등급(평가기관)",
+        "description": "평가등급(평가기관)"
+      },
+      {
+        "name": "mtd",
+        "label": "만기일",
+        "description": "만기일(YYYYMMDD)"
+      },
+      {
+        "name": "repy_at",
+        "label": "상환여부",
+        "description": "상환여부"
+      },
+      {
+        "name": "mngt_cmpny",
+        "label": "주관회사",
+        "description": "주관회사"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2020004",
+    "api_name": "기업어음증권 미상환 잔액",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 기업어음증권 미상환 잔액을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/entrprsBilScritsNrdmpBlce.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/entrprsBilScritsNrdmpBlce.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(1)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "sm",
+        "label": "합계",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2020005",
+    "api_name": "단기사채 미상환 잔액",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 단기사채 미상환 잔액을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/srtpdPsndbtNrdmpBlce.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/srtpdPsndbtNrdmpBlce.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(1)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "sm",
+        "label": "합계",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "isu_lmt",
+        "label": "발행 한도",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "remndr_lmt",
+        "label": "잔여 한도",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2020006",
+    "api_name": "회사채 미상환 잔액",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 회사채 미상환 잔액을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/cprndNrdmpBlce.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/cprndNrdmpBlce.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(1)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "sm",
+        "label": "합계",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2020007",
+    "api_name": "신종자본증권 미상환 잔액",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 신종자본증권 미상환 잔액을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/newCaplScritsNrdmpBlce.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/newCaplScritsNrdmpBlce.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(1)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "sm",
+        "label": "합계",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2020008",
+    "api_name": "조건부 자본증권 미상환 잔액",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 조건부 자본증권 미상환 잔액을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/cndlCaplScritsNrdmpBlce.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/cndlCaplScritsNrdmpBlce.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(1)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "sm",
+        "label": "합계",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2020009",
+    "api_name": "회계감사인의 명칭 및 감사의견",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 회계감사인의 명칭 및 감사의견을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/accnutAdtorNmNdAdtOpinion.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/accnutAdtorNmNdAdtOpinion.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(1)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "description": "사업연도(당기, 전기, 전전기)"
+      },
+      {
+        "name": "adtor",
+        "label": "감사인",
+        "description": "감사인"
+      },
+      {
+        "name": "adt_opinion",
+        "label": "감사의견",
+        "description": "감사의견"
+      },
+      {
+        "name": "adt_reprt_spcmnt_matter",
+        "label": "감사보고서 특기사항",
+        "description": "감사보고서 특기사항"
+      },
+      {
+        "name": "emphs_matter",
+        "label": "강조사항 등",
+        "description": "강조사항 등"
+      },
+      {
+        "name": "core_adt_matter",
+        "label": "핵심감사사항",
+        "description": "핵심감사사항"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2020010",
+    "api_name": "감사용역체결현황",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 감사용역체결현황을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/adtServcCnclsSttus.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/adtServcCnclsSttus.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(1)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "description": "사업연도(당기, 전기, 전전기)"
+      },
+      {
+        "name": "adtor",
+        "label": "감사인",
+        "description": "감사인"
+      },
+      {
+        "name": "cn",
+        "label": "내용",
+        "description": "내용"
+      },
+      {
+        "name": "mendng",
+        "label": "보수",
+        "description": "보수"
+      },
+      {
+        "name": "tot_reqre_time",
+        "label": "총소요시간",
+        "description": "총소요시간"
+      },
+      {
+        "name": "adt_cntrct_dtls_mendng",
+        "label": "감사계약내역(보수)",
+        "description": "감사계약내역(보수)"
+      },
+      {
+        "name": "adt_cntrct_dtls_time",
+        "label": "감사계약내역(시간)",
+        "description": "감사계약내역(시간)"
+      },
+      {
+        "name": "real_exc_dtls_mendng",
+        "label": "실제수행내역(보수)",
+        "description": "실제수행내역(보수)"
+      },
+      {
+        "name": "real_exc_dtls_time",
+        "label": "실제수행내역(시간)",
+        "description": "실제수행내역(시간)"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2020011",
+    "api_name": "회계감사인과의 비감사용역 계약체결 현황",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 회계감사인과의 비감사용역 계약체결 현황을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/accnutAdtorNonAdtServcCnclsSttus.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/accnutAdtorNonAdtServcCnclsSttus.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(1)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "description": "사업연도(당기, 전기, 전전기)"
+      },
+      {
+        "name": "cntrct_cncls_de",
+        "label": "계약체결일",
+        "description": "계약체결일"
+      },
+      {
+        "name": "servc_cn",
+        "label": "용역내용",
+        "description": "용역내용"
+      },
+      {
+        "name": "servc_exc_pd",
+        "label": "용역수행기간",
+        "description": "용역수행기간"
+      },
+      {
+        "name": "servc_mendng",
+        "label": "용역보수",
+        "description": "용역보수"
+      },
+      {
+        "name": "rm",
+        "label": "비고",
+        "description": "비고"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2020012",
+    "api_name": "사외이사 및 그 변동현황",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 사외이사 및 그 변동현황을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/outcmpnyDrctrNdChangeSttus.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/outcmpnyDrctrNdChangeSttus.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(1)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "drctr_co",
+        "label": "이사의 수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "otcmp_drctr_co",
+        "label": "사외이사 수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "apnt",
+        "label": "사외이사 변동현황(선임)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rlsofc",
+        "label": "사외이사 변동현황(해임)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "mdstrm_resig",
+        "label": "사외이사 변동현황(중도퇴임)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2020013",
+    "api_name": "미등기임원 보수현황",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 미등기임원 보수현황을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/unrstExctvMendngSttus.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/unrstExctvMendngSttus.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(1)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "se",
+        "label": "구분",
+        "description": "구분(미등기임원)"
+      },
+      {
+        "name": "nmpr",
+        "label": "인원수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fyer_salary_totamt",
+        "label": "연간급여 총액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "jan_salary_am",
+        "label": "1인평균 급여액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rm",
+        "label": "비고",
+        "description": "비고"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2020014",
+    "api_name": "이사·감사 전체의 보수현황(주주총회 승인금액)",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 이사·감사 전체의 보수현황(주주총회 승인금액)을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/drctrAdtAllMendngSttusGmtsckConfmAmount.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/drctrAdtAllMendngSttusGmtsckConfmAmount.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(1)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "se",
+        "label": "구분",
+        "description": "구분"
+      },
+      {
+        "name": "nmpr",
+        "label": "인원수",
+        "description": "인원수"
+      },
+      {
+        "name": "gmtsck_confm_amount",
+        "label": "주주총회 승인금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rm",
+        "label": "비고",
+        "description": "비고"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2020015",
+    "api_name": "이사·감사 전체의 보수현황(보수지급금액 - 유형별)",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 이사·감사 전체의 보수현황(보수지급금액 - 유형별)을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/drctrAdtAllMendngSttusMendngPymntamtTyCl.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/drctrAdtAllMendngSttusMendngPymntamtTyCl.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(1)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "se",
+        "label": "구분",
+        "description": "구분"
+      },
+      {
+        "name": "nmpr",
+        "label": "인원수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "pymnt_totamt",
+        "label": "보수총액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rm",
+        "label": "비고",
+        "description": "비고"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2020016",
+    "api_name": "공모자금의 사용내역",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 공모자금의 사용내역을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/pssrpCptalUseDtls.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/pssrpCptalUseDtls.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(1)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "se_nm",
+        "label": "구분",
+        "description": "구분"
+      },
+      {
+        "name": "tm",
+        "label": "회차",
+        "description": "회차"
+      },
+      {
+        "name": "pay_de",
+        "label": "납입일",
+        "description": "납입일"
+      },
+      {
+        "name": "pay_amount",
+        "label": "납입금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "on_dclrt_cptal_use_plan",
+        "label": "신고서상 자금사용 계획",
+        "description": "신고서상 자금사용 계획"
+      },
+      {
+        "name": "real_cptal_use_sttus",
+        "label": "실제 자금사용 현황",
+        "description": "실제 자금사용 현황"
+      },
+      {
+        "name": "rs_cptal_use_plan_useprps",
+        "label": "증권신고서 등의 자금사용 계획(사용용도)",
+        "description": "증권신고서 등의 자금사용 계획(사용용도)"
+      },
+      {
+        "name": "rs_cptal_use_plan_prcure_amount",
+        "label": "증권신고서 등의 자금사용 계획(조달금액)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "real_cptal_use_dtls_cn",
+        "label": "실제 자금사용 내역(내용)",
+        "description": "실제 자금사용 내역(내용)"
+      },
+      {
+        "name": "real_cptal_use_dtls_amount",
+        "label": "실제 자금사용 내역(금액)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dffrnc_occrrnc_resn",
+        "label": "차이발생 사유 등",
+        "description": "차이발생 사유 등"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  },
+  {
+    "api_id": "2020017",
+    "api_name": "사모자금의 사용내역",
+    "description": "정기보고서(사업, 분기, 반기보고서) 내에 사모자금의 사용내역을 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/prvsrpCptalUseDtls.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/prvsrpCptalUseDtls.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bsns_year",
+        "label": "사업연도",
+        "type": "STRING(1)",
+        "required": true,
+        "description": "사업연도(4자리) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "reprt_code",
+        "label": "보고서 코드",
+        "type": "STRING(5)",
+        "required": true,
+        "description": "1분기보고서 : 11013 반기보고서 : 11012 3분기보고서 : 11014 사업보고서 : 11011"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "se_nm",
+        "label": "구분",
+        "description": "구분"
+      },
+      {
+        "name": "tm",
+        "label": "회차",
+        "description": "회차"
+      },
+      {
+        "name": "pay_de",
+        "label": "납입일",
+        "description": "납입일"
+      },
+      {
+        "name": "pay_amount",
+        "label": "납입금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "cptal_use_plan",
+        "label": "자금사용 계획",
+        "description": "자금사용 계획"
+      },
+      {
+        "name": "real_cptal_use_sttus",
+        "label": "실제 자금사용 현황",
+        "description": "실제 자금사용 현황"
+      },
+      {
+        "name": "mtrpt_cptal_use_plan_useprps",
+        "label": "주요사항보고서의 자금사용 계획(사용용도)",
+        "description": "주요사항보고서의 자금사용 계획(사용용도)"
+      },
+      {
+        "name": "mtrpt_cptal_use_plan_prcure_amount",
+        "label": "주요사항보고서의 자금사용 계획(조달금액)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "real_cptal_use_dtls_cn",
+        "label": "실제 자금사용 내역(내용)",
+        "description": "실제 자금사용 내역(내용)"
+      },
+      {
+        "name": "real_cptal_use_dtls_amount",
+        "label": "실제 자금사용 내역(금액)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dffrnc_occrrnc_resn",
+        "label": "차이발생 사유 등",
+        "description": "차이발생 사유 등"
+      },
+      {
+        "name": "stlm_dt",
+        "label": "결산기준일",
+        "description": "YYYY-MM-DD"
+      }
+    ],
+    "group_code": "DS002",
+    "group_name": "report"
+  }
+]

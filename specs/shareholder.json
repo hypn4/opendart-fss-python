@@ -1,0 +1,217 @@
+[
+  {
+    "api_id": "2019021",
+    "api_name": "대량보유 상황보고",
+    "description": "주식등의 대량보유상황보고서 내에 대량보유 상황보고 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/majorstock.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/majorstock.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "rcept_dt",
+        "label": "접수일자",
+        "description": "공시 접수일자(YYYYMMDD)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사의 종목명(상장사) 또는 법인명(기타법인)"
+      },
+      {
+        "name": "report_tp",
+        "label": "보고구분",
+        "description": "주식등의 대량보유상황 보고구분"
+      },
+      {
+        "name": "repror",
+        "label": "대표보고자",
+        "description": "대표보고자"
+      },
+      {
+        "name": "stkqy",
+        "label": "보유주식등의 수",
+        "description": "보유주식등의 수"
+      },
+      {
+        "name": "stkqy_irds",
+        "label": "보유주식등의 증감",
+        "description": "보유주식등의 증감"
+      },
+      {
+        "name": "stkrt",
+        "label": "보유비율",
+        "description": "보유비율"
+      },
+      {
+        "name": "stkrt_irds",
+        "label": "보유비율 증감",
+        "description": "보유비율 증감"
+      },
+      {
+        "name": "ctr_stkqy",
+        "label": "주요체결 주식등의 수",
+        "description": "주요체결 주식등의 수"
+      },
+      {
+        "name": "ctr_stkrt",
+        "label": "주요체결 보유비율",
+        "description": "주요체결 보유비율"
+      },
+      {
+        "name": "report_resn",
+        "label": "보고사유",
+        "description": "보고사유"
+      }
+    ],
+    "group_code": "DS004",
+    "group_name": "shareholder"
+  },
+  {
+    "api_id": "2019022",
+    "api_name": "임원ㆍ주요주주 소유보고",
+    "description": "임원ㆍ주요주주특정증권등 소유상황보고서 내에 임원ㆍ주요주주 소유보고 \n정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/elestock.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/elestock.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "rcept_dt",
+        "label": "접수일자",
+        "description": "공시 접수일자(YYYY-MM-DD)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "회사명"
+      },
+      {
+        "name": "repror",
+        "label": "보고자",
+        "description": "보고자명"
+      },
+      {
+        "name": "isu_exctv_rgist_at",
+        "label": "발행 회사 관계 임원(등기여부)",
+        "description": "등기임원, 비등기임원 등"
+      },
+      {
+        "name": "isu_exctv_ofcps",
+        "label": "발행 회사 관계 임원 직위",
+        "description": "대표이사, 이사, 전무 등"
+      },
+      {
+        "name": "isu_main_shrholdr",
+        "label": "발행 회사 관계 주요 주주",
+        "description": "10%이상주주 등"
+      },
+      {
+        "name": "sp_stock_lmp_cnt",
+        "label": "특정 증권 등 소유 수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "sp_stock_lmp_irds_cnt",
+        "label": "특정 증권 등 소유 증감 수",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "sp_stock_lmp_rate",
+        "label": "특정 증권 등 소유 비율",
+        "description": "0.00"
+      },
+      {
+        "name": "sp_stock_lmp_irds_rate",
+        "label": "특정 증권 등 소유 증감 비율",
+        "description": "0.00"
+      }
+    ],
+    "group_code": "DS004",
+    "group_name": "shareholder"
+  }
+]

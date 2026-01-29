@@ -1,0 +1,7671 @@
+[
+  {
+    "api_id": "2020018",
+    "api_name": "자산양수도(기타), 풋백옵션",
+    "description": "주요사항보고서(자산양수도(기타), 풋백옵션) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/astInhtrfEtcPtbkOpt.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/astInhtrfEtcPtbkOpt.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "rp_rsn",
+        "label": "보고 사유",
+        "description": "보고 사유"
+      },
+      {
+        "name": "ast_inhtrf_prc",
+        "label": "자산양수ㆍ도 가액",
+        "description": "9,999,999,999"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020019",
+    "api_name": "부도발생",
+    "description": "주요사항보고서(부도발생) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/dfOcr.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/dfOcr.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "df_cn",
+        "label": "부도내용",
+        "description": "부도내용"
+      },
+      {
+        "name": "df_amt",
+        "label": "부도금액",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "df_bnk",
+        "label": "부도발생은행",
+        "description": "부도발생은행"
+      },
+      {
+        "name": "dfd",
+        "label": "최종부도(당좌거래정지)일자",
+        "description": "최종부도(당좌거래정지)일자"
+      },
+      {
+        "name": "df_rs",
+        "label": "부도사유 및 경위",
+        "description": "부도사유 및 경위"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020020",
+    "api_name": "영업정지",
+    "description": "주요사항보고서(영업정지) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/bsnSp.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/bsnSp.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "bsnsp_rm",
+        "label": "영업정지 분야",
+        "description": "영업정지 분야"
+      },
+      {
+        "name": "bsnsp_amt",
+        "label": "영업정지 내역(영업정지금액)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rsl",
+        "label": "영업정지 내역(최근매출총액)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "sl_vs",
+        "label": "영업정지 내역(매출액 대비)",
+        "description": "영업정지 내역(매출액 대비)"
+      },
+      {
+        "name": "ls_atn",
+        "label": "영업정지 내역(대규모법인여부)",
+        "description": "영업정지 내역(대규모법인여부)"
+      },
+      {
+        "name": "krx_stt_atn",
+        "label": "영업정지 내역(거래소 의무공시 해당 여부)",
+        "description": "영업정지 내역(거래소 의무공시 해당 여부)"
+      },
+      {
+        "name": "bsnsp_cn",
+        "label": "영업정지 내용",
+        "description": "영업정지 내용"
+      },
+      {
+        "name": "bsnsp_rs",
+        "label": "영업정지사유",
+        "description": "영업정지사유"
+      },
+      {
+        "name": "ft_ctp",
+        "label": "향후대책",
+        "description": "향후대책"
+      },
+      {
+        "name": "bsnsp_af",
+        "label": "영업정지영향",
+        "description": "영업정지영향"
+      },
+      {
+        "name": "bsnspd",
+        "label": "영업정지일자",
+        "description": "영업정지일자"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사 참석여부(참석)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사 참석여부(불참)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(감사위원) 참석여부",
+        "description": "감사(감사위원) 참석여부"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020021",
+    "api_name": "회생절차 개시신청",
+    "description": "주요사항보고서(회생절차 개시신청) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/ctrcvsBgrq.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/ctrcvsBgrq.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "apcnt",
+        "label": "신청인 (회사와의 관계)",
+        "description": "신청인 (회사와의 관계)"
+      },
+      {
+        "name": "cpct",
+        "label": "관할법원",
+        "description": "관할법원"
+      },
+      {
+        "name": "rq_rs",
+        "label": "신청사유",
+        "description": "신청사유"
+      },
+      {
+        "name": "rqd",
+        "label": "신청일자",
+        "description": "신청일자"
+      },
+      {
+        "name": "ft_ctp_sc",
+        "label": "향후대책 및 일정",
+        "description": "향후대책 및 일정"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020022",
+    "api_name": "해산사유 발생",
+    "description": "주요사항보고서(해산사유 발생) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/dsRsOcr.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/dsRsOcr.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "ds_rs",
+        "label": "해산사유",
+        "description": "해산사유"
+      },
+      {
+        "name": "ds_rsd",
+        "label": "해산사유발생일(결정일)",
+        "description": "해산사유발생일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사 참석여부(참석)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사 참석여부(불참)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(감사위원) 참석 여부",
+        "description": "감사(감사위원) 참석 여부"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020023",
+    "api_name": "유상증자 결정",
+    "description": "주요사항보고서(유상증자 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/piicDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/piicDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "nstk_ostk_cnt",
+        "label": "신주의 종류와 수(보통주식 (주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "nstk_estk_cnt",
+        "label": "신주의 종류와 수(기타주식 (주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fv_ps",
+        "label": "1주당 액면가액 (원)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bfic_tisstk_ostk",
+        "label": "증자전 발행주식총수 (주)(보통주식 (주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bfic_tisstk_estk",
+        "label": "증자전 발행주식총수 (주)(기타주식 (주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_fclt",
+        "label": "자금조달의 목적(시설자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_bsninh",
+        "label": "자금조달의 목적(영업양수자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_op",
+        "label": "자금조달의 목적(운영자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_dtrp",
+        "label": "자금조달의 목적(채무상환자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_ocsa",
+        "label": "자금조달의 목적(타법인 증권 취득자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_etc",
+        "label": "자금조달의 목적(기타자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ic_mthn",
+        "label": "증자방식",
+        "description": "증자방식"
+      },
+      {
+        "name": "ssl_at",
+        "label": "공매도 해당여부",
+        "description": "공매도 해당여부"
+      },
+      {
+        "name": "ssl_bgd",
+        "label": "공매도 시작일",
+        "description": "공매도 시작일"
+      },
+      {
+        "name": "ssl_edd",
+        "label": "공매도 종료일",
+        "description": "공매도 종료일"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020024",
+    "api_name": "무상증자 결정",
+    "description": "주요사항보고서(무상증자 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/fricDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/fricDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "nstk_ostk_cnt",
+        "label": "신주의 종류와 수(보통주식 (주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "nstk_estk_cnt",
+        "label": "신주의 종류와 수(기타주식 (주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fv_ps",
+        "label": "1주당 액면가액 (원)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bfic_tisstk_ostk",
+        "label": "증자전 발행주식총수 (주)(보통주식 (주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bfic_tisstk_estk",
+        "label": "증자전 발행주식총수 (주)(기타주식 (주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "nstk_asstd",
+        "label": "신주배정기준일",
+        "description": "신주배정기준일"
+      },
+      {
+        "name": "nstk_ascnt_ps_ostk",
+        "label": "1주당 신주배정 주식수(보통주식 (주))",
+        "description": "9,999,999,999.9x (소수점 최대 20자리)"
+      },
+      {
+        "name": "nstk_ascnt_ps_estk",
+        "label": "1주당 신주배정 주식수(기타주식 (주))",
+        "description": "9,999,999,999.9x (소수점 최대 20자리)"
+      },
+      {
+        "name": "nstk_dividrk",
+        "label": "신주의 배당기산일",
+        "description": "신주의 배당기산일"
+      },
+      {
+        "name": "nstk_dlprd",
+        "label": "신주권교부예정일",
+        "description": "신주권교부예정일"
+      },
+      {
+        "name": "nstk_lstprd",
+        "label": "신주의 상장 예정일",
+        "description": "신주의 상장 예정일"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사 참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사 참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(감사위원)참석 여부",
+        "description": "감사(감사위원)참석 여부"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020025",
+    "api_name": "유무상증자 결정",
+    "description": "주요사항보고서(유무상증자 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/pifricDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/pifricDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "piic_nstk_ostk_cnt",
+        "label": "유상증자(신주의 종류와 수(보통주식 (주)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "piic_nstk_estk_cnt",
+        "label": "유상증자(신주의 종류와 수(기타주식 (주)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "piic_fv_ps",
+        "label": "유상증자(1주당 액면가액 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "piic_bfic_tisstk_ostk",
+        "label": "유상증자(증자전 발행주식총수 (주)(보통주식 (주)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "piic_bfic_tisstk_estk",
+        "label": "유상증자(증자전 발행주식총수 (주)(기타주식 (주)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "piic_fdpp_fclt",
+        "label": "유상증자(자금조달의 목적(시설자금 (원)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "piic_fdpp_bsninh",
+        "label": "유상증자(자금조달의 목적(영업양수자금 (원)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "piic_fdpp_op",
+        "label": "유상증자(자금조달의 목적(운영자금 (원)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "piic_fdpp_dtrp",
+        "label": "유상증자(자금조달의 목적(채무상환자금 (원)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "piic_fdpp_ocsa",
+        "label": "유상증자(자금조달의 목적(타법인 증권 취득자금 (원)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "piic_fdpp_etc",
+        "label": "유상증자(자금조달의 목적(기타자금 (원)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "piic_ic_mthn",
+        "label": "유상증자(증자방식)",
+        "description": "유상증자(증자방식)"
+      },
+      {
+        "name": "fric_nstk_ostk_cnt",
+        "label": "무상증자(신주의 종류와 수(보통주식 (주)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fric_nstk_estk_cnt",
+        "label": "무상증자(신주의 종류와 수(기타주식 (주)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fric_fv_ps",
+        "label": "무상증자(1주당 액면가액 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fric_bfic_tisstk_ostk",
+        "label": "무상증자(증자전 발행주식총수(보통주식 (주)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fric_bfic_tisstk_estk",
+        "label": "무상증자(증자전 발행주식총수(기타주식 (주)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fric_nstk_asstd",
+        "label": "무상증자(신주배정기준일)",
+        "description": "무상증자(신주배정기준일)"
+      },
+      {
+        "name": "fric_nstk_ascnt_ps_ostk",
+        "label": "무상증자(1주당 신주배정 주식수(보통주식 (주)))",
+        "description": "9,999,999,999.9x (소수점 최대 20자리)"
+      },
+      {
+        "name": "fric_nstk_ascnt_ps_estk",
+        "label": "무상증자(1주당 신주배정 주식수(기타주식 (주)))",
+        "description": "9,999,999,999.9x (소수점 최대 20자리)"
+      },
+      {
+        "name": "fric_nstk_dividrk",
+        "label": "무상증자(신주의 배당기산일)",
+        "description": "무상증자(신주의 배당기산일)"
+      },
+      {
+        "name": "fric_nstk_dlprd",
+        "label": "무상증자(신주권교부예정일)",
+        "description": "무상증자(신주권교부예정일)"
+      },
+      {
+        "name": "fric_nstk_lstprd",
+        "label": "무상증자(신주의 상장 예정일)",
+        "description": "무상증자(신주의 상장 예정일)"
+      },
+      {
+        "name": "fric_bddd",
+        "label": "무상증자(이사회결의일(결정일))",
+        "description": "무상증자(이사회결의일(결정일))"
+      },
+      {
+        "name": "fric_od_a_at_t",
+        "label": "무상증자(사외이사 참석여부(참석(명)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fric_od_a_at_b",
+        "label": "무상증자(사외이사 참석여부(불참(명)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fric_adt_a_atn",
+        "label": "무상증자(감사(감사위원)참석 여부)",
+        "description": "무상증자(감사(감사위원)참석 여부)"
+      },
+      {
+        "name": "ssl_at",
+        "label": "공매도 해당여부",
+        "description": "공매도 해당여부"
+      },
+      {
+        "name": "ssl_bgd",
+        "label": "공매도 시작일",
+        "description": "공매도 시작일"
+      },
+      {
+        "name": "ssl_edd",
+        "label": "공매도 종료일",
+        "description": "공매도 종료일"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020026",
+    "api_name": "감자 결정",
+    "description": "주요사항보고서(감자 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/crDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/crDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "crstk_ostk_cnt",
+        "label": "감자주식의 종류와 수(보통주식 (주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "crstk_estk_cnt",
+        "label": "감자주식의 종류와 수(기타주식 (주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fv_ps",
+        "label": "1주당 액면가액 (원)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bfcr_cpt",
+        "label": "감자전후 자본금(감자전 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atcr_cpt",
+        "label": "감자전후 자본금(감자후 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bfcr_tisstk_ostk",
+        "label": "감자전후 발행주식수(보통주식 (주)(감자전 (원)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atcr_tisstk_ostk",
+        "label": "감자전후 발행주식수(보통주식 (주)(감자후 (원)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bfcr_tisstk_estk",
+        "label": "감자전후 발행주식수(기타주식 (주)(감자전 (원)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atcr_tisstk_estk",
+        "label": "감자전후 발행주식수(기타주식 (주)(감자후 (원)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "cr_rt_ostk",
+        "label": "감자비율(보통주식 (%))",
+        "description": "감자비율(보통주식 (%))"
+      },
+      {
+        "name": "cr_rt_estk",
+        "label": "감자비율(기타주식 (%))",
+        "description": "감자비율(기타주식 (%))"
+      },
+      {
+        "name": "cr_std",
+        "label": "감자기준일",
+        "description": "감자기준일"
+      },
+      {
+        "name": "cr_mth",
+        "label": "감자방법",
+        "description": "감자방법"
+      },
+      {
+        "name": "cr_rs",
+        "label": "감자사유",
+        "description": "감자사유"
+      },
+      {
+        "name": "crsc_gmtsck_prd",
+        "label": "감자일정(주주총회 예정일)",
+        "description": "감자일정(주주총회 예정일)"
+      },
+      {
+        "name": "crsc_trnmsppd",
+        "label": "감자일정(명의개서정지기간)",
+        "description": "감자일정(명의개서정지기간)"
+      },
+      {
+        "name": "crsc_osprpd",
+        "label": "감자일정(구주권 제출기간)",
+        "description": "감자일정(구주권 제출기간)"
+      },
+      {
+        "name": "crsc_trspprpd",
+        "label": "감자일정(매매거래 정지예정기간)",
+        "description": "감자일정(매매거래 정지예정기간)"
+      },
+      {
+        "name": "crsc_osprpd_bgd",
+        "label": "감자일정(구주권 제출기간(시작일))",
+        "description": "감자일정(구주권 제출기간(시작일))"
+      },
+      {
+        "name": "crsc_osprpd_edd",
+        "label": "감자일정(구주권 제출기간(종료일))",
+        "description": "감자일정(구주권 제출기간(종료일))"
+      },
+      {
+        "name": "crsc_trspprpd_bgd",
+        "label": "감자일정(매매거래 정지예정기간(시작일))",
+        "description": "감자일정(매매거래 정지예정기간(시작일))"
+      },
+      {
+        "name": "crsc_trspprpd_edd",
+        "label": "감자일정(매매거래 정지예정기간(종료일))",
+        "description": "감자일정(매매거래 정지예정기간(종료일))"
+      },
+      {
+        "name": "crsc_nstkdlprd",
+        "label": "감자일정(신주권교부예정일)",
+        "description": "감자일정(신주권교부예정일)"
+      },
+      {
+        "name": "crsc_nstklstprd",
+        "label": "감자일정(신주상장예정일)",
+        "description": "감자일정(신주상장예정일)"
+      },
+      {
+        "name": "cdobprpd_bgd",
+        "label": "채권자 이의제출기간(시작일)",
+        "description": "채권자 이의제출기간(시작일)"
+      },
+      {
+        "name": "cdobprpd_edd",
+        "label": "채권자 이의제출기간(종료일)",
+        "description": "채권자 이의제출기간(종료일)"
+      },
+      {
+        "name": "ospr_nstkdl_pl",
+        "label": "구주권제출 및 신주권교부장소",
+        "description": "구주권제출 및 신주권교부장소"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사 참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사 참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(감사위원) 참석여부",
+        "description": "감사(감사위원) 참석여부"
+      },
+      {
+        "name": "ftc_stt_atn",
+        "label": "공정거래위원회 신고대상 여부",
+        "description": "공정거래위원회 신고대상 여부"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020027",
+    "api_name": "채권은행 등의 관리절차 개시",
+    "description": "주요사항보고서(채권은행 등의 관리절차 개시) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/bnkMngtPcbg.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/bnkMngtPcbg.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "mngt_pcbg_dd",
+        "label": "관리절차개시 결정일자",
+        "description": "관리절차개시 결정일자"
+      },
+      {
+        "name": "mngt_int",
+        "label": "관리기관",
+        "description": "관리기관"
+      },
+      {
+        "name": "mngt_pd",
+        "label": "관리기간",
+        "description": "관리기간"
+      },
+      {
+        "name": "mngt_rs",
+        "label": "관리사유",
+        "description": "관리사유"
+      },
+      {
+        "name": "cfd",
+        "label": "확인일자",
+        "description": "확인일자"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020028",
+    "api_name": "소송 등의 제기",
+    "description": "주요사항보고서(소송 등의 제기) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/lwstLg.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/lwstLg.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "icnm",
+        "label": "사건의 명칭",
+        "description": "사건의 명칭"
+      },
+      {
+        "name": "ac_ap",
+        "label": "원고ㆍ신청인",
+        "description": "원고ㆍ신청인"
+      },
+      {
+        "name": "rq_cn",
+        "label": "청구내용",
+        "description": "청구내용"
+      },
+      {
+        "name": "cpct",
+        "label": "관할법원",
+        "description": "관할법원"
+      },
+      {
+        "name": "ft_ctp",
+        "label": "향후대책",
+        "description": "향후대책"
+      },
+      {
+        "name": "lgd",
+        "label": "제기일자",
+        "description": "제기일자"
+      },
+      {
+        "name": "cfd",
+        "label": "확인일자",
+        "description": "확인일자"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020029",
+    "api_name": "해외 증권시장 주권등 상장 결정",
+    "description": "주요사항보고서(해외 증권시장 주권등 상장 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/ovLstDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/ovLstDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "lstprstk_ostk_cnt",
+        "label": "상장예정주식 종류ㆍ수(주)(보통주식)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "lstprstk_estk_cnt",
+        "label": "상장예정주식 종류ㆍ수(주)(기타주식)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "tisstk_ostk",
+        "label": "발행주식 총수(주)(보통주식)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "tisstk_estk",
+        "label": "발행주식 총수(주)(기타주식)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "psmth_nstk_sl",
+        "label": "공모방법(신주발행 (주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "psmth_ostk_sl",
+        "label": "공모방법(구주매출 (주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp",
+        "label": "자금조달(신주발행) 목적",
+        "description": "자금조달(신주발행) 목적"
+      },
+      {
+        "name": "lststk_orlst",
+        "label": "상장증권(원주상장 (주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "lststk_drlst",
+        "label": "상장증권(DR상장 (주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "lstex_nt",
+        "label": "상장거래소(소재국가)",
+        "description": "상장거래소(소재국가)"
+      },
+      {
+        "name": "lstpp",
+        "label": "해외상장목적",
+        "description": "해외상장목적"
+      },
+      {
+        "name": "lstprd",
+        "label": "상장예정일자",
+        "description": "상장예정일자"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사 참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사 참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(감사위원)참석여부",
+        "description": "감사(감사위원)참석여부"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020030",
+    "api_name": "해외 증권시장 주권등 상장폐지 결정",
+    "description": "주요사항보고서(해외 증권시장 주권등 상장폐지 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/ovDlstDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/ovDlstDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "dlststk_ostk_cnt",
+        "label": "상장폐지주식 종류ㆍ수(주)(보통주식)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dlststk_estk_cnt",
+        "label": "상장폐지주식 종류ㆍ수(주)(기타주식)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "lstex_nt",
+        "label": "상장거래소(소재국가)",
+        "description": "상장거래소(소재국가)"
+      },
+      {
+        "name": "dlstrq_prd",
+        "label": "폐지신청예정일자",
+        "description": "폐지신청예정일자"
+      },
+      {
+        "name": "dlst_prd",
+        "label": "폐지(예정)일자",
+        "description": "폐지(예정)일자"
+      },
+      {
+        "name": "dlst_rs",
+        "label": "폐지사유",
+        "description": "폐지사유"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(확인일)",
+        "description": "이사회결의일(확인일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사 참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사 참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(감사위원)참석여부",
+        "description": "감사(감사위원)참석여부"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020031",
+    "api_name": "해외 증권시장 주권등 상장",
+    "description": "주요사항보고서(해외 증권시장 주권등 상장) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/ovLst.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/ovLst.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "lststk_ostk_cnt",
+        "label": "상장주식 종류 및 수(보통주식(주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "lststk_estk_cnt",
+        "label": "상장주식 종류 및 수(기타주식(주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "lstex_nt",
+        "label": "상장거래소(소재국가)",
+        "description": "상장거래소(소재국가)"
+      },
+      {
+        "name": "stk_cd",
+        "label": "종목 명 (code)",
+        "description": "종목 명 (code)"
+      },
+      {
+        "name": "lstd",
+        "label": "상장일자",
+        "description": "상장일자"
+      },
+      {
+        "name": "cfd",
+        "label": "확인일자",
+        "description": "확인일자"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020032",
+    "api_name": "해외 증권시장 주권등 상장폐지",
+    "description": "주요사항보고서(해외 증권시장 주권등 상장폐지) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/ovDlst.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/ovDlst.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "lstex_nt",
+        "label": "상장거래소 및 소재국가",
+        "description": "상장거래소 및 소재국가"
+      },
+      {
+        "name": "dlststk_ostk_cnt",
+        "label": "상장폐지주식의 종류(보통주식(주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dlststk_estk_cnt",
+        "label": "상장폐지주식의 종류(기타주식(주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "tredd",
+        "label": "매매거래종료일",
+        "description": "매매거래종료일"
+      },
+      {
+        "name": "dlst_rs",
+        "label": "폐지사유",
+        "description": "폐지사유"
+      },
+      {
+        "name": "cfd",
+        "label": "확인일자",
+        "description": "확인일자"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020033",
+    "api_name": "전환사채권 발행결정",
+    "description": "주요사항보고서(전환사채권 발행결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/cvbdIsDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/cvbdIsDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "bd_tm",
+        "label": "사채의 종류(회차)",
+        "description": "사채의 종류(회차)"
+      },
+      {
+        "name": "bd_knd",
+        "label": "사채의 종류(종류)",
+        "description": "사채의 종류(종류)"
+      },
+      {
+        "name": "bd_fta",
+        "label": "사채의 권면(전자등록)총액 (원)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atcsc_rmislmt",
+        "label": "정관상 잔여 발행한도 (원)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ovis_fta",
+        "label": "해외발행(권면(전자등록)총액)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ovis_fta_crn",
+        "label": "해외발행(권면(전자등록)총액(통화단위))",
+        "description": "해외발행(권면(전자등록)총액(통화단위))"
+      },
+      {
+        "name": "ovis_ster",
+        "label": "해외발행(기준환율등)",
+        "description": "해외발행(기준환율등)"
+      },
+      {
+        "name": "ovis_isar",
+        "label": "해외발행(발행지역)",
+        "description": "해외발행(발행지역)"
+      },
+      {
+        "name": "ovis_mktnm",
+        "label": "해외발행(해외상장시 시장의 명칭)",
+        "description": "해외발행(해외상장시 시장의 명칭)"
+      },
+      {
+        "name": "fdpp_fclt",
+        "label": "자금조달의 목적(시설자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_bsninh",
+        "label": "자금조달의 목적(영업양수자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_op",
+        "label": "자금조달의 목적(운영자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_dtrp",
+        "label": "자금조달의 목적(채무상환자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_ocsa",
+        "label": "자금조달의 목적(타법인 증권 취득자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_etc",
+        "label": "자금조달의 목적(기타자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bd_intr_ex",
+        "label": "사채의 이율(표면이자율 (%))",
+        "description": "사채의 이율(표면이자율 (%))"
+      },
+      {
+        "name": "bd_intr_sf",
+        "label": "사채의 이율(만기이자율 (%))",
+        "description": "사채의 이율(만기이자율 (%))"
+      },
+      {
+        "name": "bd_mtd",
+        "label": "사채만기일",
+        "description": "사채만기일"
+      },
+      {
+        "name": "bdis_mthn",
+        "label": "사채발행방법",
+        "description": "사채발행방법"
+      },
+      {
+        "name": "cv_rt",
+        "label": "전환에 관한 사항(전환비율 (%))",
+        "description": "전환에 관한 사항(전환비율 (%))"
+      },
+      {
+        "name": "cv_prc",
+        "label": "전환에 관한 사항(전환가액 (원/주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "cvisstk_knd",
+        "label": "전환에 관한 사항(전환에 따라 발행할 주식(종류))",
+        "description": "전환에 관한 사항(전환에 따라 발행할 주식(종류))"
+      },
+      {
+        "name": "cvisstk_cnt",
+        "label": "전환에 관한 사항(전환에 따라 발행할 주식(주식수))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "cvisstk_tisstk_vs",
+        "label": "전환에 관한 사항(전환에 따라 발행할 주식(주식총수 대비 비율(%)))",
+        "description": "전환에 관한 사항(전환에 따라 발행할 주식(주식총수 대비 비율(%)))"
+      },
+      {
+        "name": "cvrqpd_bgd",
+        "label": "전환에 관한 사항(전환청구기간(시작일))",
+        "description": "전환에 관한 사항(전환청구기간(시작일))"
+      },
+      {
+        "name": "cvrqpd_edd",
+        "label": "전환에 관한 사항(전환청구기간(종료일))",
+        "description": "전환에 관한 사항(전환청구기간(종료일))"
+      },
+      {
+        "name": "act_mktprcfl_cvprc_lwtrsprc",
+        "label": "전환에 관한 사항(시가하락에 따른 전환가액 조정(최저 조정가액 (원)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "act_mktprcfl_cvprc_lwtrsprc_bs",
+        "label": "전환에 관한 사항(시가하락에 따른 전환가액 조정(최저 조정가액 근거))",
+        "description": "전환에 관한 사항(시가하락에 따른 전환가액 조정(최저 조정가액 근거))"
+      },
+      {
+        "name": "abmg",
+        "label": "합병 관련 사항",
+        "description": "합병 관련 사항"
+      },
+      {
+        "name": "sbd",
+        "label": "청약일",
+        "description": "청약일"
+      },
+      {
+        "name": "pymd",
+        "label": "납입일",
+        "description": "납입일"
+      },
+      {
+        "name": "rpmcmp",
+        "label": "대표주관회사",
+        "description": "대표주관회사"
+      },
+      {
+        "name": "grint",
+        "label": "보증기관",
+        "description": "보증기관"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사 참석여부(참석 (명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사 참석여부(불참 (명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(감사위원) 참석여부",
+        "description": "감사(감사위원) 참석여부"
+      },
+      {
+        "name": "rs_sm_atn",
+        "label": "증권신고서 제출대상 여부",
+        "description": "증권신고서 제출대상 여부"
+      },
+      {
+        "name": "ex_sm_r",
+        "label": "제출을 면제받은 경우 그 사유",
+        "description": "제출을 면제받은 경우 그 사유"
+      },
+      {
+        "name": "ovis_ltdtl",
+        "label": "당해 사채의 해외발행과 연계된 대차거래 내역",
+        "description": "당해 사채의 해외발행과 연계된 대차거래 내역"
+      },
+      {
+        "name": "ftc_stt_atn",
+        "label": "공정거래위원회 신고대상 여부",
+        "description": "공정거래위원회 신고대상 여부"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020034",
+    "api_name": "신주인수권부사채권 발행결정",
+    "description": "주요사항보고서(신주인수권부사채권 발행결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/bdwtIsDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/bdwtIsDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "bd_tm",
+        "label": "사채의 종류(회차)",
+        "description": "사채의 종류(회차)"
+      },
+      {
+        "name": "bd_knd",
+        "label": "사채의 종류(종류)",
+        "description": "사채의 종류(종류)"
+      },
+      {
+        "name": "bd_fta",
+        "label": "사채의 권면(전자등록)총액 (원)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atcsc_rmislmt",
+        "label": "정관상 잔여 발행한도 (원)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ovis_fta",
+        "label": "해외발행(권면(전자등록)총액)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ovis_fta_crn",
+        "label": "해외발행(권면(전자등록)총액(통화단위))",
+        "description": "해외발행(권면(전자등록)총액(통화단위))"
+      },
+      {
+        "name": "ovis_ster",
+        "label": "해외발행(기준환율등)",
+        "description": "해외발행(기준환율등)"
+      },
+      {
+        "name": "ovis_isar",
+        "label": "해외발행(발행지역)",
+        "description": "해외발행(발행지역)"
+      },
+      {
+        "name": "ovis_mktnm",
+        "label": "해외발행(해외상장시 시장의 명칭)",
+        "description": "해외발행(해외상장시 시장의 명칭)"
+      },
+      {
+        "name": "fdpp_fclt",
+        "label": "자금조달의 목적(시설자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_bsninh",
+        "label": "자금조달의 목적(영업양수자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_op",
+        "label": "자금조달의 목적(운영자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_dtrp",
+        "label": "자금조달의 목적(채무상환자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_ocsa",
+        "label": "자금조달의 목적(타법인 증권 취득자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_etc",
+        "label": "자금조달의 목적(기타자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bd_intr_ex",
+        "label": "사채의 이율(표면이자율 (%))",
+        "description": "사채의 이율(표면이자율 (%))"
+      },
+      {
+        "name": "bd_intr_sf",
+        "label": "사채의 이율(만기이자율 (%))",
+        "description": "사채의 이율(만기이자율 (%))"
+      },
+      {
+        "name": "bd_mtd",
+        "label": "사채만기일",
+        "description": "사채만기일"
+      },
+      {
+        "name": "bdis_mthn",
+        "label": "사채발행방법",
+        "description": "사채발행방법"
+      },
+      {
+        "name": "ex_rt",
+        "label": "신주인수권에 관한 사항(행사비율 (%))",
+        "description": "신주인수권에 관한 사항(행사비율 (%))"
+      },
+      {
+        "name": "ex_prc",
+        "label": "신주인수권에 관한 사항(행사가액 (원/주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ex_prc_dmth",
+        "label": "신주인수권에 관한 사항(행사가액 결정방법)",
+        "description": "신주인수권에 관한 사항(행사가액 결정방법)"
+      },
+      {
+        "name": "bdwt_div_atn",
+        "label": "신주인수권에 관한 사항(사채와 인수권의 분리여부)",
+        "description": "신주인수권에 관한 사항(사채와 인수권의 분리여부)"
+      },
+      {
+        "name": "nstk_pym_mth",
+        "label": "신주인수권에 관한 사항(신주대금 납입방법)",
+        "description": "신주인수권에 관한 사항(신주대금 납입방법)"
+      },
+      {
+        "name": "nstk_isstk_knd",
+        "label": "신주인수권에 관한 사항(신주인수권 행사에 따라 발행할 주식(종류))",
+        "description": "신주인수권에 관한 사항(신주인수권 행사에 따라 발행할 주식(종류))"
+      },
+      {
+        "name": "nstk_isstk_cnt",
+        "label": "신주인수권에 관한 사항(신주인수권 행사에 따라 발행할 주식(주식수))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "nstk_isstk_tisstk_vs",
+        "label": "신주인수권에 관한 사항(신주인수권 행사에 따라 발행할 주식(주식총수 대비 비율(%)))",
+        "description": "신주인수권에 관한 사항(신주인수권 행사에 따라 발행할 주식(주식총수 대비 비율(%)))"
+      },
+      {
+        "name": "expd_bgd",
+        "label": "신주인수권에 관한 사항(권리행사기간(시작일))",
+        "description": "신주인수권에 관한 사항(권리행사기간(시작일))"
+      },
+      {
+        "name": "expd_edd",
+        "label": "신주인수권에 관한 사항(권리행사기간(종료일))",
+        "description": "신주인수권에 관한 사항(권리행사기간(종료일))"
+      },
+      {
+        "name": "act_mktprcfl_cvprc_lwtrsprc",
+        "label": "신주인수권에 관한 사항(시가하락에 따른 행사가액 조정(최저 조정가액 (원)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "act_mktprcfl_cvprc_lwtrsprc_bs",
+        "label": "신주인수권에 관한 사항(시가하락에 따른 행사가액 조정(최저 조정가액 근거))",
+        "description": "신주인수권에 관한 사항(시가하락에 따른 행사가액 조정(최저 조정가액 근거))"
+      },
+      {
+        "name": "abmg",
+        "label": "합병 관련 사항",
+        "description": "합병 관련 사항"
+      },
+      {
+        "name": "sbd",
+        "label": "청약일",
+        "description": "청약일"
+      },
+      {
+        "name": "pymd",
+        "label": "납입일",
+        "description": "납입일"
+      },
+      {
+        "name": "rpmcmp",
+        "label": "대표주관회사",
+        "description": "대표주관회사"
+      },
+      {
+        "name": "grint",
+        "label": "보증기관",
+        "description": "보증기관"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사 참석여부(참석 (명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사 참석여부(불참 (명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(감사위원) 참석여부",
+        "description": "감사(감사위원) 참석여부"
+      },
+      {
+        "name": "rs_sm_atn",
+        "label": "증권신고서 제출대상 여부",
+        "description": "증권신고서 제출대상 여부"
+      },
+      {
+        "name": "ex_sm_r",
+        "label": "제출을 면제받은 경우 그 사유",
+        "description": "제출을 면제받은 경우 그 사유"
+      },
+      {
+        "name": "ovis_ltdtl",
+        "label": "당해 사채의 해외발행과 연계된 대차거래 내역",
+        "description": "당해 사채의 해외발행과 연계된 대차거래 내역"
+      },
+      {
+        "name": "ftc_stt_atn",
+        "label": "공정거래위원회 신고대상 여부",
+        "description": "공정거래위원회 신고대상 여부"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020035",
+    "api_name": "교환사채권 발행결정",
+    "description": "주요사항보고서(교환사채권 발행결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/exbdIsDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/exbdIsDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "bd_tm",
+        "label": "사채의 종류(회차)",
+        "description": "사채의 종류(회차)"
+      },
+      {
+        "name": "bd_knd",
+        "label": "사채의 종류(종류)",
+        "description": "사채의 종류(종류)"
+      },
+      {
+        "name": "bd_fta",
+        "label": "사채의 권면(전자등록)총액 (원)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ovis_fta",
+        "label": "해외발행(권면(전자등록)총액)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ovis_fta_crn",
+        "label": "해외발행(권면(전자등록)총액(통화단위))",
+        "description": "해외발행(권면(전자등록)총액(통화단위))"
+      },
+      {
+        "name": "ovis_ster",
+        "label": "해외발행(기준환율등)",
+        "description": "해외발행(기준환율등)"
+      },
+      {
+        "name": "ovis_isar",
+        "label": "해외발행(발행지역)",
+        "description": "해외발행(발행지역)"
+      },
+      {
+        "name": "ovis_mktnm",
+        "label": "해외발행(해외상장시 시장의 명칭)",
+        "description": "해외발행(해외상장시 시장의 명칭)"
+      },
+      {
+        "name": "fdpp_fclt",
+        "label": "자금조달의 목적(시설자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_bsninh",
+        "label": "자금조달의 목적(영업양수자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_op",
+        "label": "자금조달의 목적(운영자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_dtrp",
+        "label": "자금조달의 목적(채무상환자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_ocsa",
+        "label": "자금조달의 목적(타법인 증권 취득자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_etc",
+        "label": "자금조달의 목적(기타자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bd_intr_ex",
+        "label": "사채의 이율(표면이자율 (%))",
+        "description": "사채의 이율(표면이자율 (%))"
+      },
+      {
+        "name": "bd_intr_sf",
+        "label": "사채의 이율(만기이자율 (%))",
+        "description": "사채의 이율(만기이자율 (%))"
+      },
+      {
+        "name": "bd_mtd",
+        "label": "사채만기일",
+        "description": "사채만기일"
+      },
+      {
+        "name": "bdis_mthn",
+        "label": "사채발행방법",
+        "description": "사채발행방법"
+      },
+      {
+        "name": "ex_rt",
+        "label": "교환에 관한 사항(교환비율 (%))",
+        "description": "교환에 관한 사항(교환비율 (%))"
+      },
+      {
+        "name": "ex_prc",
+        "label": "교환에 관한 사항(교환가액 (원/주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ex_prc_dmth",
+        "label": "교환에 관한 사항(교환가액 결정방법)",
+        "description": "교환에 관한 사항(교환가액 결정방법)"
+      },
+      {
+        "name": "extg",
+        "label": "교환에 관한 사항(교환대상(종류))",
+        "description": "교환에 관한 사항(교환대상(종류))"
+      },
+      {
+        "name": "extg_stkcnt",
+        "label": "교환에 관한 사항(교환대상(주식수))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "extg_tisstk_vs",
+        "label": "교환에 관한 사항(교환대상(주식총수 대비 비율(%)))",
+        "description": "교환에 관한 사항(교환대상(주식총수 대비 비율(%)))"
+      },
+      {
+        "name": "exrqpd_bgd",
+        "label": "교환에 관한 사항(교환청구기간(시작일))",
+        "description": "교환에 관한 사항(교환청구기간(시작일))"
+      },
+      {
+        "name": "exrqpd_edd",
+        "label": "교환에 관한 사항(교환청구기간(종료일))",
+        "description": "교환에 관한 사항(교환청구기간(종료일))"
+      },
+      {
+        "name": "sbd",
+        "label": "청약일",
+        "description": "청약일"
+      },
+      {
+        "name": "pymd",
+        "label": "납입일",
+        "description": "납입일"
+      },
+      {
+        "name": "rpmcmp",
+        "label": "대표주관회사",
+        "description": "대표주관회사"
+      },
+      {
+        "name": "grint",
+        "label": "보증기관",
+        "description": "보증기관"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사 참석여부(참석 (명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사 참석여부(불참 (명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(감사위원) 참석여부",
+        "description": "감사(감사위원) 참석여부"
+      },
+      {
+        "name": "rs_sm_atn",
+        "label": "증권신고서 제출대상 여부",
+        "description": "증권신고서 제출대상 여부"
+      },
+      {
+        "name": "ex_sm_r",
+        "label": "제출을 면제받은 경우 그 사유",
+        "description": "제출을 면제받은 경우 그 사유"
+      },
+      {
+        "name": "ovis_ltdtl",
+        "label": "당해 사채의 해외발행과 연계된 대차거래 내역",
+        "description": "당해 사채의 해외발행과 연계된 대차거래 내역"
+      },
+      {
+        "name": "ftc_stt_atn",
+        "label": "공정거래위원회 신고대상 여부",
+        "description": "공정거래위원회 신고대상 여부"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020036",
+    "api_name": "채권은행 등의 관리절차 중단",
+    "description": "주요사항보고서(채권은행 등의 관리절차 중단) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/bnkMngtPcsp.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/bnkMngtPcsp.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "mngt_pcsp_dd",
+        "label": "관리절차중단 결정일자",
+        "description": "관리절차중단 결정일자"
+      },
+      {
+        "name": "mngt_int",
+        "label": "관리기관",
+        "description": "관리기관"
+      },
+      {
+        "name": "sp_rs",
+        "label": "중단사유",
+        "description": "중단사유"
+      },
+      {
+        "name": "ft_ctp",
+        "label": "향후대책",
+        "description": "향후대책"
+      },
+      {
+        "name": "cfd",
+        "label": "확인일자",
+        "description": "확인일자"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020037",
+    "api_name": "상각형 조건부자본증권 발행결정",
+    "description": "주요사항보고서(상각형 조건부자본증권 발행결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/wdCocobdIsDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/wdCocobdIsDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "bd_tm",
+        "label": "사채의 종류(회차)",
+        "description": "사채의 종류(회차)"
+      },
+      {
+        "name": "bd_knd",
+        "label": "사채의 종류(종류)",
+        "description": "사채의 종류(종류)"
+      },
+      {
+        "name": "bd_fta",
+        "label": "사채의 권면(전자등록)총액 (원)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ovis_fta",
+        "label": "해외발행(권면(전자등록)총액)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ovis_fta_crn",
+        "label": "해외발행(권면(전자등록)총액(통화단위))",
+        "description": "해외발행(권면(전자등록)총액(통화단위))"
+      },
+      {
+        "name": "ovis_ster",
+        "label": "해외발행(기준환율등)",
+        "description": "해외발행(기준환율등)"
+      },
+      {
+        "name": "ovis_isar",
+        "label": "해외발행(발행지역)",
+        "description": "해외발행(발행지역)"
+      },
+      {
+        "name": "ovis_mktnm",
+        "label": "해외발행(해외상장시 시장의 명칭)",
+        "description": "해외발행(해외상장시 시장의 명칭)"
+      },
+      {
+        "name": "fdpp_fclt",
+        "label": "자금조달의 목적(시설자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_bsninh",
+        "label": "자금조달의 목적(영업양수자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_op",
+        "label": "자금조달의 목적(운영자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_dtrp",
+        "label": "자금조달의 목적(채무상환자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_ocsa",
+        "label": "자금조달의 목적(타법인 증권 취득자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "fdpp_etc",
+        "label": "자금조달의 목적(기타자금 (원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bd_intr_sf",
+        "label": "사채의 이율(표면이자율 (%))",
+        "description": "사채의 이율(표면이자율 (%))"
+      },
+      {
+        "name": "bd_intr_ex",
+        "label": "사채의 이율(만기이자율 (%))",
+        "description": "사채의 이율(만기이자율 (%))"
+      },
+      {
+        "name": "bd_mtd",
+        "label": "사채만기일",
+        "description": "사채만기일"
+      },
+      {
+        "name": "dbtrs_sc",
+        "label": "채무재조정에 관한 사항(채무재조정의 범위)",
+        "description": "채무재조정에 관한 사항(채무재조정의 범위)"
+      },
+      {
+        "name": "sbd",
+        "label": "청약일",
+        "description": "청약일"
+      },
+      {
+        "name": "pymd",
+        "label": "납입일",
+        "description": "납입일"
+      },
+      {
+        "name": "rpmcmp",
+        "label": "대표주관회사",
+        "description": "대표주관회사"
+      },
+      {
+        "name": "grint",
+        "label": "보증기관",
+        "description": "보증기관"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사 참석여부(참석 (명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사 참석여부(불참 (명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(감사위원) 참석여부",
+        "description": "감사(감사위원) 참석여부"
+      },
+      {
+        "name": "rs_sm_atn",
+        "label": "증권신고서 제출대상 여부",
+        "description": "증권신고서 제출대상 여부"
+      },
+      {
+        "name": "ex_sm_r",
+        "label": "제출을 면제받은 경우 그 사유",
+        "description": "제출을 면제받은 경우 그 사유"
+      },
+      {
+        "name": "ovis_ltdtl",
+        "label": "당해 사채의 해외발행과 연계된 대차거래 내역",
+        "description": "당해 사채의 해외발행과 연계된 대차거래 내역"
+      },
+      {
+        "name": "ftc_stt_atn",
+        "label": "공정거래위원회 신고대상 여부",
+        "description": "공정거래위원회 신고대상 여부"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020038",
+    "api_name": "자기주식 취득 결정",
+    "description": "주요사항보고서(자기주식 취득 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/tsstkAqDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/tsstkAqDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "aqpln_stk_ostk",
+        "label": "취득예정주식(주)(보통주식)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aqpln_stk_estk",
+        "label": "취득예정주식(주)(기타주식)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aqpln_prc_ostk",
+        "label": "취득예정금액(원)(보통주식)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aqpln_prc_estk",
+        "label": "취득예정금액(원)(기타주식)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aqexpd_bgd",
+        "label": "취득예상기간(시작일)",
+        "description": "취득예상기간(시작일)"
+      },
+      {
+        "name": "aqexpd_edd",
+        "label": "취득예상기간(종료일)",
+        "description": "취득예상기간(종료일)"
+      },
+      {
+        "name": "hdexpd_bgd",
+        "label": "보유예상기간(시작일)",
+        "description": "보유예상기간(시작일)"
+      },
+      {
+        "name": "hdexpd_edd",
+        "label": "보유예상기간(종료일)",
+        "description": "보유예상기간(종료일)"
+      },
+      {
+        "name": "aq_pp",
+        "label": "취득목적",
+        "description": "취득목적"
+      },
+      {
+        "name": "aq_mth",
+        "label": "취득방법",
+        "description": "취득방법"
+      },
+      {
+        "name": "cs_iv_bk",
+        "label": "위탁투자중개업자",
+        "description": "위탁투자중개업자"
+      },
+      {
+        "name": "aq_wtn_div_ostk",
+        "label": "취득 전 자기주식 보유현황(배당가능이익 범위 내 취득(주)(보통주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aq_wtn_div_ostk_rt",
+        "label": "취득 전 자기주식 보유현황(배당가능이익 범위 내 취득(주)(비율(%)))",
+        "description": "취득 전 자기주식 보유현황(배당가능이익 범위 내 취득(주)(비율(%)))"
+      },
+      {
+        "name": "aq_wtn_div_estk",
+        "label": "취득 전 자기주식 보유현황(배당가능이익 범위 내 취득(주)(기타주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aq_wtn_div_estk_rt",
+        "label": "취득 전 자기주식 보유현황(배당가능이익 범위 내 취득(주)(비율(%)))",
+        "description": "취득 전 자기주식 보유현황(배당가능이익 범위 내 취득(주)(비율(%)))"
+      },
+      {
+        "name": "eaq_ostk",
+        "label": "취득 전 자기주식 보유현황(기타취득(주)(보통주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "eaq_ostk_rt",
+        "label": "취득 전 자기주식 보유현황(기타취득(주)(비율(%)))",
+        "description": "취득 전 자기주식 보유현황(기타취득(주)(비율(%)))"
+      },
+      {
+        "name": "eaq_estk",
+        "label": "취득 전 자기주식 보유현황(기타취득(주)(기타주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "eaq_estk_rt",
+        "label": "취득 전 자기주식 보유현황(기타취득(주)(비율(%)))",
+        "description": "취득 전 자기주식 보유현황(기타취득(주)(비율(%)))"
+      },
+      {
+        "name": "aq_dd",
+        "label": "취득결정일",
+        "description": "취득결정일"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(사외이사가 아닌 감사위원)참석여부",
+        "description": "감사(사외이사가 아닌 감사위원)참석여부"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020039",
+    "api_name": "자기주식 처분 결정",
+    "description": "주요사항보고서(자기주식 처분 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/tsstkDpDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/tsstkDpDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "dppln_stk_ostk",
+        "label": "처분예정주식(주)(보통주식)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dppln_stk_estk",
+        "label": "처분예정주식(주)(기타주식)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dpstk_prc_ostk",
+        "label": "처분 대상 주식가격(원)(보통주식)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dpstk_prc_estk",
+        "label": "처분 대상 주식가격(원)(기타주식)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dppln_prc_ostk",
+        "label": "처분예정금액(원)(보통주식)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dppln_prc_estk",
+        "label": "처분예정금액(원)(기타주식)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dpprpd_bgd",
+        "label": "처분예정기간(시작일)",
+        "description": "처분예정기간(시작일)"
+      },
+      {
+        "name": "dpprpd_edd",
+        "label": "처분예정기간(종료일)",
+        "description": "처분예정기간(종료일)"
+      },
+      {
+        "name": "dp_pp",
+        "label": "처분목적",
+        "description": "처분목적"
+      },
+      {
+        "name": "dp_m_mkt",
+        "label": "처분방법(시장을 통한 매도(주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dp_m_ovtm",
+        "label": "처분방법(시간외대량매매(주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dp_m_otc",
+        "label": "처분방법(장외처분(주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dp_m_etc",
+        "label": "처분방법(기타(주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "cs_iv_bk",
+        "label": "위탁투자중개업자",
+        "description": "위탁투자중개업자"
+      },
+      {
+        "name": "aq_wtn_div_ostk",
+        "label": "처분 전 자기주식 보유현황(배당가능이익 범위 내 취득(주)(보통주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aq_wtn_div_ostk_rt",
+        "label": "처분 전 자기주식 보유현황(배당가능이익 범위 내 취득(주)(비율(%)))",
+        "description": "처분 전 자기주식 보유현황(배당가능이익 범위 내 취득(주)(비율(%)))"
+      },
+      {
+        "name": "aq_wtn_div_estk",
+        "label": "처분 전 자기주식 보유현황(배당가능이익 범위 내 취득(주)(기타주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aq_wtn_div_estk_rt",
+        "label": "처분 전 자기주식 보유현황(배당가능이익 범위 내 취득(주)(비율(%)))",
+        "description": "처분 전 자기주식 보유현황(배당가능이익 범위 내 취득(주)(비율(%)))"
+      },
+      {
+        "name": "eaq_ostk",
+        "label": "처분 전 자기주식 보유현황(기타취득(주)(보통주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "eaq_ostk_rt",
+        "label": "처분 전 자기주식 보유현황(기타취득(주)(비율(%)))",
+        "description": "처분 전 자기주식 보유현황(기타취득(주)(비율(%)))"
+      },
+      {
+        "name": "eaq_estk",
+        "label": "처분 전 자기주식 보유현황(기타취득(주)(기타주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "eaq_estk_rt",
+        "label": "처분 전 자기주식 보유현황(기타취득(주)(비율(%)))",
+        "description": "처분 전 자기주식 보유현황(기타취득(주)(비율(%)))"
+      },
+      {
+        "name": "dp_dd",
+        "label": "처분결정일",
+        "description": "처분결정일"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(사외이사가 아닌 감사위원)참석여부",
+        "description": "감사(사외이사가 아닌 감사위원)참석여부"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020040",
+    "api_name": "자기주식취득 신탁계약 체결 결정",
+    "description": "주요사항보고서(자기주식취득 신탁계약 체결 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/tsstkAqTrctrCnsDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/tsstkAqTrctrCnsDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "ctr_prc",
+        "label": "계약금액(원)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ctr_pd_bgd",
+        "label": "계약기간(시작일)",
+        "description": "계약기간(시작일)"
+      },
+      {
+        "name": "ctr_pd_edd",
+        "label": "계약기간(종료일)",
+        "description": "계약기간(종료일)"
+      },
+      {
+        "name": "ctr_pp",
+        "label": "계약목적",
+        "description": "계약목적"
+      },
+      {
+        "name": "ctr_cns_int",
+        "label": "계약체결기관",
+        "description": "계약체결기관"
+      },
+      {
+        "name": "ctr_cns_prd",
+        "label": "계약체결 예정일자",
+        "description": "계약체결 예정일자"
+      },
+      {
+        "name": "aq_wtn_div_ostk",
+        "label": "계약 전 자기주식 보유현황(배당가능범위 내 취득(주)(보통주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aq_wtn_div_ostk_rt",
+        "label": "계약 전 자기주식 보유현황(배당가능범위 내 취득(주)(비율(%)))",
+        "description": "계약 전 자기주식 보유현황(배당가능범위 내 취득(주)(비율(%)))"
+      },
+      {
+        "name": "aq_wtn_div_estk",
+        "label": "계약 전 자기주식 보유현황(배당가능범위 내 취득(주)(기타주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aq_wtn_div_estk_rt",
+        "label": "계약 전 자기주식 보유현황(배당가능범위 내 취득(주)(비율(%)))",
+        "description": "계약 전 자기주식 보유현황(배당가능범위 내 취득(주)(비율(%)))"
+      },
+      {
+        "name": "eaq_ostk",
+        "label": "계약 전 자기주식 보유현황(기타취득(주)(보통주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "eaq_ostk_rt",
+        "label": "계약 전 자기주식 보유현황(기타취득(주)(비율(%)))",
+        "description": "계약 전 자기주식 보유현황(기타취득(주)(비율(%)))"
+      },
+      {
+        "name": "eaq_estk",
+        "label": "계약 전 자기주식 보유현황(기타취득(주)(기타주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "eaq_estk_rt",
+        "label": "계약 전 자기주식 보유현황(기타취득(주)(비율(%)))",
+        "description": "계약 전 자기주식 보유현황(기타취득(주)(비율(%)))"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(사외이사가 아닌 감사위원)참석여부",
+        "description": "감사(사외이사가 아닌 감사위원)참석여부"
+      },
+      {
+        "name": "cs_iv_bk",
+        "label": "위탁투자중개업자",
+        "description": "위탁투자중개업자"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020041",
+    "api_name": "자기주식취득 신탁계약 해지 결정",
+    "description": "주요사항보고서(자기주식취득 신탁계약 해지 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/tsstkAqTrctrCcDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/tsstkAqTrctrCcDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "ctr_prc_bfcc",
+        "label": "계약금액(원)(해지 전)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ctr_prc_atcc",
+        "label": "계약금액(원)(해지 후)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ctr_pd_bfcc_bgd",
+        "label": "해지 전 계약기간(시작일)",
+        "description": "해지 전 계약기간(시작일)"
+      },
+      {
+        "name": "ctr_pd_bfcc_edd",
+        "label": "해지 전 계약기간(종료일)",
+        "description": "해지 전 계약기간(종료일)"
+      },
+      {
+        "name": "cc_pp",
+        "label": "해지목적",
+        "description": "해지목적"
+      },
+      {
+        "name": "cc_int",
+        "label": "해지기관",
+        "description": "해지기관"
+      },
+      {
+        "name": "cc_prd",
+        "label": "해지예정일자",
+        "description": "해지예정일자"
+      },
+      {
+        "name": "tp_rm_atcc",
+        "label": "해지후 신탁재산의 반환방법",
+        "description": "해지후 신탁재산의 반환방법"
+      },
+      {
+        "name": "aq_wtn_div_ostk",
+        "label": "해지 전 자기주식 보유현황(배당가능범위 내 취득(주)(보통주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aq_wtn_div_ostk_rt",
+        "label": "해지 전 자기주식 보유현황(배당가능범위 내 취득(주)(비율(%)))",
+        "description": "해지 전 자기주식 보유현황(배당가능범위 내 취득(주)(비율(%)))"
+      },
+      {
+        "name": "aq_wtn_div_estk",
+        "label": "해지 전 자기주식 보유현황(배당가능범위 내 취득(주)(기타주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aq_wtn_div_estk_rt",
+        "label": "해지 전 자기주식 보유현황(배당가능범위 내 취득(주)(비율(%)))",
+        "description": "해지 전 자기주식 보유현황(배당가능범위 내 취득(주)(비율(%)))"
+      },
+      {
+        "name": "eaq_ostk",
+        "label": "해지 전 자기주식 보유현황(기타취득(주)(보통주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "eaq_ostk_rt",
+        "label": "해지 전 자기주식 보유현황(기타취득(주)(비율(%)))",
+        "description": "해지 전 자기주식 보유현황(기타취득(주)(비율(%)))"
+      },
+      {
+        "name": "eaq_estk",
+        "label": "해지 전 자기주식 보유현황(기타취득(주)(기타주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "eaq_estk_rt",
+        "label": "해지 전 자기주식 보유현황(기타취득(주)(비율(%)))",
+        "description": "해지 전 자기주식 보유현황(기타취득(주)(비율(%)))"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(사외이사가 아닌 감사위원)참석여부",
+        "description": "감사(사외이사가 아닌 감사위원)참석여부"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020042",
+    "api_name": "영업양수 결정",
+    "description": "주요사항보고서(영업양수 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/bsnInhDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/bsnInhDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "inh_bsn",
+        "label": "양수영업",
+        "description": "양수영업"
+      },
+      {
+        "name": "inh_bsn_mc",
+        "label": "양수영업 주요내용",
+        "description": "양수영업 주요내용"
+      },
+      {
+        "name": "inh_prc",
+        "label": "양수가액(원)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "absn_inh_atn",
+        "label": "영업전부의 양수 여부",
+        "description": "영업전부의 양수 여부"
+      },
+      {
+        "name": "ast_inh_bsn",
+        "label": "재무내용(원)(자산액(양수대상 영업부문(A)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ast_cmp_all",
+        "label": "재무내용(원)(자산액(당사전체(B)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ast_rt",
+        "label": "재무내용(원)(자산액(비중(%)(A/B)))",
+        "description": "재무내용(원)(자산액(비중(%)(A/B)))"
+      },
+      {
+        "name": "sl_inh_bsn",
+        "label": "재무내용(원)(매출액(양수대상 영업부문(A)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "sl_cmp_all",
+        "label": "재무내용(원)(매출액(당사전체(B)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "sl_rt",
+        "label": "재무내용(원)(매출액(비중(%)(A/B)))",
+        "description": "재무내용(원)(매출액(비중(%)(A/B)))"
+      },
+      {
+        "name": "dbt_inh_bsn",
+        "label": "재무내용(원)(부채액(양수대상 영업부문(A)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dbt_cmp_all",
+        "label": "재무내용(원)(부채액(당사전체(B)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dbt_rt",
+        "label": "재무내용(원)(부채액(비중(%)(A/B)))",
+        "description": "재무내용(원)(부채액(비중(%)(A/B)))"
+      },
+      {
+        "name": "inh_pp",
+        "label": "양수목적",
+        "description": "양수목적"
+      },
+      {
+        "name": "inh_af",
+        "label": "양수영향",
+        "description": "양수영향"
+      },
+      {
+        "name": "inh_prd_ctr_cnsd",
+        "label": "양수예정일자(계약체결일)",
+        "description": "양수예정일자(계약체결일)"
+      },
+      {
+        "name": "inh_prd_inh_std",
+        "label": "양수예정일자(양수기준일)",
+        "description": "양수예정일자(양수기준일)"
+      },
+      {
+        "name": "dlptn_cmpnm",
+        "label": "거래상대방(회사명(성명))",
+        "description": "거래상대방(회사명(성명))"
+      },
+      {
+        "name": "dlptn_cpt",
+        "label": "거래상대방(자본금(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dlptn_mbsn",
+        "label": "거래상대방(주요사업)",
+        "description": "거래상대방(주요사업)"
+      },
+      {
+        "name": "dlptn_hoadd",
+        "label": "거래상대방(본점소재지(주소))",
+        "description": "거래상대방(본점소재지(주소))"
+      },
+      {
+        "name": "dlptn_rl_cmpn",
+        "label": "거래상대방(회사와의 관계)",
+        "description": "거래상대방(회사와의 관계)"
+      },
+      {
+        "name": "inh_pym",
+        "label": "양수대금지급",
+        "description": "양수대금지급"
+      },
+      {
+        "name": "exevl_atn",
+        "label": "외부평가에 관한 사항(외부평가 여부)",
+        "description": "외부평가에 관한 사항(외부평가 여부)"
+      },
+      {
+        "name": "exevl_bs_rs",
+        "label": "외부평가에 관한 사항(근거 및 사유)",
+        "description": "외부평가에 관한 사항(근거 및 사유)"
+      },
+      {
+        "name": "exevl_intn",
+        "label": "외부평가에 관한 사항(외부평가기관의 명칭)",
+        "description": "외부평가에 관한 사항(외부평가기관의 명칭)"
+      },
+      {
+        "name": "exevl_pd",
+        "label": "외부평가에 관한 사항(외부평가 기간)",
+        "description": "외부평가에 관한 사항(외부평가 기간)"
+      },
+      {
+        "name": "exevl_op",
+        "label": "외부평가에 관한 사항(외부평가 의견)",
+        "description": "외부평가에 관한 사항(외부평가 의견)"
+      },
+      {
+        "name": "gmtsck_spd_atn",
+        "label": "주주총회 특별결의 여부",
+        "description": "주주총회 특별결의 여부"
+      },
+      {
+        "name": "gmtsck_prd",
+        "label": "주주총회 예정일자",
+        "description": "주주총회 예정일자"
+      },
+      {
+        "name": "aprskh_plnprc",
+        "label": "주식매수청구권에 관한 사항(매수예정가격)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aprskh_pym_plpd_mth",
+        "label": "주식매수청구권에 관한 사항(지급예정시기, 지급방법)",
+        "description": "주식매수청구권에 관한 사항(지급예정시기, 지급방법)"
+      },
+      {
+        "name": "aprskh_lmt",
+        "label": "주식매수청구권에 관한 사항(주식매수청구권 제한 관련 내용)",
+        "description": "주식매수청구권에 관한 사항(주식매수청구권 제한 관련 내용)"
+      },
+      {
+        "name": "aprskh_ctref",
+        "label": "주식매수청구권에 관한 사항(계약에 미치는 효력)",
+        "description": "주식매수청구권에 관한 사항(계약에 미치는 효력)"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(사외이사가 아닌 감사위원) 참석여부",
+        "description": "감사(사외이사가 아닌 감사위원) 참석여부"
+      },
+      {
+        "name": "bdlst_atn",
+        "label": "우회상장 해당 여부",
+        "description": "우회상장 해당 여부"
+      },
+      {
+        "name": "otcpr_bdlst_sf_atn",
+        "label": "타법인의 우회상장 요건 충족여부",
+        "description": "타법인의 우회상장 요건 충족여부"
+      },
+      {
+        "name": "ftc_stt_atn",
+        "label": "공정거래위원회 신고대상 여부",
+        "description": "공정거래위원회 신고대상 여부"
+      },
+      {
+        "name": "popt_ctr_atn",
+        "label": "풋옵션 등 계약 체결여부",
+        "description": "풋옵션 등 계약 체결여부"
+      },
+      {
+        "name": "popt_ctr_cn",
+        "label": "계약내용",
+        "description": "계약내용"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020043",
+    "api_name": "영업양도 결정",
+    "description": "주요사항보고서(영업양도 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/bsnTrfDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/bsnTrfDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "trf_bsn",
+        "label": "양도영업",
+        "description": "양도영업"
+      },
+      {
+        "name": "trf_bsn_mc",
+        "label": "양도영업 주요내용",
+        "description": "양도영업 주요내용"
+      },
+      {
+        "name": "trf_prc",
+        "label": "양도가액(원)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ast_trf_bsn",
+        "label": "재무내용(원)(자산액(양도대상 영업부문(A)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ast_cmp_all",
+        "label": "재무내용(원)(자산액(당사전체(B)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ast_rt",
+        "label": "재무내용(원)(자산액(비중(%)(A/B)))",
+        "description": "재무내용(원)(자산액(비중(%)(A/B)))"
+      },
+      {
+        "name": "sl_trf_bsn",
+        "label": "재무내용(원)(매출액(양도대상 영업부문(A)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "sl_cmp_all",
+        "label": "재무내용(원)(매출액(당사전체(B)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "sl_rt",
+        "label": "재무내용(원)(매출액(비중(%)(A/B)))",
+        "description": "재무내용(원)(매출액(비중(%)(A/B)))"
+      },
+      {
+        "name": "trf_pp",
+        "label": "양도목적",
+        "description": "양도목적"
+      },
+      {
+        "name": "trf_af",
+        "label": "양도영향",
+        "description": "양도영향"
+      },
+      {
+        "name": "trf_prd_ctr_cnsd",
+        "label": "양도예정일자(계약체결일)",
+        "description": "양도예정일자(계약체결일)"
+      },
+      {
+        "name": "trf_prd_trf_std",
+        "label": "양도예정일자(양도기준일)",
+        "description": "양도예정일자(양도기준일)"
+      },
+      {
+        "name": "dlptn_cmpnm",
+        "label": "거래상대방(회사명(성명))",
+        "description": "거래상대방(회사명(성명))"
+      },
+      {
+        "name": "dlptn_cpt",
+        "label": "거래상대방(자본금(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dlptn_mbsn",
+        "label": "거래상대방(주요사업)",
+        "description": "거래상대방(주요사업)"
+      },
+      {
+        "name": "dlptn_hoadd",
+        "label": "거래상대방(본점소재지(주소))",
+        "description": "거래상대방(본점소재지(주소))"
+      },
+      {
+        "name": "dlptn_rl_cmpn",
+        "label": "거래상대방(회사와의 관계)",
+        "description": "거래상대방(회사와의 관계)"
+      },
+      {
+        "name": "trf_pym",
+        "label": "양도대금지급",
+        "description": "양도대금지급"
+      },
+      {
+        "name": "exevl_atn",
+        "label": "외부평가에 관한 사항(외부평가 여부)",
+        "description": "외부평가에 관한 사항(외부평가 여부)"
+      },
+      {
+        "name": "exevl_bs_rs",
+        "label": "외부평가에 관한 사항(근거 및 사유)",
+        "description": "외부평가에 관한 사항(근거 및 사유)"
+      },
+      {
+        "name": "exevl_intn",
+        "label": "외부평가에 관한 사항(외부평가기관의 명칭)",
+        "description": "외부평가에 관한 사항(외부평가기관의 명칭)"
+      },
+      {
+        "name": "exevl_pd",
+        "label": "외부평가에 관한 사항(외부평가 기간)",
+        "description": "외부평가에 관한 사항(외부평가 기간)"
+      },
+      {
+        "name": "exevl_op",
+        "label": "외부평가에 관한 사항(외부평가 의견)",
+        "description": "외부평가에 관한 사항(외부평가 의견)"
+      },
+      {
+        "name": "gmtsck_spd_atn",
+        "label": "주주총회 특별결의 여부",
+        "description": "주주총회 특별결의 여부"
+      },
+      {
+        "name": "gmtsck_prd",
+        "label": "주주총회 예정일자",
+        "description": "주주총회 예정일자"
+      },
+      {
+        "name": "aprskh_plnprc",
+        "label": "주식매수청구권에 관한 사항(매수예정가격)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aprskh_pym_plpd_mth",
+        "label": "주식매수청구권에 관한 사항(지급예정시기, 지급방법)",
+        "description": "주식매수청구권에 관한 사항(지급예정시기, 지급방법)"
+      },
+      {
+        "name": "aprskh_lmt",
+        "label": "주식매수청구권에 관한 사항(주식매수청구권 제한 관련 내용)",
+        "description": "주식매수청구권에 관한 사항(주식매수청구권 제한 관련 내용)"
+      },
+      {
+        "name": "aprskh_ctref",
+        "label": "주식매수청구권에 관한 사항(계약에 미치는 효력)",
+        "description": "주식매수청구권에 관한 사항(계약에 미치는 효력)"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(사외이사가 아닌 감사위원) 참석여부",
+        "description": "감사(사외이사가 아닌 감사위원) 참석여부"
+      },
+      {
+        "name": "ftc_stt_atn",
+        "label": "공정거래위원회 신고대상 여부",
+        "description": "공정거래위원회 신고대상 여부"
+      },
+      {
+        "name": "popt_ctr_atn",
+        "label": "풋옵션 등 계약 체결여부",
+        "description": "풋옵션 등 계약 체결여부"
+      },
+      {
+        "name": "popt_ctr_cn",
+        "label": "계약내용",
+        "description": "계약내용"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020044",
+    "api_name": "유형자산 양수 결정",
+    "description": "주요사항보고서(유형자산 양수 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/tgastInhDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/tgastInhDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "ast_sen",
+        "label": "자산구분",
+        "description": "자산구분"
+      },
+      {
+        "name": "ast_nm",
+        "label": "자산명",
+        "description": "자산명"
+      },
+      {
+        "name": "inhdtl_inhprc",
+        "label": "양수내역(양수금액(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "inhdtl_tast",
+        "label": "양수내역(자산총액(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "inhdtl_tast_vs",
+        "label": "양수내역(자산총액대비(%))",
+        "description": "양수내역(자산총액대비(%))"
+      },
+      {
+        "name": "inh_pp",
+        "label": "양수목적",
+        "description": "양수목적"
+      },
+      {
+        "name": "inh_af",
+        "label": "양수영향",
+        "description": "양수영향"
+      },
+      {
+        "name": "inh_prd_ctr_cnsd",
+        "label": "양수예정일자(계약체결일)",
+        "description": "양수예정일자(계약체결일)"
+      },
+      {
+        "name": "inh_prd_inh_std",
+        "label": "양수예정일자(양수기준일)",
+        "description": "양수예정일자(양수기준일)"
+      },
+      {
+        "name": "inh_prd_rgs_prd",
+        "label": "양수예정일자(등기예정일)",
+        "description": "양수예정일자(등기예정일)"
+      },
+      {
+        "name": "dlptn_cmpnm",
+        "label": "거래상대방(회사명(성명))",
+        "description": "거래상대방(회사명(성명))"
+      },
+      {
+        "name": "dlptn_cpt",
+        "label": "거래상대방(자본금(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dlptn_mbsn",
+        "label": "거래상대방(주요사업)",
+        "description": "거래상대방(주요사업)"
+      },
+      {
+        "name": "dlptn_hoadd",
+        "label": "거래상대방(본점소재지(주소))",
+        "description": "거래상대방(본점소재지(주소))"
+      },
+      {
+        "name": "dlptn_rl_cmpn",
+        "label": "거래상대방(회사와의 관계)",
+        "description": "거래상대방(회사와의 관계)"
+      },
+      {
+        "name": "dl_pym",
+        "label": "거래대금지급",
+        "description": "거래대금지급"
+      },
+      {
+        "name": "exevl_atn",
+        "label": "외부평가에 관한 사항(외부평가 여부)",
+        "description": "외부평가에 관한 사항(외부평가 여부)"
+      },
+      {
+        "name": "exevl_bs_rs",
+        "label": "외부평가에 관한 사항(근거 및 사유)",
+        "description": "외부평가에 관한 사항(근거 및 사유)"
+      },
+      {
+        "name": "exevl_intn",
+        "label": "외부평가에 관한 사항(외부평가기관의 명칭)",
+        "description": "외부평가에 관한 사항(외부평가기관의 명칭)"
+      },
+      {
+        "name": "exevl_pd",
+        "label": "외부평가에 관한 사항(외부평가 기간)",
+        "description": "외부평가에 관한 사항(외부평가 기간)"
+      },
+      {
+        "name": "exevl_op",
+        "label": "외부평가에 관한 사항(외부평가 의견)",
+        "description": "외부평가에 관한 사항(외부평가 의견)"
+      },
+      {
+        "name": "gmtsck_spd_atn",
+        "label": "주주총회 특별결의 여부",
+        "description": "주주총회 특별결의 여부"
+      },
+      {
+        "name": "gmtsck_prd",
+        "label": "주주총회 예정일자",
+        "description": "주주총회 예정일자"
+      },
+      {
+        "name": "aprskh_exrq",
+        "label": "주식매수청구권에 관한 사항(행사요건)",
+        "description": "주식매수청구권에 관한 사항(행사요건)"
+      },
+      {
+        "name": "aprskh_plnprc",
+        "label": "주식매수청구권에 관한 사항(매수예정가격)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aprskh_ex_pc_mth_pd_pl",
+        "label": "주식매수청구권에 관한 사항(행사절차, 방법, 기간, 장소)",
+        "description": "주식매수청구권에 관한 사항(행사절차, 방법, 기간, 장소)"
+      },
+      {
+        "name": "aprskh_pym_plpd_mth",
+        "label": "주식매수청구권에 관한 사항(지급예정시기, 지급방법)",
+        "description": "주식매수청구권에 관한 사항(지급예정시기, 지급방법)"
+      },
+      {
+        "name": "aprskh_lmt",
+        "label": "주식매수청구권에 관한 사항(주식매수청구권 제한 관련 내용)",
+        "description": "주식매수청구권에 관한 사항(주식매수청구권 제한 관련 내용)"
+      },
+      {
+        "name": "aprskh_ctref",
+        "label": "주식매수청구권에 관한 사항(계약에 미치는 효력)",
+        "description": "주식매수청구권에 관한 사항(계약에 미치는 효력)"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(사외이사가 아닌 감사위원) 참석여부",
+        "description": "감사(사외이사가 아닌 감사위원) 참석여부"
+      },
+      {
+        "name": "ftc_stt_atn",
+        "label": "공정거래위원회 신고대상 여부",
+        "description": "공정거래위원회 신고대상 여부"
+      },
+      {
+        "name": "popt_ctr_atn",
+        "label": "풋옵션 등 계약 체결여부",
+        "description": "풋옵션 등 계약 체결여부"
+      },
+      {
+        "name": "popt_ctr_cn",
+        "label": "계약내용",
+        "description": "계약내용"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020045",
+    "api_name": "유형자산 양도 결정",
+    "description": "주요사항보고서(유형자산 양도 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/tgastTrfDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/tgastTrfDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "ast_sen",
+        "label": "자산구분",
+        "description": "자산구분"
+      },
+      {
+        "name": "ast_nm",
+        "label": "자산명",
+        "description": "자산명"
+      },
+      {
+        "name": "trfdtl_trfprc",
+        "label": "양도내역(양도금액(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "trfdtl_tast",
+        "label": "양도내역(자산총액(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "trfdtl_tast_vs",
+        "label": "양도내역(자산총액대비(%))",
+        "description": "양도내역(자산총액대비(%))"
+      },
+      {
+        "name": "trf_pp",
+        "label": "양도목적",
+        "description": "양도목적"
+      },
+      {
+        "name": "trf_af",
+        "label": "양도영향",
+        "description": "양도영향"
+      },
+      {
+        "name": "trf_prd_ctr_cnsd",
+        "label": "양도예정일자(계약체결일)",
+        "description": "양도예정일자(계약체결일)"
+      },
+      {
+        "name": "trf_prd_trf_std",
+        "label": "양도예정일자(양도기준일)",
+        "description": "양도예정일자(양도기준일)"
+      },
+      {
+        "name": "trf_prd_rgs_prd",
+        "label": "양도예정일자(등기예정일)",
+        "description": "양도예정일자(등기예정일)"
+      },
+      {
+        "name": "dlptn_cmpnm",
+        "label": "거래상대방(회사명(성명))",
+        "description": "거래상대방(회사명(성명))"
+      },
+      {
+        "name": "dlptn_cpt",
+        "label": "거래상대방(자본금(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dlptn_mbsn",
+        "label": "거래상대방(주요사업)",
+        "description": "거래상대방(주요사업)"
+      },
+      {
+        "name": "dlptn_hoadd",
+        "label": "거래상대방(본점소재지(주소))",
+        "description": "거래상대방(본점소재지(주소))"
+      },
+      {
+        "name": "dlptn_rl_cmpn",
+        "label": "거래상대방(회사와의 관계)",
+        "description": "거래상대방(회사와의 관계)"
+      },
+      {
+        "name": "dl_pym",
+        "label": "거래대금지급",
+        "description": "거래대금지급"
+      },
+      {
+        "name": "exevl_atn",
+        "label": "외부평가에 관한 사항(외부평가 여부)",
+        "description": "외부평가에 관한 사항(외부평가 여부)"
+      },
+      {
+        "name": "exevl_bs_rs",
+        "label": "외부평가에 관한 사항(근거 및 사유)",
+        "description": "외부평가에 관한 사항(근거 및 사유)"
+      },
+      {
+        "name": "exevl_intn",
+        "label": "외부평가에 관한 사항(외부평가기관의 명칭)",
+        "description": "외부평가에 관한 사항(외부평가기관의 명칭)"
+      },
+      {
+        "name": "exevl_pd",
+        "label": "외부평가에 관한 사항(외부평가 기간)",
+        "description": "외부평가에 관한 사항(외부평가 기간)"
+      },
+      {
+        "name": "exevl_op",
+        "label": "외부평가에 관한 사항(외부평가 의견)",
+        "description": "외부평가에 관한 사항(외부평가 의견)"
+      },
+      {
+        "name": "gmtsck_spd_atn",
+        "label": "주주총회 특별결의 여부",
+        "description": "주주총회 특별결의 여부"
+      },
+      {
+        "name": "gmtsck_prd",
+        "label": "주주총회 예정일자",
+        "description": "주주총회 예정일자"
+      },
+      {
+        "name": "aprskh_exrq",
+        "label": "주식매수청구권에 관한 사항(행사요건)",
+        "description": "주식매수청구권에 관한 사항(행사요건)"
+      },
+      {
+        "name": "aprskh_plnprc",
+        "label": "주식매수청구권에 관한 사항(매수예정가격)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aprskh_ex_pc_mth_pd_pl",
+        "label": "주식매수청구권에 관한 사항(행사절차, 방법, 기간, 장소)",
+        "description": "주식매수청구권에 관한 사항(행사절차, 방법, 기간, 장소)"
+      },
+      {
+        "name": "aprskh_pym_plpd_mth",
+        "label": "주식매수청구권에 관한 사항(지급예정시기, 지급방법)",
+        "description": "주식매수청구권에 관한 사항(지급예정시기, 지급방법)"
+      },
+      {
+        "name": "aprskh_lmt",
+        "label": "주식매수청구권에 관한 사항(주식매수청구권 제한 관련 내용)",
+        "description": "주식매수청구권에 관한 사항(주식매수청구권 제한 관련 내용)"
+      },
+      {
+        "name": "aprskh_ctref",
+        "label": "주식매수청구권에 관한 사항(계약에 미치는 효력)",
+        "description": "주식매수청구권에 관한 사항(계약에 미치는 효력)"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(사외이사가 아닌 감사위원) 참석여부",
+        "description": "감사(사외이사가 아닌 감사위원) 참석여부"
+      },
+      {
+        "name": "ftc_stt_atn",
+        "label": "공정거래위원회 신고대상 여부",
+        "description": "공정거래위원회 신고대상 여부"
+      },
+      {
+        "name": "popt_ctr_atn",
+        "label": "풋옵션 등 계약 체결여부",
+        "description": "풋옵션 등 계약 체결여부"
+      },
+      {
+        "name": "popt_ctr_cn",
+        "label": "계약내용",
+        "description": "계약내용"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020046",
+    "api_name": "타법인 주식 및 출자증권 양수결정",
+    "description": "주요사항보고서(타법인 주식 및 출자증권 양수결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/otcprStkInvscrInhDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/otcprStkInvscrInhDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "iscmp_cmpnm",
+        "label": "발행회사(회사명)",
+        "description": "발행회사(회사명)"
+      },
+      {
+        "name": "iscmp_nt",
+        "label": "발행회사(국적)",
+        "description": "발행회사(국적)"
+      },
+      {
+        "name": "iscmp_rp",
+        "label": "발행회사(대표자)",
+        "description": "발행회사(대표자)"
+      },
+      {
+        "name": "iscmp_cpt",
+        "label": "발행회사(자본금(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "iscmp_rl_cmpn",
+        "label": "발행회사(회사와 관계)",
+        "description": "발행회사(회사와 관계)"
+      },
+      {
+        "name": "iscmp_tisstk",
+        "label": "발행회사(발행주식 총수(주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "iscmp_mbsn",
+        "label": "발행회사(주요사업)",
+        "description": "발행회사(주요사업)"
+      },
+      {
+        "name": "inhdtl_stkcnt",
+        "label": "양수내역(양수주식수(주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "inhdtl_inhprc",
+        "label": "양수내역(양수금액(원)(A))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "inhdtl_tast",
+        "label": "양수내역(총자산(원)(B))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "inhdtl_tast_vs",
+        "label": "양수내역(총자산대비(%)(A/B))",
+        "description": "양수내역(총자산대비(%)(A/B))"
+      },
+      {
+        "name": "inhdtl_ecpt",
+        "label": "양수내역(자기자본(원)(C))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "inhdtl_ecpt_vs",
+        "label": "양수내역(자기자본대비(%)(A/C))",
+        "description": "양수내역(자기자본대비(%)(A/C))"
+      },
+      {
+        "name": "atinh_owstkcnt",
+        "label": "양수후 소유주식수 및 지분비율(소유주식수(주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atinh_eqrt",
+        "label": "양수후 소유주식수 및 지분비율(지분비율(%))",
+        "description": "양수후 소유주식수 및 지분비율(지분비율(%))"
+      },
+      {
+        "name": "inh_pp",
+        "label": "양수목적",
+        "description": "양수목적"
+      },
+      {
+        "name": "inh_prd",
+        "label": "양수예정일자",
+        "description": "양수예정일자"
+      },
+      {
+        "name": "dlptn_cmpnm",
+        "label": "거래상대방(회사명(성명))",
+        "description": "거래상대방(회사명(성명))"
+      },
+      {
+        "name": "dlptn_cpt",
+        "label": "거래상대방(자본금(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dlptn_mbsn",
+        "label": "거래상대방(주요사업)",
+        "description": "거래상대방(주요사업)"
+      },
+      {
+        "name": "dlptn_hoadd",
+        "label": "거래상대방(본점소재지(주소))",
+        "description": "거래상대방(본점소재지(주소))"
+      },
+      {
+        "name": "dlptn_rl_cmpn",
+        "label": "거래상대방(회사와의 관계)",
+        "description": "거래상대방(회사와의 관계)"
+      },
+      {
+        "name": "dl_pym",
+        "label": "거래대금지급",
+        "description": "거래대금지급"
+      },
+      {
+        "name": "exevl_atn",
+        "label": "외부평가에 관한 사항(외부평가 여부)",
+        "description": "외부평가에 관한 사항(외부평가 여부)"
+      },
+      {
+        "name": "exevl_bs_rs",
+        "label": "외부평가에 관한 사항(근거 및 사유)",
+        "description": "외부평가에 관한 사항(근거 및 사유)"
+      },
+      {
+        "name": "exevl_intn",
+        "label": "외부평가에 관한 사항(외부평가기관의 명칭)",
+        "description": "외부평가에 관한 사항(외부평가기관의 명칭)"
+      },
+      {
+        "name": "exevl_pd",
+        "label": "외부평가에 관한 사항(외부평가 기간)",
+        "description": "외부평가에 관한 사항(외부평가 기간)"
+      },
+      {
+        "name": "exevl_op",
+        "label": "외부평가에 관한 사항(외부평가 의견)",
+        "description": "외부평가에 관한 사항(외부평가 의견)"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(사외이사가 아닌 감사위원) 참석여부",
+        "description": "감사(사외이사가 아닌 감사위원) 참석여부"
+      },
+      {
+        "name": "bdlst_atn",
+        "label": "우회상장 해당 여부",
+        "description": "우회상장 해당 여부"
+      },
+      {
+        "name": "iscmp_bdlst_sf_atn",
+        "label": "발행회사(타법인)의 우회상장 요건 충족여부",
+        "description": "발행회사(타법인)의 우회상장 요건 충족여부"
+      },
+      {
+        "name": "ftc_stt_atn",
+        "label": "공정거래위원회 신고대상 여부",
+        "description": "공정거래위원회 신고대상 여부"
+      },
+      {
+        "name": "popt_ctr_atn",
+        "label": "풋옵션 등 계약 체결여부",
+        "description": "풋옵션 등 계약 체결여부"
+      },
+      {
+        "name": "popt_ctr_cn",
+        "label": "계약내용",
+        "description": "계약내용"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020047",
+    "api_name": "타법인 주식 및 출자증권 양도결정",
+    "description": "주요사항보고서(타법인 주식 및 출자증권 양도결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/otcprStkInvscrTrfDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/otcprStkInvscrTrfDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "iscmp_cmpnm",
+        "label": "발행회사(회사명)",
+        "description": "발행회사(회사명)"
+      },
+      {
+        "name": "iscmp_nt",
+        "label": "발행회사(국적)",
+        "description": "발행회사(국적)"
+      },
+      {
+        "name": "iscmp_rp",
+        "label": "발행회사(대표자)",
+        "description": "발행회사(대표자)"
+      },
+      {
+        "name": "iscmp_cpt",
+        "label": "발행회사(자본금(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "iscmp_rl_cmpn",
+        "label": "발행회사(회사와 관계)",
+        "description": "발행회사(회사와 관계)"
+      },
+      {
+        "name": "iscmp_tisstk",
+        "label": "발행회사(발행주식 총수(주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "iscmp_mbsn",
+        "label": "발행회사(주요사업)",
+        "description": "발행회사(주요사업)"
+      },
+      {
+        "name": "trfdtl_stkcnt",
+        "label": "양도내역(양도주식수(주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "trfdtl_trfprc",
+        "label": "양도내역(양도금액(원)(A))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "trfdtl_tast",
+        "label": "양도내역(총자산(원)(B))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "trfdtl_tast_vs",
+        "label": "양도내역(총자산대비(%)(A/B))",
+        "description": "양도내역(총자산대비(%)(A/B))"
+      },
+      {
+        "name": "trfdtl_ecpt",
+        "label": "양도내역(자기자본(원)(C))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "trfdtl_ecpt_vs",
+        "label": "양도내역(자기자본대비(%)(A/C))",
+        "description": "양도내역(자기자본대비(%)(A/C))"
+      },
+      {
+        "name": "attrf_owstkcnt",
+        "label": "양도후 소유주식수 및 지분비율(소유주식수(주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "attrf_eqrt",
+        "label": "양도후 소유주식수 및 지분비율(지분비율(%))",
+        "description": "양도후 소유주식수 및 지분비율(지분비율(%))"
+      },
+      {
+        "name": "trf_pp",
+        "label": "양도목적",
+        "description": "양도목적"
+      },
+      {
+        "name": "trf_prd",
+        "label": "양도예정일자",
+        "description": "양도예정일자"
+      },
+      {
+        "name": "dlptn_cmpnm",
+        "label": "거래상대방(회사명(성명))",
+        "description": "거래상대방(회사명(성명))"
+      },
+      {
+        "name": "dlptn_cpt",
+        "label": "거래상대방(자본금(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dlptn_mbsn",
+        "label": "거래상대방(주요사업)",
+        "description": "거래상대방(주요사업)"
+      },
+      {
+        "name": "dlptn_hoadd",
+        "label": "거래상대방(본점소재지(주소))",
+        "description": "거래상대방(본점소재지(주소))"
+      },
+      {
+        "name": "dlptn_rl_cmpn",
+        "label": "거래상대방(회사와의 관계)",
+        "description": "거래상대방(회사와의 관계)"
+      },
+      {
+        "name": "dl_pym",
+        "label": "거래대금지급",
+        "description": "거래대금지급"
+      },
+      {
+        "name": "exevl_atn",
+        "label": "외부평가에 관한 사항(외부평가 여부)",
+        "description": "외부평가에 관한 사항(외부평가 여부)"
+      },
+      {
+        "name": "exevl_bs_rs",
+        "label": "외부평가에 관한 사항(근거 및 사유)",
+        "description": "외부평가에 관한 사항(근거 및 사유)"
+      },
+      {
+        "name": "exevl_intn",
+        "label": "외부평가에 관한 사항(외부평가기관의 명칭)",
+        "description": "외부평가에 관한 사항(외부평가기관의 명칭)"
+      },
+      {
+        "name": "exevl_pd",
+        "label": "외부평가에 관한 사항(외부평가 기간)",
+        "description": "외부평가에 관한 사항(외부평가 기간)"
+      },
+      {
+        "name": "exevl_op",
+        "label": "외부평가에 관한 사항(외부평가 의견)",
+        "description": "외부평가에 관한 사항(외부평가 의견)"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(사외이사가 아닌 감사위원) 참석여부",
+        "description": "감사(사외이사가 아닌 감사위원) 참석여부"
+      },
+      {
+        "name": "ftc_stt_atn",
+        "label": "공정거래위원회 신고대상 여부",
+        "description": "공정거래위원회 신고대상 여부"
+      },
+      {
+        "name": "popt_ctr_atn",
+        "label": "풋옵션 등 계약 체결여부",
+        "description": "풋옵션 등 계약 체결여부"
+      },
+      {
+        "name": "popt_ctr_cn",
+        "label": "계약내용",
+        "description": "계약내용"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020048",
+    "api_name": "주권 관련 사채권 양수 결정",
+    "description": "주요사항보고서(주권 관련 사채권 양수 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/stkrtbdInhDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/stkrtbdInhDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "stkrtbd_kndn",
+        "label": "주권 관련 사채권의 종류",
+        "description": "주권 관련 사채권의 종류"
+      },
+      {
+        "name": "tm",
+        "label": "주권 관련 사채권의 종류(회차)",
+        "description": "주권 관련 사채권의 종류(회차)"
+      },
+      {
+        "name": "knd",
+        "label": "주권 관련 사채권의 종류(종류)",
+        "description": "주권 관련 사채권의 종류(종류)"
+      },
+      {
+        "name": "bdiscmp_cmpnm",
+        "label": "사채권 발행회사(회사명)",
+        "description": "사채권 발행회사(회사명)"
+      },
+      {
+        "name": "bdiscmp_nt",
+        "label": "사채권 발행회사(국적)",
+        "description": "사채권 발행회사(국적)"
+      },
+      {
+        "name": "bdiscmp_rp",
+        "label": "사채권 발행회사(대표자)",
+        "description": "사채권 발행회사(대표자)"
+      },
+      {
+        "name": "bdiscmp_cpt",
+        "label": "사채권 발행회사(자본금(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bdiscmp_rl_cmpn",
+        "label": "사채권 발행회사(회사와 관계)",
+        "description": "사채권 발행회사(회사와 관계)"
+      },
+      {
+        "name": "bdiscmp_tisstk",
+        "label": "사채권 발행회사(발행주식 총수(주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bdiscmp_mbsn",
+        "label": "사채권 발행회사(주요사업)",
+        "description": "사채권 발행회사(주요사업)"
+      },
+      {
+        "name": "inhdtl_bd_fta",
+        "label": "양수내역(사채의 권면(전자등록)총액(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "inhdtl_inhprc",
+        "label": "양수내역(양수금액(원)(A))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "inhdtl_tast",
+        "label": "양수내역(총자산(원)(B))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "inhdtl_tast_vs",
+        "label": "양수내역(총자산대비(%)(A/B))",
+        "description": "양수내역(총자산대비(%)(A/B))"
+      },
+      {
+        "name": "inhdtl_ecpt",
+        "label": "양수내역(자기자본(원)(C))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "inhdtl_ecpt_vs",
+        "label": "양수내역(자기자본대비(%)(A/C))",
+        "description": "양수내역(자기자본대비(%)(A/C))"
+      },
+      {
+        "name": "inh_pp",
+        "label": "양수목적",
+        "description": "양수목적"
+      },
+      {
+        "name": "inh_prd",
+        "label": "양수예정일자",
+        "description": "양수예정일자"
+      },
+      {
+        "name": "dlptn_cmpnm",
+        "label": "거래상대방(회사명(성명))",
+        "description": "거래상대방(회사명(성명))"
+      },
+      {
+        "name": "dlptn_cpt",
+        "label": "거래상대방(자본금(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dlptn_mbsn",
+        "label": "거래상대방(주요사업)",
+        "description": "거래상대방(주요사업)"
+      },
+      {
+        "name": "dlptn_hoadd",
+        "label": "거래상대방(본점소재지(주소))",
+        "description": "거래상대방(본점소재지(주소))"
+      },
+      {
+        "name": "dlptn_rl_cmpn",
+        "label": "거래상대방(회사와의 관계)",
+        "description": "거래상대방(회사와의 관계)"
+      },
+      {
+        "name": "dl_pym",
+        "label": "거래대금지급",
+        "description": "거래대금지급"
+      },
+      {
+        "name": "exevl_atn",
+        "label": "외부평가에 관한 사항(외부평가 여부)",
+        "description": "외부평가에 관한 사항(외부평가 여부)"
+      },
+      {
+        "name": "exevl_bs_rs",
+        "label": "외부평가에 관한 사항(근거 및 사유)",
+        "description": "외부평가에 관한 사항(근거 및 사유)"
+      },
+      {
+        "name": "exevl_intn",
+        "label": "외부평가에 관한 사항(외부평가기관의 명칭)",
+        "description": "외부평가에 관한 사항(외부평가기관의 명칭)"
+      },
+      {
+        "name": "exevl_pd",
+        "label": "외부평가에 관한 사항(외부평가 기간)",
+        "description": "외부평가에 관한 사항(외부평가 기간)"
+      },
+      {
+        "name": "exevl_op",
+        "label": "외부평가에 관한 사항(외부평가 의견)",
+        "description": "외부평가에 관한 사항(외부평가 의견)"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사 참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사 참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(사외이사가 아닌 감사위원) 참석여부",
+        "description": "감사(사외이사가 아닌 감사위원) 참석여부"
+      },
+      {
+        "name": "ftc_stt_atn",
+        "label": "공정거래위원회 신고대상 여부",
+        "description": "공정거래위원회 신고대상 여부"
+      },
+      {
+        "name": "popt_ctr_atn",
+        "label": "풋옵션 등 계약 체결여부",
+        "description": "풋옵션 등 계약 체결여부"
+      },
+      {
+        "name": "popt_ctr_cn",
+        "label": "계약내용",
+        "description": "계약내용"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020049",
+    "api_name": "주권 관련 사채권 양도 결정",
+    "description": "주요사항보고서(주권 관련 사채권 양도 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/stkrtbdTrfDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/stkrtbdTrfDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "stkrtbd_kndn",
+        "label": "주권 관련 사채권의 종류",
+        "description": "주권 관련 사채권의 종류"
+      },
+      {
+        "name": "tm",
+        "label": "주권 관련 사채권의 종류(회차)",
+        "description": "주권 관련 사채권의 종류(회차)"
+      },
+      {
+        "name": "knd",
+        "label": "주권 관련 사채권의 종류(종류)",
+        "description": "주권 관련 사채권의 종류(종류)"
+      },
+      {
+        "name": "aqd",
+        "label": "취득일자",
+        "description": "취득일자"
+      },
+      {
+        "name": "bdiscmp_cmpnm",
+        "label": "사채권 발행회사(회사명)",
+        "description": "사채권 발행회사(회사명)"
+      },
+      {
+        "name": "bdiscmp_nt",
+        "label": "사채권 발행회사(국적)",
+        "description": "사채권 발행회사(국적)"
+      },
+      {
+        "name": "bdiscmp_rp",
+        "label": "사채권 발행회사(대표자)",
+        "description": "사채권 발행회사(대표자)"
+      },
+      {
+        "name": "bdiscmp_cpt",
+        "label": "사채권 발행회사(자본금(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bdiscmp_rl_cmpn",
+        "label": "사채권 발행회사(회사와 관계)",
+        "description": "사채권 발행회사(회사와 관계)"
+      },
+      {
+        "name": "bdiscmp_tisstk",
+        "label": "사채권 발행회사(발행주식 총수(주))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "bdiscmp_mbsn",
+        "label": "사채권 발행회사(주요사업)",
+        "description": "사채권 발행회사(주요사업)"
+      },
+      {
+        "name": "trfdtl_bd_fta",
+        "label": "양도내역(사채의 권면(전자등록)총액(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "trfdtl_trfprc",
+        "label": "양도내역(양도금액(원)(A))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "trfdtl_tast",
+        "label": "양도내역(총자산(원)(B))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "trfdtl_tast_vs",
+        "label": "양도내역(총자산대비(%)(A/B))",
+        "description": "양도내역(총자산대비(%)(A/B))"
+      },
+      {
+        "name": "trfdtl_ecpt",
+        "label": "양도내역(자기자본(원)(C))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "trfdtl_ecpt_vs",
+        "label": "양도내역(자기자본대비(%)(A/C))",
+        "description": "양도내역(자기자본대비(%)(A/C))"
+      },
+      {
+        "name": "trf_pp",
+        "label": "양도목적",
+        "description": "양도목적"
+      },
+      {
+        "name": "trf_prd",
+        "label": "양도예정일자",
+        "description": "양도예정일자"
+      },
+      {
+        "name": "dlptn_cmpnm",
+        "label": "거래상대방(회사명(성명))",
+        "description": "거래상대방(회사명(성명))"
+      },
+      {
+        "name": "dlptn_cpt",
+        "label": "거래상대방(자본금(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dlptn_mbsn",
+        "label": "거래상대방(주요사업)",
+        "description": "거래상대방(주요사업)"
+      },
+      {
+        "name": "dlptn_hoadd",
+        "label": "거래상대방(본점소재지(주소))",
+        "description": "거래상대방(본점소재지(주소))"
+      },
+      {
+        "name": "dlptn_rl_cmpn",
+        "label": "거래상대방(회사와의 관계)",
+        "description": "거래상대방(회사와의 관계)"
+      },
+      {
+        "name": "dl_pym",
+        "label": "거래대금지급",
+        "description": "거래대금지급"
+      },
+      {
+        "name": "exevl_atn",
+        "label": "외부평가에 관한 사항(외부평가 여부)",
+        "description": "외부평가에 관한 사항(외부평가 여부)"
+      },
+      {
+        "name": "exevl_bs_rs",
+        "label": "외부평가에 관한 사항(근거 및 사유)",
+        "description": "외부평가에 관한 사항(근거 및 사유)"
+      },
+      {
+        "name": "exevl_intn",
+        "label": "외부평가에 관한 사항(외부평가기관의 명칭)",
+        "description": "외부평가에 관한 사항(외부평가기관의 명칭)"
+      },
+      {
+        "name": "exevl_pd",
+        "label": "외부평가에 관한 사항(외부평가 기간)",
+        "description": "외부평가에 관한 사항(외부평가 기간)"
+      },
+      {
+        "name": "exevl_op",
+        "label": "외부평가에 관한 사항(외부평가 의견)",
+        "description": "외부평가에 관한 사항(외부평가 의견)"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사 참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사 참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(사외이사가 아닌 감사위원) 참석여부",
+        "description": "감사(사외이사가 아닌 감사위원) 참석여부"
+      },
+      {
+        "name": "ftc_stt_atn",
+        "label": "공정거래위원회 신고대상 여부",
+        "description": "공정거래위원회 신고대상 여부"
+      },
+      {
+        "name": "popt_ctr_atn",
+        "label": "풋옵션 등 계약 체결여부",
+        "description": "풋옵션 등 계약 체결여부"
+      },
+      {
+        "name": "popt_ctr_cn",
+        "label": "계약내용",
+        "description": "계약내용"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020050",
+    "api_name": "회사합병 결정",
+    "description": "주요사항보고서(회사합병 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/cmpMgDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/cmpMgDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "mg_mth",
+        "label": "합병방법",
+        "description": "합병방법"
+      },
+      {
+        "name": "mg_stn",
+        "label": "합병형태",
+        "description": "합병형태"
+      },
+      {
+        "name": "mg_pp",
+        "label": "합병목적",
+        "description": "합병목적"
+      },
+      {
+        "name": "mg_rt",
+        "label": "합병비율",
+        "description": "합병비율"
+      },
+      {
+        "name": "mg_rt_bs",
+        "label": "합병비율 산출근거",
+        "description": "합병비율 산출근거"
+      },
+      {
+        "name": "exevl_atn",
+        "label": "외부평가에 관한 사항(외부평가 여부)",
+        "description": "외부평가에 관한 사항(외부평가 여부)"
+      },
+      {
+        "name": "exevl_bs_rs",
+        "label": "외부평가에 관한 사항(근거 및 사유)",
+        "description": "외부평가에 관한 사항(근거 및 사유)"
+      },
+      {
+        "name": "exevl_intn",
+        "label": "외부평가에 관한 사항(외부평가기관의 명칭)",
+        "description": "외부평가에 관한 사항(외부평가기관의 명칭)"
+      },
+      {
+        "name": "exevl_pd",
+        "label": "외부평가에 관한 사항(외부평가 기간)",
+        "description": "외부평가에 관한 사항(외부평가 기간)"
+      },
+      {
+        "name": "exevl_op",
+        "label": "외부평가에 관한 사항(외부평가 의견)",
+        "description": "외부평가에 관한 사항(외부평가 의견)"
+      },
+      {
+        "name": "mgnstk_ostk_cnt",
+        "label": "합병신주의 종류와 수(주)(보통주식)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "mgnstk_cstk_cnt",
+        "label": "합병신주의 종류와 수(주)(종류주식)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "mgptncmp_cmpnm",
+        "label": "합병상대회사(회사명)",
+        "description": "합병상대회사(회사명)"
+      },
+      {
+        "name": "mgptncmp_mbsn",
+        "label": "합병상대회사(주요사업)",
+        "description": "합병상대회사(주요사업)"
+      },
+      {
+        "name": "mgptncmp_rl_cmpn",
+        "label": "합병상대회사(회사와의 관계)",
+        "description": "합병상대회사(회사와의 관계)"
+      },
+      {
+        "name": "rbsnfdtl_tast",
+        "label": "합병상대회사(최근 사업연도 재무내용(원)(자산총계))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rbsnfdtl_tdbt",
+        "label": "합병상대회사(최근 사업연도 재무내용(원)(부채총계))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rbsnfdtl_teqt",
+        "label": "합병상대회사(최근 사업연도 재무내용(원)(자본총계))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rbsnfdtl_cpt",
+        "label": "합병상대회사(최근 사업연도 재무내용(원)(자본금))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rbsnfdtl_sl",
+        "label": "합병상대회사(최근 사업연도 재무내용(원)(매출액))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rbsnfdtl_nic",
+        "label": "합병상대회사(최근 사업연도 재무내용(원)(당기순이익))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "eadtat_intn",
+        "label": "합병상대회사(외부감사 여부(기관명))",
+        "description": "합병상대회사(외부감사 여부(기관명))"
+      },
+      {
+        "name": "eadtat_op",
+        "label": "합병상대회사(외부감사 여부(감사의견))",
+        "description": "합병상대회사(외부감사 여부(감사의견))"
+      },
+      {
+        "name": "nmgcmp_cmpnm",
+        "label": "신설합병회사(회사명)",
+        "description": "신설합병회사(회사명)"
+      },
+      {
+        "name": "ffdtl_tast",
+        "label": "신설합병회사(설립시 재무내용(원)(자산총계))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ffdtl_tdbt",
+        "label": "신설합병회사(설립시 재무내용(원)(부채총계))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ffdtl_teqt",
+        "label": "신설합병회사(설립시 재무내용(원)(자본총계))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ffdtl_cpt",
+        "label": "신설합병회사(설립시 재무내용(원)(자본금))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ffdtl_std",
+        "label": "신설합병회사(설립시 재무내용(원)(현재기준))",
+        "description": "신설합병회사(설립시 재무내용(원)(현재기준))"
+      },
+      {
+        "name": "nmgcmp_nbsn_rsl",
+        "label": "신설합병회사(신설사업부문 최근 사업연도 매출액(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "nmgcmp_mbsn",
+        "label": "신설합병회사(주요사업)",
+        "description": "신설합병회사(주요사업)"
+      },
+      {
+        "name": "nmgcmp_rlst_atn",
+        "label": "신설합병회사(재상장신청 여부)",
+        "description": "신설합병회사(재상장신청 여부)"
+      },
+      {
+        "name": "mgsc_mgctrd",
+        "label": "합병일정(합병계약일)",
+        "description": "합병일정(합병계약일)"
+      },
+      {
+        "name": "mgsc_shddstd",
+        "label": "합병일정(주주확정기준일)",
+        "description": "합병일정(주주확정기준일)"
+      },
+      {
+        "name": "mgsc_shclspd_bgd",
+        "label": "합병일정(주주명부 폐쇄기간(시작일))",
+        "description": "합병일정(주주명부 폐쇄기간(시작일))"
+      },
+      {
+        "name": "mgsc_shclspd_edd",
+        "label": "합병일정(주주명부 폐쇄기간(종료일))",
+        "description": "합병일정(주주명부 폐쇄기간(종료일))"
+      },
+      {
+        "name": "mgsc_mgop_rcpd_bgd",
+        "label": "합병일정(합병반대의사통지 접수기간(시작일))",
+        "description": "합병일정(합병반대의사통지 접수기간(시작일))"
+      },
+      {
+        "name": "mgsc_mgop_rcpd_edd",
+        "label": "합병일정(합병반대의사통지 접수기간(종료일))",
+        "description": "합병일정(합병반대의사통지 접수기간(종료일))"
+      },
+      {
+        "name": "mgsc_gmtsck_prd",
+        "label": "합병일정(주주총회예정일자)",
+        "description": "합병일정(주주총회예정일자)"
+      },
+      {
+        "name": "mgsc_aprskh_expd_bgd",
+        "label": "합병일정(주식매수청구권 행사기간(시작일))",
+        "description": "합병일정(주식매수청구권 행사기간(시작일))"
+      },
+      {
+        "name": "mgsc_aprskh_expd_edd",
+        "label": "합병일정(주식매수청구권 행사기간(종료일))",
+        "description": "합병일정(주식매수청구권 행사기간(종료일))"
+      },
+      {
+        "name": "mgsc_osprpd_bgd",
+        "label": "합병일정(구주권 제출기간(시작일))",
+        "description": "합병일정(구주권 제출기간(시작일))"
+      },
+      {
+        "name": "mgsc_osprpd_edd",
+        "label": "합병일정(구주권 제출기간(종료일))",
+        "description": "합병일정(구주권 제출기간(종료일))"
+      },
+      {
+        "name": "mgsc_trspprpd_bgd",
+        "label": "합병일정(매매거래 정지예정기간(시작일))",
+        "description": "합병일정(매매거래 정지예정기간(시작일))"
+      },
+      {
+        "name": "mgsc_trspprpd_edd",
+        "label": "합병일정(매매거래 정지예정기간(종료일))",
+        "description": "합병일정(매매거래 정지예정기간(종료일))"
+      },
+      {
+        "name": "mgsc_cdobprpd_bgd",
+        "label": "합병일정(채권자이의 제출기간(시작일))",
+        "description": "합병일정(채권자이의 제출기간(시작일))"
+      },
+      {
+        "name": "mgsc_cdobprpd_edd",
+        "label": "합병일정(채권자이의 제출기간(종료일))",
+        "description": "합병일정(채권자이의 제출기간(종료일))"
+      },
+      {
+        "name": "mgsc_mgdt",
+        "label": "합병일정(합병기일)",
+        "description": "합병일정(합병기일)"
+      },
+      {
+        "name": "mgsc_ergmd",
+        "label": "합병일정(종료보고 총회일)",
+        "description": "합병일정(종료보고 총회일)"
+      },
+      {
+        "name": "mgsc_mgrgsprd",
+        "label": "합병일정(합병등기예정일자)",
+        "description": "합병일정(합병등기예정일자)"
+      },
+      {
+        "name": "mgsc_nstkdlprd",
+        "label": "합병일정(신주권교부예정일)",
+        "description": "합병일정(신주권교부예정일)"
+      },
+      {
+        "name": "mgsc_nstklstprd",
+        "label": "합병일정(신주의 상장예정일)",
+        "description": "합병일정(신주의 상장예정일)"
+      },
+      {
+        "name": "bdlst_atn",
+        "label": "우회상장 해당 여부",
+        "description": "우회상장 해당 여부"
+      },
+      {
+        "name": "otcpr_bdlst_sf_atn",
+        "label": "타법인의 우회상장 요건 충족여부",
+        "description": "타법인의 우회상장 요건 충족여부"
+      },
+      {
+        "name": "aprskh_plnprc",
+        "label": "주식매수청구권에 관한 사항(매수예정가격)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aprskh_pym_plpd_mth",
+        "label": "주식매수청구권에 관한 사항(지급예정시기, 지급방법)",
+        "description": "주식매수청구권에 관한 사항(지급예정시기, 지급방법)"
+      },
+      {
+        "name": "aprskh_ctref",
+        "label": "주식매수청구권에 관한 사항(계약에 미치는 효력)",
+        "description": "주식매수청구권에 관한 사항(계약에 미치는 효력)"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사참석여부(참석(명))",
+        "description": "사외이사참석여부(참석(명))"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사참석여부(불참(명))",
+        "description": "사외이사참석여부(불참(명))"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(사외이사가 아닌 감사위원) 참석여부",
+        "description": "감사(사외이사가 아닌 감사위원) 참석여부"
+      },
+      {
+        "name": "popt_ctr_atn",
+        "label": "풋옵션 등 계약 체결여부",
+        "description": "풋옵션 등 계약 체결여부"
+      },
+      {
+        "name": "popt_ctr_cn",
+        "label": "계약내용",
+        "description": "계약내용"
+      },
+      {
+        "name": "rs_sm_atn",
+        "label": "증권신고서 제출대상 여부",
+        "description": "증권신고서 제출대상 여부"
+      },
+      {
+        "name": "ex_sm_r",
+        "label": "제출을 면제받은 경우 그 사유",
+        "description": "제출을 면제받은 경우 그 사유"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020051",
+    "api_name": "회사분할 결정",
+    "description": "주요사항보고서(회사분할 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/cmpDvDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/cmpDvDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "dv_mth",
+        "label": "분할방법",
+        "description": "분할방법"
+      },
+      {
+        "name": "dv_impef",
+        "label": "분할의 중요영향 및 효과",
+        "description": "분할의 중요영향 및 효과"
+      },
+      {
+        "name": "dv_rt",
+        "label": "분할비율",
+        "description": "분할비율"
+      },
+      {
+        "name": "dv_trfbsnprt_cn",
+        "label": "분할로 이전할 사업 및 재산의 내용",
+        "description": "분할로 이전할 사업 및 재산의 내용"
+      },
+      {
+        "name": "atdv_excmp_cmpnm",
+        "label": "분할 후 존속회사(회사명)",
+        "description": "분할 후 존속회사(회사명)"
+      },
+      {
+        "name": "atdvfdtl_tast",
+        "label": "분할 후 존속회사(분할후 재무내용(원)(자산총계))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atdvfdtl_tdbt",
+        "label": "분할 후 존속회사(분할후 재무내용(원)(부채총계))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atdvfdtl_teqt",
+        "label": "분할 후 존속회사(분할후 재무내용(원)(자본총계))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atdvfdtl_cpt",
+        "label": "분할 후 존속회사(분할후 재무내용(원)(자본금))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atdvfdtl_std",
+        "label": "분할 후 존속회사(분할후 재무내용(원)(현재기준))",
+        "description": "분할 후 존속회사(분할후 재무내용(원)(현재기준))"
+      },
+      {
+        "name": "atdv_excmp_exbsn_rsl",
+        "label": "분할 후 존속회사(존속사업부문 최근 사업연도매출액(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atdv_excmp_mbsn",
+        "label": "분할 후 존속회사(주요사업)",
+        "description": "분할 후 존속회사(주요사업)"
+      },
+      {
+        "name": "atdv_excmp_atdv_lstmn_atn",
+        "label": "분할 후 존속회사(분할 후 상장유지 여부)",
+        "description": "분할 후 존속회사(분할 후 상장유지 여부)"
+      },
+      {
+        "name": "dvfcmp_cmpnm",
+        "label": "분할설립회사(회사명)",
+        "description": "분할설립회사(회사명)"
+      },
+      {
+        "name": "ffdtl_tast",
+        "label": "분할설립회사(설립시 재무내용(원)(자산총계))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ffdtl_tdbt",
+        "label": "분할설립회사(설립시 재무내용(원)(부채총계))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ffdtl_teqt",
+        "label": "분할설립회사(설립시 재무내용(원)(자본총계))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ffdtl_cpt",
+        "label": "분할설립회사(설립시 재무내용(원)(자본금))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ffdtl_std",
+        "label": "분할설립회사(설립시 재무내용(원)(현재기준))",
+        "description": "분할설립회사(설립시 재무내용(원)(현재기준))"
+      },
+      {
+        "name": "dvfcmp_nbsn_rsl",
+        "label": "분할설립회사(신설사업부문 최근 사업연도 매출액(원))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dvfcmp_mbsn",
+        "label": "분할설립회사(주요사업)",
+        "description": "분할설립회사(주요사업)"
+      },
+      {
+        "name": "dvfcmp_rlst_atn",
+        "label": "분할설립회사(재상장신청 여부)",
+        "description": "분할설립회사(재상장신청 여부)"
+      },
+      {
+        "name": "abcr_crrt",
+        "label": "감자에 관한 사항(감자비율(%))",
+        "description": "감자에 관한 사항(감자비율(%))"
+      },
+      {
+        "name": "abcr_osprpd_bgd",
+        "label": "감자에 관한 사항(구주권 제출기간(시작일))",
+        "description": "감자에 관한 사항(구주권 제출기간(시작일))"
+      },
+      {
+        "name": "abcr_osprpd_edd",
+        "label": "감자에 관한 사항(구주권 제출기간(종료일))",
+        "description": "감자에 관한 사항(구주권 제출기간(종료일))"
+      },
+      {
+        "name": "abcr_trspprpd_bgd",
+        "label": "감자에 관한 사항(매매거래정지 예정기간(시작일))",
+        "description": "감자에 관한 사항(매매거래정지 예정기간(시작일))"
+      },
+      {
+        "name": "abcr_trspprpd_edd",
+        "label": "감자에 관한 사항(매매거래정지 예정기간(종료일))",
+        "description": "감자에 관한 사항(매매거래정지 예정기간(종료일))"
+      },
+      {
+        "name": "abcr_nstkascnd",
+        "label": "감자에 관한 사항(신주배정조건)",
+        "description": "감자에 관한 사항(신주배정조건)"
+      },
+      {
+        "name": "abcr_shstkcnt_rt_at_rs",
+        "label": "감자에 관한 사항(주주 주식수 비례여부 및 사유)",
+        "description": "감자에 관한 사항(주주 주식수 비례여부 및 사유)"
+      },
+      {
+        "name": "abcr_nstkasstd",
+        "label": "감자에 관한 사항(신주배정기준일)",
+        "description": "감자에 관한 사항(신주배정기준일)"
+      },
+      {
+        "name": "abcr_nstkdlprd",
+        "label": "감자에 관한 사항(신주권교부예정일)",
+        "description": "감자에 관한 사항(신주권교부예정일)"
+      },
+      {
+        "name": "abcr_nstklstprd",
+        "label": "감자에 관한 사항(신주의 상장예정일)",
+        "description": "감자에 관한 사항(신주의 상장예정일)"
+      },
+      {
+        "name": "gmtsck_prd",
+        "label": "주주총회 예정일",
+        "description": "주주총회 예정일"
+      },
+      {
+        "name": "cdobprpd_bgd",
+        "label": "채권자 이의제출기간(시작일)",
+        "description": "채권자 이의제출기간(시작일)"
+      },
+      {
+        "name": "cdobprpd_edd",
+        "label": "채권자 이의제출기간(종료일)",
+        "description": "채권자 이의제출기간(종료일)"
+      },
+      {
+        "name": "dvdt",
+        "label": "분할기일",
+        "description": "분할기일"
+      },
+      {
+        "name": "dvrgsprd",
+        "label": "분할등기 예정일",
+        "description": "분할등기 예정일"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(사외이사가 아닌 감사위원) 참석여부",
+        "description": "감사(사외이사가 아닌 감사위원) 참석여부"
+      },
+      {
+        "name": "popt_ctr_atn",
+        "label": "풋옵션 등 계약 체결여부",
+        "description": "풋옵션 등 계약 체결여부"
+      },
+      {
+        "name": "popt_ctr_cn",
+        "label": "계약내용",
+        "description": "계약내용"
+      },
+      {
+        "name": "rs_sm_atn",
+        "label": "증권신고서 제출대상 여부",
+        "description": "증권신고서 제출대상 여부"
+      },
+      {
+        "name": "ex_sm_r",
+        "label": "제출을 면제받은 경우 그 사유",
+        "description": "제출을 면제받은 경우 그 사유"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020052",
+    "api_name": "회사분할합병 결정",
+    "description": "주요사항보고서(회사분할합병 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/cmpDvmgDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/cmpDvmgDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "dvmg_mth",
+        "label": "분할합병 방법",
+        "description": "분할합병 방법"
+      },
+      {
+        "name": "dvmg_impef",
+        "label": "분할합병의 중요영향 및 효과",
+        "description": "분할합병의 중요영향 및 효과"
+      },
+      {
+        "name": "dv_trfbsnprt_cn",
+        "label": "분할에 관한 사항(분할로 이전할 사업 및 재산의 내용)",
+        "description": "분할에 관한 사항(분할로 이전할 사업 및 재산의 내용)"
+      },
+      {
+        "name": "atdv_excmp_cmpnm",
+        "label": "분할에 관한 사항(분할 후 존속회사(회사명))",
+        "description": "분할에 관한 사항(분할 후 존속회사(회사명))"
+      },
+      {
+        "name": "atdvfdtl_tast",
+        "label": "분할에 관한 사항(분할 후 존속회사(분할후 재무내용(원)(자산총계)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atdvfdtl_tdbt",
+        "label": "분할에 관한 사항(분할 후 존속회사(분할후 재무내용(원)(부채총계)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atdvfdtl_teqt",
+        "label": "분할에 관한 사항(분할 후 존속회사(분할후 재무내용(원)(자본총계)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atdvfdtl_cpt",
+        "label": "분할에 관한 사항(분할 후 존속회사(분할후 재무내용(원)(자본금)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atdvfdtl_std",
+        "label": "분할에 관한 사항(분할 후 존속회사(분할후 재무내용(원)(현재기준)))",
+        "description": "분할에 관한 사항(분할 후 존속회사(분할후 재무내용(원)(현재기준)))"
+      },
+      {
+        "name": "atdv_excmp_exbsn_rsl",
+        "label": "분할에 관한 사항(분할 후 존속회사(존속사업부문 최근 사업연도매출액(원)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "atdv_excmp_mbsn",
+        "label": "분할에 관한 사항(분할 후 존속회사(주요사업))",
+        "description": "분할에 관한 사항(분할 후 존속회사(주요사업))"
+      },
+      {
+        "name": "atdv_excmp_atdv_lstmn_atn",
+        "label": "분할에 관한 사항(분할 후 존속회사(분할 후 상장유지 여부))",
+        "description": "분할에 관한 사항(분할 후 존속회사(분할 후 상장유지 여부))"
+      },
+      {
+        "name": "dvfcmp_cmpnm",
+        "label": "분할에 관한 사항(분할설립 회사(회사명))",
+        "description": "분할에 관한 사항(분할설립 회사(회사명))"
+      },
+      {
+        "name": "ffdtl_tast",
+        "label": "분할에 관한 사항(분할설립 회사(설립시 재무내용(원)(자산총계)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ffdtl_tdbt",
+        "label": "분할에 관한 사항(분할설립 회사(설립시 재무내용(원)(부채총계)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ffdtl_teqt",
+        "label": "분할에 관한 사항(분할설립 회사(설립시 재무내용(원)(자본총계)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ffdtl_cpt",
+        "label": "분할에 관한 사항(분할설립 회사(설립시 재무내용(원)(자본금)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "ffdtl_std",
+        "label": "분할에 관한 사항(분할설립 회사(설립시 재무내용(원)(현재기준)))",
+        "description": "분할에 관한 사항(분할설립 회사(설립시 재무내용(원)(현재기준)))"
+      },
+      {
+        "name": "dvfcmp_nbsn_rsl",
+        "label": "분할에 관한 사항(분할설립 회사(신설사업부문 최근 사업연도 매출액(원)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dvfcmp_mbsn",
+        "label": "분할에 관한 사항(분할설립 회사(주요사업))",
+        "description": "분할에 관한 사항(분할설립 회사(주요사업))"
+      },
+      {
+        "name": "dvfcmp_atdv_lstmn_at",
+        "label": "분할에 관한 사항(분할설립 회사(분할후 상장유지여부))",
+        "description": "분할에 관한 사항(분할설립 회사(분할후 상장유지여부))"
+      },
+      {
+        "name": "abcr_crrt",
+        "label": "분할에 관한 사항(감자에 관한 사항(감자비율(%)))",
+        "description": "분할에 관한 사항(감자에 관한 사항(감자비율(%)))"
+      },
+      {
+        "name": "abcr_osprpd_bgd",
+        "label": "분할에 관한 사항(감자에 관한 사항(구주권 제출기간(시작일)))",
+        "description": "분할에 관한 사항(감자에 관한 사항(구주권 제출기간(시작일)))"
+      },
+      {
+        "name": "abcr_osprpd_edd",
+        "label": "분할에 관한 사항(감자에 관한 사항(구주권 제출기간(종료일)))",
+        "description": "분할에 관한 사항(감자에 관한 사항(구주권 제출기간(종료일)))"
+      },
+      {
+        "name": "abcr_trspprpd_bgd",
+        "label": "분할에 관한 사항(감자에 관한 사항(매매거래정지 예정기간(시작일)))",
+        "description": "분할에 관한 사항(감자에 관한 사항(매매거래정지 예정기간(시작일)))"
+      },
+      {
+        "name": "abcr_trspprpd_edd",
+        "label": "분할에 관한 사항(감자에 관한 사항(매매거래정지 예정기간(종료일)))",
+        "description": "분할에 관한 사항(감자에 관한 사항(매매거래정지 예정기간(종료일)))"
+      },
+      {
+        "name": "abcr_nstkascnd",
+        "label": "분할에 관한 사항(감자에 관한 사항(신주배정조건))",
+        "description": "분할에 관한 사항(감자에 관한 사항(신주배정조건))"
+      },
+      {
+        "name": "abcr_shstkcnt_rt_at_rs",
+        "label": "분할에 관한 사항(감자에 관한 사항(주주 주식수 비례여부 및 사유))",
+        "description": "분할에 관한 사항(감자에 관한 사항(주주 주식수 비례여부 및 사유))"
+      },
+      {
+        "name": "abcr_nstkasstd",
+        "label": "분할에 관한 사항(감자에 관한 사항(신주배정기준일))",
+        "description": "분할에 관한 사항(감자에 관한 사항(신주배정기준일))"
+      },
+      {
+        "name": "abcr_nstkdlprd",
+        "label": "분할에 관한 사항(감자에 관한 사항(신주권교부예정일))",
+        "description": "분할에 관한 사항(감자에 관한 사항(신주권교부예정일))"
+      },
+      {
+        "name": "abcr_nstklstprd",
+        "label": "분할에 관한 사항(감자에 관한 사항(신주의 상장예정일))",
+        "description": "분할에 관한 사항(감자에 관한 사항(신주의 상장예정일))"
+      },
+      {
+        "name": "mg_stn",
+        "label": "합병에 관한 사항(합병형태)",
+        "description": "합병에 관한 사항(합병형태)"
+      },
+      {
+        "name": "mgptncmp_cmpnm",
+        "label": "합병에 관한 사항(합병상대 회사(회사명))",
+        "description": "합병에 관한 사항(합병상대 회사(회사명))"
+      },
+      {
+        "name": "mgptncmp_mbsn",
+        "label": "합병에 관한 사항(합병상대 회사(주요사업))",
+        "description": "합병에 관한 사항(합병상대 회사(주요사업))"
+      },
+      {
+        "name": "mgptncmp_rl_cmpn",
+        "label": "합병에 관한 사항(합병상대 회사(회사와의 관계))",
+        "description": "합병에 관한 사항(합병상대 회사(회사와의 관계))"
+      },
+      {
+        "name": "rbsnfdtl_tast",
+        "label": "합병에 관한 사항(합병상대 회사(최근 사업연도 재무내용(원)(자산총계)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rbsnfdtl_tdbt",
+        "label": "합병에 관한 사항(합병상대 회사(최근 사업연도 재무내용(원)(부채총계)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rbsnfdtl_teqt",
+        "label": "합병에 관한 사항(합병상대 회사(최근 사업연도 재무내용(원)(자본총계)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rbsnfdtl_cpt",
+        "label": "합병에 관한 사항(합병상대 회사(최근 사업연도 재무내용(원)(자본금)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rbsnfdtl_sl",
+        "label": "합병에 관한 사항(합병상대 회사(최근 사업연도 재무내용(원)(매출액)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rbsnfdtl_nic",
+        "label": "합병에 관한 사항(합병상대 회사(최근 사업연도 재무내용(원)(당기순이익)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "eadtat_intn",
+        "label": "합병에 관한 사항(합병상대 회사(외부감사 여부(기관명)))",
+        "description": "합병에 관한 사항(합병상대 회사(외부감사 여부(기관명)))"
+      },
+      {
+        "name": "eadtat_op",
+        "label": "합병에 관한 사항(합병상대 회사(외부감사 여부(감사의견)))",
+        "description": "합병에 관한 사항(합병상대 회사(외부감사 여부(감사의견)))"
+      },
+      {
+        "name": "dvmgnstk_ostk_cnt",
+        "label": "합병에 관한 사항(분할합병신주의 종류와 수(주)(보통주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "dvmgnstk_cstk_cnt",
+        "label": "합병에 관한 사항(분할합병신주의 종류와 수(주)(종류주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "nmgcmp_cmpnm",
+        "label": "합병에 관한 사항(합병신설 회사(회사명))",
+        "description": "합병에 관한 사항(합병신설 회사(회사명))"
+      },
+      {
+        "name": "nmgcmp_cpt",
+        "label": "합병에 관한 사항(합병신설 회사(자본금(원)))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "nmgcmp_mbsn",
+        "label": "합병에 관한 사항(합병신설 회사(주요사업))",
+        "description": "합병에 관한 사항(합병신설 회사(주요사업))"
+      },
+      {
+        "name": "nmgcmp_rlst_atn",
+        "label": "합병에 관한 사항(합병신설 회사(재상장신청 여부))",
+        "description": "합병에 관한 사항(합병신설 회사(재상장신청 여부))"
+      },
+      {
+        "name": "dvmg_rt",
+        "label": "분할합병비율",
+        "description": "분할합병비율"
+      },
+      {
+        "name": "dvmg_rt_bs",
+        "label": "분할합병비율 산출근거",
+        "description": "분할합병비율 산출근거"
+      },
+      {
+        "name": "exevl_atn",
+        "label": "외부평가에 관한 사항(외부평가 여부)",
+        "description": "외부평가에 관한 사항(외부평가 여부)"
+      },
+      {
+        "name": "exevl_bs_rs",
+        "label": "외부평가에 관한 사항(근거 및 사유)",
+        "description": "외부평가에 관한 사항(근거 및 사유)"
+      },
+      {
+        "name": "exevl_intn",
+        "label": "외부평가에 관한 사항(외부평가기관의 명칭)",
+        "description": "외부평가에 관한 사항(외부평가기관의 명칭)"
+      },
+      {
+        "name": "exevl_pd",
+        "label": "외부평가에 관한 사항(외부평가 기간)",
+        "description": "외부평가에 관한 사항(외부평가 기간)"
+      },
+      {
+        "name": "exevl_op",
+        "label": "외부평가에 관한 사항(외부평가 의견)",
+        "description": "외부평가에 관한 사항(외부평가 의견)"
+      },
+      {
+        "name": "dvmgsc_dvmgctrd",
+        "label": "분할합병일정(분할합병계약일)",
+        "description": "분할합병일정(분할합병계약일)"
+      },
+      {
+        "name": "dvmgsc_shddstd",
+        "label": "분할합병일정(주주확정기준일)",
+        "description": "분할합병일정(주주확정기준일)"
+      },
+      {
+        "name": "dvmgsc_shclspd_bgd",
+        "label": "분할합병일정(주주명부 폐쇄기간(시작일))",
+        "description": "분할합병일정(주주명부 폐쇄기간(시작일))"
+      },
+      {
+        "name": "dvmgsc_shclspd_edd",
+        "label": "분할합병일정(주주명부 폐쇄기간(종료일))",
+        "description": "분할합병일정(주주명부 폐쇄기간(종료일))"
+      },
+      {
+        "name": "dvmgsc_dvmgop_rcpd_bgd",
+        "label": "분할합병일정(분할합병반대의사통지 접수기간(시작일))",
+        "description": "분할합병일정(분할합병반대의사통지 접수기간(시작일))"
+      },
+      {
+        "name": "dvmgsc_dvmgop_rcpd_edd",
+        "label": "분할합병일정(분할합병반대의사통지 접수기간(종료일))",
+        "description": "분할합병일정(분할합병반대의사통지 접수기간(종료일))"
+      },
+      {
+        "name": "dvmgsc_gmtsck_prd",
+        "label": "분할합병일정(주주총회예정일자)",
+        "description": "분할합병일정(주주총회예정일자)"
+      },
+      {
+        "name": "dvmgsc_aprskh_expd_bgd",
+        "label": "분할합병일정(주식매수청구권 행사기간(시작일))",
+        "description": "분할합병일정(주식매수청구권 행사기간(시작일))"
+      },
+      {
+        "name": "dvmgsc_aprskh_expd_edd",
+        "label": "분할합병일정(주식매수청구권 행사기간(종료일))",
+        "description": "분할합병일정(주식매수청구권 행사기간(종료일))"
+      },
+      {
+        "name": "dvmgsc_cdobprpd_bgd",
+        "label": "분할합병일정(채권자 이의 제출기간(시작일))",
+        "description": "분할합병일정(채권자 이의 제출기간(시작일))"
+      },
+      {
+        "name": "dvmgsc_cdobprpd_edd",
+        "label": "분할합병일정(채권자 이의 제출기간(종료일))",
+        "description": "분할합병일정(채권자 이의 제출기간(종료일))"
+      },
+      {
+        "name": "dvmgsc_dvmgdt",
+        "label": "분할합병일정(분할합병기일)",
+        "description": "분할합병일정(분할합병기일)"
+      },
+      {
+        "name": "dvmgsc_ergmd",
+        "label": "분할합병일정(종료보고 총회일)",
+        "description": "분할합병일정(종료보고 총회일)"
+      },
+      {
+        "name": "dvmgsc_dvmgrgsprd",
+        "label": "분할합병일정(분할합병등기예정일)",
+        "description": "분할합병일정(분할합병등기예정일)"
+      },
+      {
+        "name": "bdlst_atn",
+        "label": "우회상장 해당 여부",
+        "description": "우회상장 해당 여부"
+      },
+      {
+        "name": "otcpr_bdlst_sf_atn",
+        "label": "타법인의 우회상장 요건 충족여부",
+        "description": "타법인의 우회상장 요건 충족여부"
+      },
+      {
+        "name": "aprskh_exrq",
+        "label": "주식매수청구권에 관한 사항(행사요건)",
+        "description": "주식매수청구권에 관한 사항(행사요건)"
+      },
+      {
+        "name": "aprskh_plnprc",
+        "label": "주식매수청구권에 관한 사항(매수예정가격)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aprskh_ex_pc_mth_pd_pl",
+        "label": "주식매수청구권에 관한 사항(행사절차, 방법, 기간, 장소)",
+        "description": "주식매수청구권에 관한 사항(행사절차, 방법, 기간, 장소)"
+      },
+      {
+        "name": "aprskh_pym_plpd_mth",
+        "label": "주식매수청구권에 관한 사항(지급예정시기, 지급방법)",
+        "description": "주식매수청구권에 관한 사항(지급예정시기, 지급방법)"
+      },
+      {
+        "name": "aprskh_lmt",
+        "label": "주식매수청구권에 관한 사항(주식매수청구권 제한 관련 내용)",
+        "description": "주식매수청구권에 관한 사항(주식매수청구권 제한 관련 내용)"
+      },
+      {
+        "name": "aprskh_ctref",
+        "label": "주식매수청구권에 관한 사항(계약에 미치는 효력)",
+        "description": "주식매수청구권에 관한 사항(계약에 미치는 효력)"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(사외이사가 아닌 감사위원) 참석여부",
+        "description": "감사(사외이사가 아닌 감사위원) 참석여부"
+      },
+      {
+        "name": "popt_ctr_atn",
+        "label": "풋옵션 등 계약 체결여부",
+        "description": "풋옵션 등 계약 체결여부"
+      },
+      {
+        "name": "popt_ctr_cn",
+        "label": "계약내용",
+        "description": "계약내용"
+      },
+      {
+        "name": "rs_sm_atn",
+        "label": "증권신고서 제출대상 여부",
+        "description": "증권신고서 제출대상 여부"
+      },
+      {
+        "name": "ex_sm_r",
+        "label": "제출을 면제받은 경우 그 사유",
+        "description": "제출을 면제받은 경우 그 사유"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  },
+  {
+    "api_id": "2020053",
+    "api_name": "주식교환·이전 결정",
+    "description": "주요사항보고서(주식교환·이전 결정) 내에 주요 정보를 제공합니다.",
+    "endpoints": [
+      {
+        "url": "https://opendart.fss.or.kr/api/stkExtrDecsn.json",
+        "format": "JSON"
+      },
+      {
+        "url": "https://opendart.fss.or.kr/api/stkExtrDecsn.xml",
+        "format": "XML"
+      }
+    ],
+    "request_params": [
+      {
+        "name": "crtfc_key",
+        "label": "API 인증키",
+        "type": "STRING(40)",
+        "required": true,
+        "description": "발급받은 인증키(40자리)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "공시대상회사의 고유번호(8자리) ※ 개발가이드 &gt; 공시정보 &gt; 고유번호 참고"
+      },
+      {
+        "name": "bgn_de",
+        "label": "시작일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색시작 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      },
+      {
+        "name": "end_de",
+        "label": "종료일(최초접수일)",
+        "type": "STRING(8)",
+        "required": true,
+        "description": "검색종료 접수일자(YYYYMMDD) ※ 2015년 이후 부터 정보제공"
+      }
+    ],
+    "response_fields": [
+      {
+        "name": "status",
+        "label": "에러 및 정보 코드",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "message",
+        "label": "에러 및 정보 메시지",
+        "description": "(※메시지 설명 참조)"
+      },
+      {
+        "name": "rcept_no",
+        "label": "접수번호",
+        "description": "접수번호(14자리)"
+      },
+      {
+        "name": "corp_cls",
+        "label": "법인구분",
+        "description": "법인구분 : Y(유가), K(코스닥), N(코넥스), E(기타)"
+      },
+      {
+        "name": "corp_code",
+        "label": "고유번호",
+        "description": "공시대상회사의 고유번호(8자리)"
+      },
+      {
+        "name": "corp_name",
+        "label": "회사명",
+        "description": "공시대상회사명"
+      },
+      {
+        "name": "extr_sen",
+        "label": "구분",
+        "description": "구분"
+      },
+      {
+        "name": "extr_stn",
+        "label": "교환ㆍ이전 형태",
+        "description": "교환ㆍ이전 형태"
+      },
+      {
+        "name": "extr_tgcmp_cmpnm",
+        "label": "교환ㆍ이전 대상법인(회사명)",
+        "description": "교환ㆍ이전 대상법인(회사명)"
+      },
+      {
+        "name": "extr_tgcmp_rp",
+        "label": "교환ㆍ이전 대상법인(대표자)",
+        "description": "교환ㆍ이전 대상법인(대표자)"
+      },
+      {
+        "name": "extr_tgcmp_mbsn",
+        "label": "교환ㆍ이전 대상법인(주요사업)",
+        "description": "교환ㆍ이전 대상법인(주요사업)"
+      },
+      {
+        "name": "extr_tgcmp_rl_cmpn",
+        "label": "교환ㆍ이전 대상법인(회사와의 관계)",
+        "description": "교환ㆍ이전 대상법인(회사와의 관계)"
+      },
+      {
+        "name": "extr_tgcmp_tisstk_ostk",
+        "label": "교환ㆍ이전 대상법인(발행주식총수(주)(보통주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "extr_tgcmp_tisstk_cstk",
+        "label": "교환ㆍ이전 대상법인(발행주식총수(주)(종류주식))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rbsnfdtl_tast",
+        "label": "교환ㆍ이전 대상법인(최근 사업연도 요약재무내용(원)(자산총계))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rbsnfdtl_tdbt",
+        "label": "교환ㆍ이전 대상법인(최근 사업연도 요약재무내용(원)(부채총계))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rbsnfdtl_teqt",
+        "label": "교환ㆍ이전 대상법인(최근 사업연도 요약재무내용(원)(자본총계))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "rbsnfdtl_cpt",
+        "label": "교환ㆍ이전 대상법인(최근 사업연도 요약재무내용(원)(자본금))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "extr_rt",
+        "label": "교환ㆍ이전 비율",
+        "description": "교환ㆍ이전 비율"
+      },
+      {
+        "name": "extr_rt_bs",
+        "label": "교환ㆍ이전 비율 산출근거",
+        "description": "교환ㆍ이전 비율 산출근거"
+      },
+      {
+        "name": "exevl_atn",
+        "label": "외부평가에 관한 사항(외부평가 여부)",
+        "description": "외부평가에 관한 사항(외부평가 여부)"
+      },
+      {
+        "name": "exevl_bs_rs",
+        "label": "외부평가에 관한 사항(근거 및 사유)",
+        "description": "외부평가에 관한 사항(근거 및 사유)"
+      },
+      {
+        "name": "exevl_intn",
+        "label": "외부평가에 관한 사항(외부평가기관의 명칭)",
+        "description": "외부평가에 관한 사항(외부평가기관의 명칭)"
+      },
+      {
+        "name": "exevl_pd",
+        "label": "외부평가에 관한 사항(외부평가 기간)",
+        "description": "외부평가에 관한 사항(외부평가 기간)"
+      },
+      {
+        "name": "exevl_op",
+        "label": "외부평가에 관한 사항(외부평가 의견)",
+        "description": "외부평가에 관한 사항(외부평가 의견)"
+      },
+      {
+        "name": "extr_pp",
+        "label": "교환ㆍ이전 목적",
+        "description": "교환ㆍ이전 목적"
+      },
+      {
+        "name": "extrsc_extrctrd",
+        "label": "교환ㆍ이전일정(교환ㆍ이전계약일)",
+        "description": "교환ㆍ이전일정(교환ㆍ이전계약일)"
+      },
+      {
+        "name": "extrsc_shddstd",
+        "label": "교환ㆍ이전일정(주주확정기준일)",
+        "description": "교환ㆍ이전일정(주주확정기준일)"
+      },
+      {
+        "name": "extrsc_shclspd_bgd",
+        "label": "교환ㆍ이전일정(주주명부 폐쇄기간(시작일))",
+        "description": "교환ㆍ이전일정(주주명부 폐쇄기간(시작일))"
+      },
+      {
+        "name": "extrsc_shclspd_edd",
+        "label": "교환ㆍ이전일정(주주명부 폐쇄기간(종료일))",
+        "description": "교환ㆍ이전일정(주주명부 폐쇄기간(종료일))"
+      },
+      {
+        "name": "extrsc_extrop_rcpd_bgd",
+        "label": "교환ㆍ이전일정(주식교환ㆍ이전 반대의사 통지접수기간(시작일))",
+        "description": "교환ㆍ이전일정(주식교환ㆍ이전 반대의사 통지접수기간(시작일))"
+      },
+      {
+        "name": "extrsc_extrop_rcpd_edd",
+        "label": "교환ㆍ이전일정(주식교환ㆍ이전 반대의사 통지접수기간(종료일))",
+        "description": "교환ㆍ이전일정(주식교환ㆍ이전 반대의사 통지접수기간(종료일))"
+      },
+      {
+        "name": "extrsc_gmtsck_prd",
+        "label": "교환ㆍ이전일정(주주총회 예정일자)",
+        "description": "교환ㆍ이전일정(주주총회 예정일자)"
+      },
+      {
+        "name": "extrsc_aprskh_expd_bgd",
+        "label": "교환ㆍ이전일정(주식매수청구권 행사기간(시작일))",
+        "description": "교환ㆍ이전일정(주식매수청구권 행사기간(시작일))"
+      },
+      {
+        "name": "extrsc_aprskh_expd_edd",
+        "label": "교환ㆍ이전일정(주식매수청구권 행사기간(종료일))",
+        "description": "교환ㆍ이전일정(주식매수청구권 행사기간(종료일))"
+      },
+      {
+        "name": "extrsc_osprpd_bgd",
+        "label": "교환ㆍ이전일정(구주권제출기간(시작일))",
+        "description": "교환ㆍ이전일정(구주권제출기간(시작일))"
+      },
+      {
+        "name": "extrsc_osprpd_edd",
+        "label": "교환ㆍ이전일정(구주권제출기간(종료일))",
+        "description": "교환ㆍ이전일정(구주권제출기간(종료일))"
+      },
+      {
+        "name": "extrsc_trspprpd",
+        "label": "교환ㆍ이전일정(매매거래정지예정기간)",
+        "description": "교환ㆍ이전일정(매매거래정지예정기간)"
+      },
+      {
+        "name": "extrsc_trspprpd_bgd",
+        "label": "교환ㆍ이전일정(매매거래정지예정기간(시작일))",
+        "description": "교환ㆍ이전일정(매매거래정지예정기간(시작일))"
+      },
+      {
+        "name": "extrsc_trspprpd_edd",
+        "label": "교환ㆍ이전일정(매매거래정지예정기간(종료일))",
+        "description": "교환ㆍ이전일정(매매거래정지예정기간(종료일))"
+      },
+      {
+        "name": "extrsc_extrdt",
+        "label": "교환ㆍ이전일정(교환ㆍ이전일자)",
+        "description": "교환ㆍ이전일정(교환ㆍ이전일자)"
+      },
+      {
+        "name": "extrsc_nstkdlprd",
+        "label": "교환ㆍ이전일정(신주권교부예정일)",
+        "description": "교환ㆍ이전일정(신주권교부예정일)"
+      },
+      {
+        "name": "extrsc_nstklstprd",
+        "label": "교환ㆍ이전일정(신주의 상장예정일)",
+        "description": "교환ㆍ이전일정(신주의 상장예정일)"
+      },
+      {
+        "name": "atextr_cpcmpnm",
+        "label": "교환ㆍ이전 후 완전모회사명",
+        "description": "교환ㆍ이전 후 완전모회사명"
+      },
+      {
+        "name": "aprskh_plnprc",
+        "label": "주식매수청구권에 관한 사항(매수예정가격)",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "aprskh_pym_plpd_mth",
+        "label": "주식매수청구권에 관한 사항(지급예정시기, 지급방법)",
+        "description": "주식매수청구권에 관한 사항(지급예정시기, 지급방법)"
+      },
+      {
+        "name": "aprskh_lmt",
+        "label": "주식매수청구권에 관한 사항(주식매수청구권 제한 관련 내용)",
+        "description": "주식매수청구권에 관한 사항(주식매수청구권 제한 관련 내용)"
+      },
+      {
+        "name": "aprskh_ctref",
+        "label": "주식매수청구권에 관한 사항(계약에 미치는 효력)",
+        "description": "주식매수청구권에 관한 사항(계약에 미치는 효력)"
+      },
+      {
+        "name": "bdlst_atn",
+        "label": "우회상장 해당 여부",
+        "description": "우회상장 해당 여부"
+      },
+      {
+        "name": "otcpr_bdlst_sf_atn",
+        "label": "타법인의 우회상장 요건 충족 여부",
+        "description": "타법인의 우회상장 요건 충족 여부"
+      },
+      {
+        "name": "bddd",
+        "label": "이사회결의일(결정일)",
+        "description": "이사회결의일(결정일)"
+      },
+      {
+        "name": "od_a_at_t",
+        "label": "사외이사참석여부(참석(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "od_a_at_b",
+        "label": "사외이사참석여부(불참(명))",
+        "description": "9,999,999,999"
+      },
+      {
+        "name": "adt_a_atn",
+        "label": "감사(사외이사가 아닌 감사위원) 참석여부",
+        "description": "감사(사외이사가 아닌 감사위원) 참석여부"
+      },
+      {
+        "name": "popt_ctr_atn",
+        "label": "풋옵션 등 계약 체결여부",
+        "description": "풋옵션 등 계약 체결여부"
+      },
+      {
+        "name": "popt_ctr_cn",
+        "label": "계약내용",
+        "description": "계약내용"
+      },
+      {
+        "name": "rs_sm_atn",
+        "label": "증권신고서 제출대상 여부",
+        "description": "증권신고서 제출대상 여부"
+      },
+      {
+        "name": "ex_sm_r",
+        "label": "제출을 면제받은 경우 그 사유",
+        "description": "제출을 면제받은 경우 그 사유"
+      }
+    ],
+    "group_code": "DS005",
+    "group_name": "major_event"
+  }
+]
