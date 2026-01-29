@@ -11,13 +11,13 @@
 ## 설치
 
 ```bash
-pip install opendart-fss-python
+pip install opendart-fss
 ```
 
 또는 uv 사용:
 
 ```bash
-uv add opendart-fss-python
+uv add opendart-fss
 ```
 
 ## 빠른 시작
