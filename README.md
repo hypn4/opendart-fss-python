@@ -36,15 +36,13 @@ cp .env.example .env
 
 ```python
 # 환경변수가 설정되어 있으면 api_key 파라미터 생략 가능
-async with OpenDartClient() as client:
-    ...
+client = OpenDartClient()
 ```
 
 **2. 직접 전달**
 
 ```python
-async with OpenDartClient(api_key="YOUR_API_KEY") as client:
-    ...
+client = OpenDartClient(api_key="YOUR_API_KEY")
 ```
 
 ### 예제
@@ -54,31 +52,34 @@ import asyncio
 from opendart_fss import OpenDartClient
 
 async def main():
-    async with OpenDartClient() as client:  # 환경변수에서 API 키 로드
-        # 공시 검색
-        disclosures = await client.disclosure.search(
-            corp_code="00126380",
-            bgn_de="20240101",
-            end_de="20241231"
-        )
+    client = OpenDartClient()  # 환경변수에서 API 키 로드
 
-        for item in disclosures:
-            print(f"{item.rcept_dt} - {item.report_nm}")
+    # 공시 검색
+    disclosures = await client.disclosure.search(
+        corp_code="00126380",
+        bgn_de="20240101",
+        end_de="20241231"
+    )
 
-        # 기업 개황
-        company = await client.disclosure.get_company("00126380")
-        print(f"회사명: {company.corp_name}")
-        print(f"대표자: {company.ceo_nm}")
+    for item in disclosures:
+        print(f"{item.rcept_dt} - {item.report_nm}")
 
-        # 재무제표 조회
-        financials = await client.financial.get_single_account(
-            corp_code="00126380",
-            bsns_year="2024",
-            reprt_code="11011"  # 사업보고서
-        )
+    # 기업 개황
+    company = await client.disclosure.get_company("00126380")
+    print(f"회사명: {company.corp_name}")
+    print(f"대표자: {company.ceo_nm}")
 
-        for item in financials:
-            print(f"{item.account_nm}: {item.thstrm_amount}")
+    # 재무제표 조회
+    financials = await client.financial.get_single_account(
+        corp_code="00126380",
+        bsns_year="2024",
+        reprt_code="11011"  # 사업보고서
+    )
+
+    for item in financials:
+        print(f"{item.account_nm}: {item.thstrm_amount}")
+
+    await client.close()
 
 asyncio.run(main())
 ```
