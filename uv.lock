@@ -1134,7 +1134,7 @@ wheels = [
 ]
 
 [[package]]
-name = "opendart-fss-python"
+name = "opendart-fss"
 source = { editable = "." }
 dependencies = [
     { name = "httpx" },
