@@ -1,7 +1,6 @@
 """OpenDART API 클라이언트."""
 
 import os
-from types import TracebackType
 
 import httpx
 from dotenv import load_dotenv
@@ -21,24 +20,27 @@ class OpenDartClient:
 
     Example:
         ```python
-        async with OpenDartClient(api_key="YOUR_API_KEY") as client:
-            # 공시 검색
-            disclosures = await client.disclosure.search(
-                corp_code="00126380",
-                bgn_de="20240101",
-                end_de="20241231"
-            )
+        client = OpenDartClient(api_key="YOUR_API_KEY")
 
-            # 기업 개황
-            company = await client.disclosure.get_company("00126380")
-            print(f"회사명: {company.corp_name}")
+        # 공시 검색
+        disclosures = await client.disclosure.search(
+            corp_code="00126380",
+            bgn_de="20240101",
+            end_de="20241231"
+        )
 
-            # 재무제표 조회
-            financials = await client.financial.get_single_account(
-                corp_code="00126380",
-                bsns_year="2024",
-                reprt_code="11011"
-            )
+        # 기업 개황
+        company = await client.disclosure.get_company("00126380")
+        print(f"회사명: {company.corp_name}")
+
+        # 재무제표 조회
+        financials = await client.financial.get_single_account(
+            corp_code="00126380",
+            bsns_year="2024",
+            reprt_code="11011"
+        )
+
+        await client.close()  # 또는 contextlib.aclosing() 사용
         ```
     """
 
@@ -77,20 +79,9 @@ class OpenDartClient:
         self.major_event = MajorEventAPI(self)
         self.registration = RegistrationAPI(self)
 
-    async def __aenter__(self) -> "OpenDartClient":
-        """컨텍스트 매니저 진입."""
-        return self
-
-    async def __aexit__(
-        self,
-        _exc_type: type[BaseException] | None,
-        _exc_val: BaseException | None,
-        _exc_tb: TracebackType | None,
-    ) -> None:
-        """컨텍스트 매니저 종료."""
-        await self.close()
-
-    async def close(self) -> None:
+    async def aclose(self) -> None:
         """HTTP 클라이언트 종료."""
         if not self._external_client:
             await self._http.aclose()
+
+    close = aclose  # alias
