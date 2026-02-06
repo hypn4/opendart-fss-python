@@ -1,5 +1,7 @@
 """클라이언트 테스트."""
 
+from contextlib import aclosing
+
 import pytest
 
 from opendart_fss import OpenDartClient
@@ -27,13 +29,13 @@ class TestOpenDartClient:
         assert isinstance(client.registration, RegistrationAPI)
 
     @pytest.mark.asyncio
-    async def test_client_context_manager(self, api_key: str) -> None:
-        """컨텍스트 매니저 테스트."""
-        async with OpenDartClient(api_key=api_key) as client:
+    async def test_client_aclosing(self, api_key: str) -> None:
+        """contextlib.aclosing을 통한 자동 정리 테스트."""
+        async with aclosing(OpenDartClient(api_key=api_key)) as client:
             assert client.api_key == api_key
             assert not client._http.is_closed
 
-        # 컨텍스트 종료 후 HTTP 클라이언트가 닫혀야 함
+        # aclosing 종료 후 HTTP 클라이언트가 닫혀야 함
         assert client._http.is_closed
 
     @pytest.mark.asyncio
