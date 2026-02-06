@@ -60,13 +60,12 @@ class EndpointVerifier:
     async def __aenter__(self) -> "EndpointVerifier":
         """컨텍스트 매니저 진입."""
         self._client = OpenDartClient(api_key=self._api_key)
-        await self._client.__aenter__()
         return self
 
     async def __aexit__(self, *args: Any) -> None:
         """컨텍스트 매니저 종료."""
         if self._client:
-            await self._client.__aexit__(*args)
+            await self._client.close()
 
     async def verify_all(
         self,
